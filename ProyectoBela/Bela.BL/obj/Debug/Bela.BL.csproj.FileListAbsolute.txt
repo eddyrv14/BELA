@@ -1,0 +1,9 @@
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.BL\bin\Debug\Bela.BL.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.BL\bin\Debug\Bela.BL.pdb
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.BL\bin\Debug\Bela.DAL.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.BL\bin\Debug\Bela.Datos.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.BL\bin\Debug\Bela.DAL.pdb
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.BL\bin\Debug\Bela.Datos.pdb
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.csprojResolveAssemblyReference.cache
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.pdb
