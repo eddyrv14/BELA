@@ -12,7 +12,7 @@ Create table DetalleMateria(idDetalleMateria int auto_increment primary key,idMa
 foreign key (idUsuario) references Usuario(idUsuario),
 CONSTRAINT FK_IDMATERIA foreign key (idMateria) references Materia(idMateria));
 
-Create table tipoNoticia(idTipoNoticia int auto_increment primary key,nombre varchar(20);
+Create table tipoNoticia(idTipoNoticia int auto_increment primary key,nombre varchar(20));
 
 Create table Noticia(idNoticia int auto_increment  primary key,idUsuario int,idtipo int,titulo varchar(100),descripcion varchar(300),
 contenido varchar(1000),imagen varchar(45),fechaYHora datetime,
@@ -27,7 +27,7 @@ Create table MensajesContacto(idMensaje int auto_increment primary key,correo va
 
 
 Create table Material(idMaterial int auto_increment primary key,idDetalleMateria int,titulo varchar(100),
-mensaje varchar(300),material varchar(45),fechaHora datetime,CONSTRAINT);
+mensaje varchar(300),material varchar(45),fechaHora datetime,CONSTRAINT  FK_DETALLEMATERIA FOREIGN KEY(idDetalleMateria) references DetalleMateria(idDetalleMateria));
 
 Create table masMaterial(idMasMaterial int auto_increment primary key,idMaterial int,material varchar(30),
 CONSTRAINT FK_IDMateria FOREIGN KEY (idMaterial) REFERENCES Material(idMaterial));
