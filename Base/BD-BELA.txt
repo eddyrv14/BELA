@@ -1,10 +1,14 @@
 Create table Persona(idPersona int auto_increment primary key,
-nombre varchar(20),apellido1 varchar(20),apellido2 varchar(20),correo varchar(60));
+nombre varchar(60),apellido1 varchar(60),
+apellido2 varchar(60),correo varchar(100));
 
 Create table Rol(idRol int auto_increment primary key,nombre varchar(40));
 
-Create table Usuario(idUsuario int primary key,idRol int,usuario varchar(30),contrasena(30),CONSTRAINT FK_IDPERSONA foreign key (idUsuario)
-references Persona(idPersona),CONSTRAINT FK_IDROL foreign key (idRol) references Rol(idRol));
+Create table Usuario(idUsuario int primary key,idRol int,usuario varchar(30),contrasena varchar(30),
+
+CONSTRAINT FK_IDPERSONA foreign key (idUsuario)
+references Persona(idPersona),
+CONSTRAINT FK_IDROL foreign key (idRol) references Rol(idRol));
 
 Create table Materia(idMateria int auto_increment primary key,nombre varchar(20));
 
@@ -25,12 +29,20 @@ CONSTRAINT FK_IDNOTICIAIMG FOREIGN KEY (idNoticia) REFERENCES Noticia(idNoticia)
 
 Create table MensajesContacto(idMensaje int auto_increment primary key,correo varchar(45),asunto varchar(60),mensaje varchar(200));
 
-
-Create table Material(idMaterial int auto_increment primary key,idDetalleMateria int,titulo varchar(100),
-mensaje varchar(300),material varchar(45),fechaHora datetime,CONSTRAINT  FK_DETALLEMATERIA FOREIGN KEY(idDetalleMateria) references DetalleMateria(idDetalleMateria));
+Create table Material(idMaterial int auto_increment primary key,idUsuario int,idDetalleMateria int,titulo varchar(100),
+mensaje varchar(300),material varchar(45),fechaHora datetime,
+CONSTRAINT FK_DETALLE FOREIGN KEY(idDetalleMateria)
+REFERENCES DetalleMateria(idDetalleMateria),
+CONSTRAINT FK_IDUSUARIOSUBIO FOREIGN KEY (idUsuario) references Usuario(idUsuario));
 
 Create table masMaterial(idMasMaterial int auto_increment primary key,idMaterial int,material varchar(30),
-CONSTRAINT FK_IDMateria FOREIGN KEY (idMaterial) REFERENCES Material(idMaterial));
+
+CONSTRAINT FK_IDMaterialMas FOREIGN KEY (idMaterial) REFERENCES Material(idMaterial));
+
+Create table NotiInternas(idNotificacionInt int auto_increment primary key,idUsuario int,CONSTRAINT FK_IDUSARIOCORREO FOREIGN KEY (idUsuario)
+REFERENCES Usuario(idUsuario));
+
+Create table NotiExternas(idNoticficacionExter int auto_increment primary key,correo varchar(100));
 
 
 
