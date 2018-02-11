@@ -40,7 +40,7 @@ CONSTRAINT FK_IDUSUARIOSUBIO FOREIGN KEY (idUsuario) references Usuario(idUsuari
 
 Create table masMaterial(idMasMaterial int auto_increment primary key,idMaterial int,material varchar(30),
 
-CONSTRAINT FK_IDMaterialMas FOREIGN KEY (idMaterial)REFERENCES Material(idMaterial));
+CONSTRAINT FK_IDMaterialMas FOREIGN KEY (idMaterial) REFERENCES Material(idMaterial));
 
 Create table NotiInternas(idNotificacionInt int auto_increment primary key,idUsuario int,CONSTRAINT FK_IDUSARIOCORREO FOREIGN KEY (idUsuario)
 REFERENCES Usuario(idUsuario));
