@@ -29,13 +29,10 @@ CONSTRAINT FK_IDNOTICIAIMG FOREIGN KEY (idNoticia) REFERENCES Noticia(idNoticia)
 
 Create table MensajesContacto(idMensaje int auto_increment primary key,correo varchar(45),asunto varchar(60),mensaje varchar(200));
 
-
 Create table Material(idMaterial int auto_increment primary key,idUsuario int,idDetalleMateria int,titulo varchar(100),
 mensaje varchar(300),material varchar(45),fechaHora datetime,
 CONSTRAINT FK_DETALLE FOREIGN KEY(idDetalleMateria)
- REFERENCES 
-DetalleMateria(idDetalleMateria),
-
+REFERENCES DetalleMateria(idDetalleMateria),
 CONSTRAINT FK_IDUSUARIOSUBIO FOREIGN KEY (idUsuario) references Usuario(idUsuario));
 
 Create table masMaterial(idMasMaterial int auto_increment primary key,idMaterial int,material varchar(30),
@@ -45,7 +42,7 @@ CONSTRAINT FK_IDMaterialMas FOREIGN KEY (idMaterial) REFERENCES Material(idMater
 Create table NotiInternas(idNotificacionInt int auto_increment primary key,idUsuario int,CONSTRAINT FK_IDUSARIOCORREO FOREIGN KEY (idUsuario)
 REFERENCES Usuario(idUsuario));
 
-Create table NotiExternas(idNoticficacionExter int auto_increment primary key,correo varchar(100));   *Sin usuarios
+Create table NotiExternas(idNoticficacionExter int auto_increment primary key,correo varchar(100));
 
 
 
