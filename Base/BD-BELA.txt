@@ -1,0 +1,53 @@
+Create table Persona(idPersona int auto_increment primary key,
+nombre varchar(60),apellido1 varchar(60),
+apellido2 varchar(60),correo varchar(100));
+
+Create table Rol(idRol int auto_increment primary key,nombre varchar(40));
+
+Create table Usuario(idUsuario int primary key,idRol int,usuario varchar(30),contrasena varchar(30),
+
+CONSTRAINT FK_IDPERSONA foreign key (idUsuario)
+references Persona(idPersona),
+CONSTRAINT FK_IDROL foreign key (idRol) references Rol(idRol));
+
+Create table Materia(idMateria int auto_increment primary key,nombre varchar(20));
+
+Create table DetalleMateria(idDetalleMateria int auto_increment primary key,idMateria int,idUsuario int,grado int,CONSTRAINT FK_IDPROFESOR
+foreign key (idUsuario) references Usuario(idUsuario),
+CONSTRAINT FK_IDMATERIA foreign key (idMateria) references Materia(idMateria));
+
+Create table tipoNoticia(idTipoNoticia int auto_increment primary key,nombre varchar(20));
+
+Create table Noticia(idNoticia int auto_increment  primary key,idUsuario int,idtipo int,titulo varchar(100),descripcion varchar(300),
+contenido varchar(1000),imagen varchar(45),fechaYHora datetime,
+CONSTRAINT FK_IDUSUARIONOTI FOREIGN KEY (idUsuario) references Usuario(idUsuario),
+CONSTRAINT FK_IDTIPONOTI FOREIGN KEY (idTipo)REFERENCES tipoNoticia(idTipoNoticia));
+
+Create table ImagenNoticia(idImagen int auto_increment primary key,idNoticia int,imagen varchar(30),
+CONSTRAINT FK_IDNOTICIAIMG FOREIGN KEY (idNoticia) REFERENCES Noticia(idNoticia));
+
+
+Create table MensajesContacto(idMensaje int auto_increment primary key,correo varchar(45),asunto varchar(60),mensaje varchar(200));
+
+Create table Material(idMaterial int auto_increment primary key,idUsuario int,idDetalleMateria int,titulo varchar(100),
+mensaje varchar(300),material varchar(45),fechaHora datetime,
+CONSTRAINT FK_DETALLE FOREIGN KEY(idDetalleMateria)
+REFERENCES DetalleMateria(idDetalleMateria),
+CONSTRAINT FK_IDUSUARIOSUBIO FOREIGN KEY (idUsuario) references Usuario(idUsuario));
+
+Create table masMaterial(idMasMaterial int auto_increment primary key,idMaterial int,material varchar(30),
+
+CONSTRAINT FK_IDMaterialMas FOREIGN KEY (idMaterial) REFERENCES Material(idMaterial));
+
+Create table NotiInternas(idNotificacionInt int auto_increment primary key,idUsuario int,CONSTRAINT FK_IDUSARIOCORREO FOREIGN KEY (idUsuario)
+REFERENCES Usuario(idUsuario));
+
+Create table NotiExternas(idNoticficacionExter int auto_increment primary key,correo varchar(100));
+
+
+
+
+
+
+
+
