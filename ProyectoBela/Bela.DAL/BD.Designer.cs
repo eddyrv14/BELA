@@ -22,5 +22,15 @@ namespace Bela.DAL {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=BayronAnalisis;password=proyectoBela1224;database=bela")]
+        public string conexion {
+            get {
+                return ((string)(this["conexion"]));
+            }
+        }
     }
 }
