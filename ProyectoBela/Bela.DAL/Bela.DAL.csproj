@@ -63,6 +63,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>BD.settings</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\INoticia.cs" />
+    <Compile Include="Metodos\MNoticia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,10 +73,7 @@
       <Name>Bela.Datos</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Metodos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="BD.settings">
