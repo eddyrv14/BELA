@@ -31,7 +31,8 @@ table {
 h1, h2, h3, h4, h5, h6 {
 }
 
-/**media Queries**/
+
+
 .navbar-default {
     background-color: transparent;
 }
@@ -163,6 +164,7 @@ h1, h2, h3, h4, h5, h6 {
     .intro h3 {
         color: #fff;
         margin-top: 0;
+        font-size:30px;
     }
 
     .intro p {
@@ -310,11 +312,7 @@ h3.txt-tl {
     font-weight: 600;
 }
 
-.btn-send {
-    border-radius: 0px;
-    color: #000;
-    background-color: #FFD34E;
-}
+
 
 a, a:hover {
     color: #FFD34E;
@@ -526,6 +524,7 @@ a, a:hover {
     color: #000;
 }
 /****/
+
 @media (min-width: 451px) and (max-width: 900px) {
     .navbar-toggle:hover, .navbar-toggle {
         background-color: transparent;
