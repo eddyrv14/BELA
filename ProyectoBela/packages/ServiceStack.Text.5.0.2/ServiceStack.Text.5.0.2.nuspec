@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ServiceStack.Text</id>
+    <version>5.0.2</version>
+    <title>.NET's fastest JSON Serializer by ServiceStack</title>
+    <authors>ServiceStack</authors>
+    <owners>ServiceStack</owners>
+    <licenseUrl>https://servicestack.net/terms</licenseUrl>
+    <projectUrl>https://github.com/ServiceStack/ServiceStack.Text</projectUrl>
+    <iconUrl>https://servicestack.net/img/logo-32.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>.NET's fastest JSON, JSV and CSV Text Serializers. Fast, Light, Resilient.
+        Contains ServiceStack's high-performance text-processing powers, for more info see: https://servicestack.net/text</description>
+    <summary>.NET's fastest JSON, JSV and CSV Text Serializers</summary>
+    <copyright>ServiceStack and contributors</copyright>
+    <language>en-US</language>
+    <tags>JSON Text Serializer CSV JSV Dump PrettyPrint Fast</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework="Unsupported0.0">
+        <dependency id="Microsoft.Extensions.Primitives" version="2.0.0" />
+        <dependency id="System.Runtime" version="4.3.0" />
+        <dependency id="Microsoft.CSharp" version="4.4.0" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

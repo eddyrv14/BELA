@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title - Inicio</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+   <link href="~/Content/animated.css" rel="stylesheet" />
+   <link href="~/Content/fontawesome.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+   <link href="~/Content/main.css" rel="stylesheet" />
+   <link href="~/Content/responsive.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    
+</head>
+
+<body>
+    <header class="main-header" id="header">
+        <div class="bg-color">
+            <!--nav-->
+            <nav class="nav navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="fa fa-bars"></span>
+                            </button>
+                            <a href="index.html" class="navbar-brand">Liceo de Puriscal</a>
+                        </div>
+                        <div class="collapse navbar-collapse navbar-right" id="mynavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#header">Inicio</a></li>
+                                <li><a href="#">Noticias</a></li>
+                                <li>@Html.ActionLink("Contacto","EnvioMensaje","Contacto")
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!--/ nav-->
+            <div class="container text-center">
+                <div class="wrapper wow fadeInUp delay-05s">
+                    @*<h2 class="top-title">Liceo</h2>*@
+                    <h3 class="title">Liceo de Puriscal</h3>
+                    <h4 class="sub-title">La educacion ssdsdsd</h4>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--/ header-->
+    <!---->
+   
+    
+           
+    <div class="">
+        @RenderBody()
+        <hr />
+        
+    </div>
+
+    <footer class="" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 footer-copyright">
+                    © Liceo de Puriscal - Todos los derechos reservados
+                    <div class="credits">
+                        Disenado por <a href="#">Estudiantes UFIDELITAS</a>
+                    </div>
+                </div>
+                <div class="col-sm-5 footer-social">
+                    <div class="pull-right hidden-xs hidden-sm">
+                        <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/wow.js"></script>
+   <script src="~/Scripts/custom.js"></script>
+   <script src="~/Scripts/main.js"></script>
+
+    
+</body>
+</html>
