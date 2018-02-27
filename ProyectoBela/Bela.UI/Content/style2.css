@@ -360,16 +360,17 @@ a, a:hover
     -webkit-transform: rotate(20deg);
     transform: rotate(20deg);
 }
+
 .btn-ghost {
-  color: #ef5285;
+  color: #FFBF00;
   background-color: transparent;
-  border-color: #ef5285;
+  border-color: #FFBF00;
 }
 .btn-ghost:hover
  {
   color: #FFF;
-  background-color:  #ef5285;
-  border-color: #ea1a5d;
+  background-color: #FFBF00;
+  border-color: #FFBF00;
 }
 
 

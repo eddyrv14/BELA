@@ -28,6 +28,7 @@ namespace Bela.UI.Controllers
         public ActionResult EnvioMensaje()
         {
             Session.Contents.Remove("mensajeEnviado");                  /****/
+            Session.Contents.Remove("errorMensaje"); 
             return View();
         }
 
