@@ -10,3 +10,20 @@ go
 
 
 **********************FIN MENSAJES
+
+********************* NOTICIAS
+Create PROC listaNoticias
+as
+SELECT idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia
+go
+
+
+
+Create PROC ultimasNoticias
+as
+SELECT TOP 5 idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia
+ORDER BY idNoticia DESC
+go
+
+
+*********************FIN NOTICIAS
