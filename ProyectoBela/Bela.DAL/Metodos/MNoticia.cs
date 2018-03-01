@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 using ServiceStack.OrmLite;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Configuration;
 namespace Bela.DAL.Metodos
 {
-   public  class MNoticia
+   public class MNoticia
     {
 
-       private OrmLiteConnectionFactory _conex;
-       private IDbConnection _db;
+       private OrmLiteConnectionFactory _db;
+       private IDbConnection __conex;
 
        public MNoticia()
        {
-           _conex = new OrmLiteConnectionFactory(BD.Default.conexion, MySqlDialect.Provider);
-           _db = _conex.Open();
+        //   __conex = new OrmLiteConnectionFactory();
        }
     }
 }

@@ -1,32 +1,117 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Liceo de puriscal";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+
+<section id="intro" class="section intro">
+    <div class="container">
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <h3>Te damos la bienvenida</h3>
+            <p>Al nuevo campus en donde podra realizar...</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<div class="container" style="padding-top:50px;">
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Informacion</h2>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fas fa-building text-services text-warning mb-3 sr-icons"></i>
+                        <h3 class="mb-3">Vida estudiantil</h3>
+                        <p class="text-muted mb-0">Los estudiantes ads</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                      <a onclick="location.href='@Url.Action("Index","Noticia")'"><i class="fa fa-4x fa-newspaper text-services-noticias text-services mb-3 sr-icons"></i></a>
+                        <h3 class="mb-3">Noticias</h3>
+                        <p class="text-muted mb-0">Puedes estar al tanto de las diferentes acontecimientos que suceden
+                         en la institucion</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center ">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fas fa-address-card text-success text-services mb-3 sr-icons"></i>
+                        <h3 class="mb-3">Matricula</h3>
+                        <p class="text-muted mb-0">El proceso de matricula</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fas fa-graduation-cap text-primary text-services"></i>
+                        <h3 class="mb-3">Bachillerato internacional</h3>
+                        <p class="text-muted mb-0">Conoce mas acerca sobre Bachillerato internacional!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6  col-md-offset-3 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fas fa-handshake text-services-apoyo text-services"></i>
+                        <h3 class="mb-3">Apoyo educativo</h3>
+                        <p class="text-muted mb-0">Conoce mas acerca de la diferentes ayudas que puedes obtener!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6  text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fas fa-users text-services-liceoycomunidad text-services"></i>
+                        <h3 class="mb-3">Liceo y comunidad </h3>
+                        <p class="text-muted mb-0">Ve cuales actividades se ofrecen en el liceo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+<section class="section--padding-bottom-small wow fadeInUp">
+    <div class="container">
+        <h1 class="text-center">Ultimas noticias</h1>
+        <div class="row">
+
+            @*@foreach(){}*@
+
+            <div class="col-sm-4">
+                <div class="post">
+                    <div class="image"><a href="text.html"><img src="~/Images/hd.jpg" alt="" class="img-responsive"></a></div>
+                    <h3><a href="text.html">Noticia 1</a></h3>
+                    <p class="post__intro">Intro noticia 1</p>
+                    <p class="read-more"><a href="text.html" class="btn btn-ghost">Leer mas</a></p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="post">
+                    <div class="image"><a href="text.html"><img src="~/Images/hd.jpg" alt="" class="img-responsive"></a></div>
+                    <h3><a href="text.html">Noticia 2</a></h3>
+                    <p class="post__intro"> Intro noticia 2</p>
+                    <p class="read-more"><a href="text.html" class="btn btn-ghost">Leer mas</a></p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="post">
+                    <div class="image"><a href="text.html"><img src="~/Images/hd.jpg" alt="" class="img-responsive"></a></div>
+                    <h3><a href="text.html">Noticia 3</a></h3>
+                    <p class="post__intro">Intro noticia 3</p>
+                    <p class="read-more"><a href="text.html" class="btn btn-ghost">Leer mas</a></p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-    <h3>Hola</h3>
-</div>
+</section>
+

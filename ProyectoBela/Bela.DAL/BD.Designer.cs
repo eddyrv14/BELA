@@ -26,7 +26,8 @@ namespace Bela.DAL {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=BayronAnalisis;password=proyectoBela1224;database=bela")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HEOAUNE\\BAYRONBD;Initial Catalog=bela;Integrated Security=Tru" +
+            "e")]
         public string conexion {
             get {
                 return ((string)(this["conexion"]));

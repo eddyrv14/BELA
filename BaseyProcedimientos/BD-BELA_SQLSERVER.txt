@@ -1,0 +1,63 @@
+Create table Persona(idPersona int IDENTITY(1,1) primary key,
+nombre varchar(60),apellido1 varchar(60),
+apellido2 varchar(60),correo varchar(100));
+
+Create table Rol(idRol int IDENTITY(1,1) primary key,nombre varchar(40));
+
+Create table Usuario(idUsuario int primary key,idRol int,usuario varchar(30),contrasena varchar(30),
+
+CONSTRAINT FK_IDPERSONA foreign key (idUsuario)
+references Persona(idPersona),
+CONSTRAINT FK_IDROL foreign key (idRol) references Rol(idRol));
+
+
+Create table Materia(idMateria int IDENTITY(1,1) primary key,nombre varchar(20));
+
+
+Create table Seccion(idSeccion int IDENTITY(1,1) primary key,nombre varchar(10));
+
+Create table DetalleMateria(idDetalleMateria int IDENTITY(1,1) primary key,idMateria int,idUsuario int,idSeccion int,grado int,CONSTRAINT FK_IDPROFESOR
+foreign key (idUsuario) references Usuario(idUsuario),
+CONSTRAINT FK_IDSECCION foreign key (idSeccion) references Seccion(idSeccion),
+CONSTRAINT FK_IDMATERIA foreign key (idMateria) references Materia(idMateria));
+
+Create table EstudiantesMaterias(idEstudianteMateria int IDENTITY(1,1) primary key,idUsuario int,idDetalleMateria int,
+CONSTRAINT FK_IDUSUESTUDIANTE FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
+CONSTRAINT FK_IDDETALLEMATERIAEST FOREIGN KEY (idDetalleMateria) REFERENCES DetalleMateria(idDetalleMateria));
+
+Create table ProfesoresMaterias(idProfesoresMaterias int IDENTITY(1,1) primary key,idUsuario int,idDetalleMateria int,
+CONSTRAINT FK_IDUSUPROFE FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
+CONSTRAINT FK_IDDETALLEMATERIAPROF FOREIGN KEY (idDetalleMateria) REFERENCES DetalleMateria(idDetalleMateria));
+
+Create table TipoNoticia(idTipoNoticia int IDENTITY(1,1) primary key,nombre varchar(20));
+
+
+
+Create table Noticia(idNoticia int IDENTITY(1,1)  primary key,idUsuario int,idtipo int,titulo varchar(100),descripcion varchar(300),
+contenido varchar(1000),imagen varchar(45),fechaYHora datetime,
+CONSTRAINT FK_IDUSUARIONOTI FOREIGN KEY (idUsuario) references Usuario(idUsuario),
+CONSTRAINT FK_IDTIPONOTI FOREIGN KEY (idTipo)REFERENCES tipoNoticia(idTipoNoticia));
+
+Create table ImagenNoticia(idImagen int IDENTITY(1,1) primary key,idNoticia int,imagen varchar(30),
+CONSTRAINT FK_IDNOTICIAIMG FOREIGN KEY (idNoticia) REFERENCES Noticia(idNoticia));
+
+
+Create table MensajeContacto(idMensaje int IDENTITY(1,1) primary key,correo varchar(45),asunto varchar(60),mensaje varchar(200));
+
+
+Create table Material(idMaterial int IDENTITY(1,1) primary key,idUsuario int,idDetalleMateria int,titulo varchar(100),
+mensaje varchar(300),material varchar(45),fechaHora datetime,
+CONSTRAINT FK_DETALLE FOREIGN KEY(idDetalleMateria)
+ REFERENCES 
+DetalleMateria(idDetalleMateria),
+
+CONSTRAINT FK_IDUSUARIOSUBIO FOREIGN KEY (idUsuario) references Usuario(idUsuario));
+
+Create table MasMaterial(idMasMaterial int IDENTITY(1,1) primary key,idMaterial int,material varchar(30),
+
+CONSTRAINT FK_IDMaterialMas FOREIGN KEY (idMaterial)REFERENCES Material(idMaterial));
+
+Create table NotiInternas(idNotificacionInt int IDENTITY(1,1) primary key,idUsuario int,CONSTRAINT FK_IDUSARIOCORREO FOREIGN KEY (idUsuario)
+REFERENCES Usuario(idUsuario));
+
+Create table NotiExternas(idNoticficacionExter int IDENTITY(1,1) primary key,correo varchar(100)); 

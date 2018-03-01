@@ -1,0 +1,29 @@
+************************MENSAJES
+
+CREATE PROC insertarMensaje
+@correo varchar(45),
+@asunto varchar(45),
+@mensaje varchar(200)
+as
+INSERT INTO MensajeContacto(correo,asunto,mensaje) values(@correo,@asunto,@mensaje)
+go
+
+
+**********************FIN MENSAJES
+
+********************* NOTICIAS
+Create PROC listaNoticias
+as
+SELECT idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia
+go
+
+
+
+Create PROC ultimasNoticias
+as
+SELECT TOP 5 idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia
+ORDER BY idNoticia DESC
+go
+
+
+*********************FIN NOTICIAS
