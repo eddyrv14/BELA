@@ -109,8 +109,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sub-title {
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 45px;
+    font-weight: 600;
     color: #fff;
     line-height: 71px;
     letter-spacing: 4px;
@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
     .intro h3 {
         color: #fff;
         margin-top: 0;
-        font-size:30px;
+        font-size: 30px;
     }
 
     .intro p {
@@ -178,6 +178,19 @@ h1, h2, h3, h4, h5, h6 {
 .text-services:hover {
     color: black;
     cursor: pointer;
+}
+
+
+.text-services-apoyo {
+    color: #DF122E;
+}
+
+.text-services-liceoycomunidad {
+    color: #8A35F1;
+}
+
+.text-services-noticias {
+    color: #D06111;
 }
 
 .service-box {
@@ -263,24 +276,7 @@ h3.txt-tl {
     font-size: 24px;
     line-height: 1.35;
 }
-/****/
-.parallax {
-    background-attachment: fixed;
-    background-repeat: repeat-y;
-    background-position: center center;
-}
 
-.bg-image-2 {
-    background: url('../img/cta-banner.jpg') no-repeat center fixed;
-    -webkit-background-size: 100% auto;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    background-size: 100% auto;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
 .section {
     position: relative;
@@ -418,7 +414,7 @@ a, a:hover {
         border-color: #FFBF00;
     }
 
-    /**/
+/**/
 
 .post {
     margin-bottom: 60px;
