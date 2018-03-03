@@ -42,6 +42,7 @@
     <Compile Include="Interfaces\IContacto.cs" />
     <Compile Include="Interfaces\INoticia.cs" />
     <Compile Include="Metodos\MContactoBL.cs" />
+    <Compile Include="Metodos\MNoticiaBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

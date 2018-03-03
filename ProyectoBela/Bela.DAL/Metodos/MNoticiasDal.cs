@@ -6,36 +6,40 @@ using System.Threading.Tasks;
 using ServiceStack.OrmLite;
 using System.Data;
 using Bela.DAL.Interfaces;
+using Bela.Datos;
 
 namespace Bela.DAL.Metodos
 {
- public   class MNoticias:INoticia
+ public   class MNoticiasDal:INoticia
     {
 
      private OrmLiteConnectionFactory _conex;
      private IDbConnection _db;
 
 
-     public MNoticias()
+     public MNoticiasDal()
      {
          _conex = new OrmLiteConnectionFactory(BD.Default.conexion, SqlServerDialect.Provider);
          _db = _conex.Open();
      }
 
 
-     public List<Datos.Noticia> listaNoticias()
+     public List<Noticia> listaNoticias()
      {
          throw new NotImplementedException();
      }
 
-     public List<Datos.Noticia> ultimasNoticias()
+     public List<Noticia> ultimasNoticias()
+     {
+          var re = _db.SqlList<Noticia>("EXEC ultimasNoticias").ToList();
+          return re;
+     }
+
+
+     public void eliminarNoticia(int idNoticia)
      {
          throw new NotImplementedException();
      }
 
-     public void insertarNoticia(Datos.Noticia noticia)
-     {
-         throw new NotImplementedException();
-     }
     }
 }

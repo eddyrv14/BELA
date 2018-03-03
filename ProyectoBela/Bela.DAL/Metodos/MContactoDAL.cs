@@ -12,13 +12,13 @@ using Bela.Datos;
 
 namespace Bela.DAL.Metodos
 {
-    public class MContactoDAL : IContacto
+    public class MContactoDal : IContacto
     {
 
         private OrmLiteConnectionFactory _conex;
         private IDbConnection _db;
 
-        public MContactoDAL()
+        public MContactoDal()
         {
             _conex = new OrmLiteConnectionFactory(BD.Default.conexion, SqlServerDialect.Provider);
             _db = _conex.Open();

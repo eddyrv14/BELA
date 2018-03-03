@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Bela.UI.Models.Noticia>
+@{
     ViewBag.Title = "Liceo de puriscal";
 }
 
@@ -21,7 +22,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Informacion</h2>
+                    <h1 class="section-heading">Informacion</h1>
                     <hr class="my-4">
                 </div>
             </div>
@@ -30,88 +31,73 @@
             <div class="row wow fadeInUp">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box mt-5 mx-auto">
-                        <i class="fa fa-4x fas fa-building text-services text-warning mb-3 sr-icons"></i>
+                        <a onclick="location.href='@Url.Action("vidaEstudiantil","Informacion")'"> <i class="fa fa-4x fas fa-building text-services text-warning mb-3 sr-icons"></i></a>
                         <h3 class="mb-3">Vida estudiantil</h3>
-                        <p class="text-muted mb-0">Los estudiantes ads</p>
+                        <p class="text-muted mb-0">Los estudiantes </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box mt-5 mx-auto">
-                      <a onclick="location.href='@Url.Action("Index","Noticia")'"><i class="fa fa-4x fa-newspaper text-services-noticias text-services mb-3 sr-icons"></i></a>
+                        <a onclick="location.href='@Url.Action("Index", "Noticia")'"> <i class="fa fa-4x fa-newspaper text-primary  text-services-noticias text-services mb-3 sr-icons"></i></a>
                         <h3 class="mb-3">Noticias</h3>
-                        <p class="text-muted mb-0">Puedes estar al tanto de las diferentes acontecimientos que suceden
-                         en la institucion</p>
+                        <p class="text-muted mb-0">
+                            Puedes estar al tanto de las diferentes acontecimientos que suceden
+                            en la institucion
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center ">
                     <div class="service-box mt-5 mx-auto">
-                        <i class="fa fa-4x fas fa-address-card text-success text-services mb-3 sr-icons"></i>
+                        <a onclick="location.href='@Url.Action("matricula","Informacion")'"><i class="fa fa-4x fas fa-address-card text-services-noticias text-services  text-services-matricula sr-icons"></i></a>
                         <h3 class="mb-3">Matricula</h3>
-                        <p class="text-muted mb-0">El proceso de matriculas</p>
+                        <p class="text-muted mb-0">El proceso de matricula</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box mt-5 mx-auto">
-                        <i class="fa fa-4x fas fa-graduation-cap text-primary text-services"></i>
+                        <a onclick="location.href='@Url.Action("bachilleratoInternacional","Informacion")'"><i class="fa fa-4x fas fa-graduation-cap text-primary text-services"></i></a>
                         <h3 class="mb-3">Bachillerato internacional</h3>
                         <p class="text-muted mb-0">Conoce mas acerca sobre Bachillerato internacional!</p>
                     </div>
                 </div>
-
                 <div class="col-lg-3 col-md-6  col-md-offset-3 text-center">
                     <div class="service-box mt-5 mx-auto">
-                        <i class="fa fa-4x fas fa-handshake text-services-apoyo text-services"></i>
+                        <a onclick="location.href='@Url.Action("apoyoEducativo","Informacion")'"><i class="fa fa-4x fas fa-handshake text-services-apoyo text-services"></i></a>
                         <h3 class="mb-3">Apoyo educativo</h3>
                         <p class="text-muted mb-0">Conoce mas acerca de la diferentes ayudas que puedes obtener!</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6  text-center">
                     <div class="service-box mt-5 mx-auto">
-                        <i class="fa fa-4x fas fa-users text-services-liceoycomunidad text-services"></i>
+                        <a onclick="location.href='@Url.Action("liceoComunidad","Informacion")'"><i class="fa fa-4x fas fa-users text-services-liceoycomunidad text-services"></i></a>
                         <h3 class="mb-3">Liceo y comunidad </h3>
                         <p class="text-muted mb-0">Ve cuales actividades se ofrecen en el liceo</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
 </div>
 
 
-<section class="section--padding-bottom-small wow fadeInUp">
+<section class="section--padding-bottom-small wow fadeInUp news">
     <div class="container">
         <h1 class="text-center">Ultimas noticias</h1>
         <div class="row">
 
-            @*@foreach(){}*@
+            @foreach (var item in Model)
+            {
 
-            <div class="col-sm-4">
-                <div class="post">
-                    <div class="image"><a href="text.html"><img src="~/Images/hd.jpg" alt="" class="img-responsive"></a></div>
-                    <h3><a href="text.html">Noticia 1</a></h3>
-                    <p class="post__intro">Intro noticia 1</p>
-                    <p class="read-more"><a href="text.html" class="btn btn-ghost">Leer mas</a></p>
+                <div class="col-sm-4">
+                    <div class="post">
+                        <div class="image"><a href="text.html"><img src="@Html.DisplayFor(modelItem => item.imagen)" alt="" class="img-responsive"></a></div>
+                        <h3><a href="text.html">@Html.DisplayFor(modelItem => item.titulo)</a></h3>
+                        <p class="post__intro">@Html.DisplayFor(modelItem => item.descripcion)</p>
+                        <p class="read-more"><a onclick="location.href='@Url.Action("Details", "Noticia", new { id=item.idNoticia})'" class="btn btn-ghost">Leer mas</a></p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-sm-4">
-                <div class="post">
-                    <div class="image"><a href="text.html"><img src="~/Images/hd.jpg" alt="" class="img-responsive"></a></div>
-                    <h3><a href="text.html">Noticia 2</a></h3>
-                    <p class="post__intro"> Intro noticia 2</p>
-                    <p class="read-more"><a href="text.html" class="btn btn-ghost">Leer mas</a></p>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="post">
-                    <div class="image"><a href="text.html"><img src="~/Images/hd.jpg" alt="" class="img-responsive"></a></div>
-                    <h3><a href="text.html">Noticia 3</a></h3>
-                    <p class="post__intro">Intro noticia 3</p>
-                    <p class="read-more"><a href="text.html" class="btn btn-ghost">Leer mas</a></p>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
-

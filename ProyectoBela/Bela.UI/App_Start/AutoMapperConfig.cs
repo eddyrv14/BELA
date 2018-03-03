@@ -15,10 +15,11 @@ namespace Bela.UI.App_Start
             {
                 //Inserts, Update, Deletes
                cfg.CreateMap<Models.MensajeContacto, Bela.Datos.MensajeContacto>();
+               cfg.CreateMap<Models.Noticia, Bela.Datos.Noticia>();
 
                 //// Selects
                 cfg.CreateMap<Bela.Datos.MensajeContacto, Models.MensajeContacto>();
-
+                cfg.CreateMap<Bela.Datos.Noticia, Models.Noticia>();
 
             });
         }

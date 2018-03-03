@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace Bela.Datos
+namespace Bela.UI.Models
 {
-   public class Noticia
+    public class Noticia
     {
         public int idNoticia { get; set; }
         public string titulo { get; set; }

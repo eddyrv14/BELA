@@ -164,11 +164,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\ContactoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InformacionController.cs" />
     <Compile Include="Controllers\NoticiaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\MensajeContacto.cs" />
+    <Compile Include="Models\Noticia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -238,6 +240,12 @@
     <Content Include="Views\Shared\_Contacto.cshtml" />
     <Content Include="Views\Noticia\Index.cshtml" />
     <Content Include="Views\Shared\_Noticia.cshtml" />
+    <Content Include="Views\Shared\_Informacion.cshtml" />
+    <Content Include="Views\Informacion\apoyoEducativo.cshtml" />
+    <Content Include="Views\Informacion\bachilleratoInternacional.cshtml" />
+    <Content Include="Views\Informacion\liceoComunidad.cshtml" />
+    <Content Include="Views\Informacion\matricula.cshtml" />
+    <Content Include="Views\Informacion\vidaEstudiantil.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
