@@ -26,7 +26,8 @@ namespace Bela.DAL.Metodos
 
      public List<Noticia> listaNoticias()
      {
-         throw new NotImplementedException();
+         var re = _db.SqlList<Noticia>("EXEC listaNoticiasPublicas").ToList();
+         return re;
      }
 
      public List<Noticia> ultimasNoticias()

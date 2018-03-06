@@ -3,16 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Bela.Datos;
+using Bela.BL.Interfaces;
+using Bela.BL.Metodos;
+using AutoMapper;
 
 namespace Bela.UI.Controllers
 {
     public class NoticiaController : Controller
     {
-        //
-        // GET: /Noticia/
-        public ActionResult Index()
+        INoticia noticias;
+
+        public NoticiaController()
         {
-            return View();
+            noticias = new MNoticiaBL();
+        }
+        public ActionResult Noticias()
+        {
+            var listaNoticias = noticias.listaNoticias();
+            var lista = Mapper.Map<List<Models.Noticia>>(listaNoticias);
+            return View(lista);
         }
 	}
 }

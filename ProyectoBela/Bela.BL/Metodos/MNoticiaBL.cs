@@ -16,7 +16,7 @@ namespace Bela.BL.Metodos
 
         public List<Noticia> listaNoticias()
         {
-            throw new NotImplementedException();
+            return noticias.listaNoticias();
         }
 
         public List<Noticia> ultimasNoticias()

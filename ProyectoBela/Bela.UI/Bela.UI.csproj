@@ -183,13 +183,15 @@
     <Content Include="Content\responsive.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style2.css" />
+    <Content Include="Content\styleNoticias.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\banner.jpg" />
-    <Content Include="Images\hd.jpg" />
+    <Content Include="Imagenes\banner.jpg" />
+    <Content Include="Imagenes\hd.jpg" />
+    <Content Include="Imagenes\inicio3.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\fontawesome-webfont.eot" />
@@ -238,7 +240,7 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Contacto\EnvioMensaje.cshtml" />
     <Content Include="Views\Shared\_Contacto.cshtml" />
-    <Content Include="Views\Noticia\Index.cshtml" />
+    <Content Include="Views\Noticia\Noticias.cshtml" />
     <Content Include="Views\Shared\_Noticia.cshtml" />
     <Content Include="Views\Shared\_Informacion.cshtml" />
     <Content Include="Views\Informacion\apoyoEducativo.cshtml" />

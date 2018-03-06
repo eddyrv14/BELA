@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Bela.UI.Models.Noticia>
+@{
+    ViewBag.Title = "Liceo de puriscal";
+    Layout = "~/Views/Shared/_Noticia.cshtml";
+}
+
+
+<section class="section--padding-bottom-small noticias">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 wow fadeInUp">
+                    <div class="post">
+                        <div class="image"><a href="text.html"><img src="@Html.DisplayFor(modelItem => item.imagen)" alt="" class="img-responsive"></a></div>
+                        <h3><a href="text.html">@Html.DisplayFor(modelItem => item.titulo)</a></h3>
+                        <p class="post__intro">@Html.DisplayFor(modelItem => item.descripcion)</p>
+                        <p class="read-more"><a href="text.html" class="btn btn-ghost">Leer mas  </a></p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+

@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-header {
-    background: url(../Images/banner.jpg) no-repeat;
+    background: url(../Imagenes/banner.jpg) no-repeat;
     background-size: cover;
     min-height: 550px;
 }
@@ -199,23 +199,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /****/
-#cta-1 {
-    padding: 40px 0px;
-}
 
-.cta-info {
-    border: 5px solid #FFD34E;
-    padding: 40px 0px;
-}
 
-    .cta-info h3 {
-        font-size: 24px;
-    }
-
-.dec-tec {
-    font-size: 34px;
-}
-/****/
 
 
 

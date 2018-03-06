@@ -361,18 +361,6 @@ a, a:hover
     transform: rotate(20deg);
 }
 
-.btn-ghost {
-  color: #FFBF00;
-  background-color: transparent;
-  border-color: #FFBF00;
-}
-.btn-ghost:hover
- {
-  color: #FFF;
-  background-color: #FFBF00;
-  border-color: #FFBF00;
-}
-
 
 
 /**Footer**/

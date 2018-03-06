@@ -10,7 +10,7 @@
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/style2.css" rel="stylesheet" />
     @* <link href="~/Content/animated.css" rel="stylesheet" />*@
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
                         <div class="collapse navbar-collapse navbar-right" id="mynavbar">
                             <ul class="nav navbar-nav">
                                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                                <li>@Html.ActionLink("Noticias", "Index", "Noticia")</li>
+                                <li>@Html.ActionLink("Noticias", "Noticias", "Noticia")</li>
                                 <li>@Html.ActionLink("Contacto", "EnvioMensaje", "Contacto")</li>
                                 <li><a href="#contact">Login</a></li>
                             </ul>
@@ -52,16 +52,16 @@
                 <div class="col-sm-7 footer-copyright">
                     © Liceo de Puriscal - Todos los derechos reservados
                     <div class="credits">
-                        Creado por <a href="#">Estudiantes UFIDELITAS</a>
+                        Creado por <a href="https://ufidelitas.ac.cr/">Estudiantes UFIDELITAS</a>
                     </div>
                 </div>
                 <div class="col-sm-5 footer-social">
                     <div class="pull-right hidden-xs hidden-sm">
-                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                        <a href="#"><i class="fa fa-dribbble fa-lg"></i></a>
-                        <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                        <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                        <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+                        <a href="https://www.facebook.com/pg/liceodepuriscalOFICIAL/posts/?ref=page_internal" title="Facebook"><i class="fab fa-facebook-square fa-2x"></i></a>
+                        @*<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>*@
+                        <a href="https://wego.here.com/directions/mix//Liceo-de-Puriscal,-114001-Santiago:e-eyJuYW1lIjoiTGljZW8gZGUgUHVyaXNjYWwiLCJhZGRyZXNzIjoiMTE0MDAxIFNhbnRpYWdvLCBTYW4gSm9zZSwgQ29zdGEgUmljYSIsImxhdGl0dWRlIjo5Ljg0NzM2MjM1MDIyODQsImxvbmdpdHVkZSI6LTg0LjMxMzEyNDMyMTU1NCwicHJvdmlkZXJOYW1lIjoiZmFjZWJvb2siLCJwcm92aWRlcklkIjo0Mzc3NzI2NTI5OTU3OTN9?map=9.84736,-84.31312,15,normal&fb_locale=es_LA" title="Ubicacion"><i class="fas fa-map-marker-alt fa-2x"></i></i></a>
                     </div>
                 </div>
             </div>
