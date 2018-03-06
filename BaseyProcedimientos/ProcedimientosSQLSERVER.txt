@@ -1,6 +1,6 @@
 ************************MENSAJES
 
-CREATE PROC insertarMensaje
+CREATE OR ALTER PROC insertarMensaje
 @correo varchar(45),
 @asunto varchar(45),
 @mensaje varchar(200)
@@ -12,18 +12,18 @@ go
 **********************FIN MENSAJES
 
 ********************* NOTICIAS
-Create PROC listaNoticias
+Create  or ALTER PROC listaNoticiasPublicas
 as
-SELECT idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia
+SELECT idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia where idTipo=1 Order by idNoticas Desc
 go
 
+----
 
-
-Create PROC ultimasNoticias
+Create or ALTER PROC ultimasNoticias
 as
-SELECT TOP 5 idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia
+SELECT TOP 3 idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia where idTipo=1
 ORDER BY idNoticia DESC
 go
 
 
-*********************FIN NOTICIAS
+*******************FIN NOTICIAS
