@@ -25,5 +25,14 @@ SELECT TOP 3 idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia 
 ORDER BY idNoticia DESC
 go
 
+---
+
+Create or alter proc detalleNoticia
+@idNoticia int
+as
+SELECT n.idNoticia,p.Nombre,p.Apellido1,
+n.Titulo,n.Descripcion,n.Contenido,n.Imagen,n.fechaYHora from Noticia n join  Persona p on p.idPersona=n.idUsuario  where n.idNoticia=@idNoticia
+go
+
 
 *******************FIN NOTICIAS
