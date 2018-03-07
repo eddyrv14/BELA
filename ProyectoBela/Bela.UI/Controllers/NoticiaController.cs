@@ -24,5 +24,13 @@ namespace Bela.UI.Controllers
             var lista = Mapper.Map<List<Models.Noticia>>(listaNoticias);
             return View(lista);
         }
+
+        public ActionResult Detalles(int idNoticia)
+        {
+            var noticiaDetails = noticias.buscarNoticiaDetalle(idNoticia);
+            var noticiaDetailsMostrar = Mapper.Map<Models.NoticiaDetalles>(noticiaDetails);
+            return View(noticiaDetailsMostrar);
+
+        }
 	}
 }

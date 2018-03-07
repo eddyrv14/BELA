@@ -28,5 +28,11 @@ namespace Bela.BL.Metodos
         {
             throw new NotImplementedException();
         }
+
+
+        public NoticiaDetalles buscarNoticiaDetalle(int idNoticia)
+        {
+            return noticias.buscarNoticiaDetalle(idNoticia);
+        }
     }
 }

@@ -11,7 +11,8 @@ namespace Bela.DAL.Interfaces
     {
         List<Noticia> listaNoticias();
         List<Noticia> ultimasNoticias();
-        void eliminarNoticia(int idNoticia);
+        void insertarNoticia(Noticia noticia);
+        NoticiaDetalles buscarNoticiaDetalle(int idNoticia);
        
     }
 }

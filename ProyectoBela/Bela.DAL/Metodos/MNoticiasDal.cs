@@ -37,10 +37,15 @@ namespace Bela.DAL.Metodos
      }
 
 
-     public void eliminarNoticia(int idNoticia)
+     public void insertarNoticia(Noticia noticia)
      {
          throw new NotImplementedException();
      }
 
+     public NoticiaDetalles buscarNoticiaDetalle(int idNoticia)
+     {
+         var re = _db.SqlList<NoticiaDetalles>("EXEC detalleNoticia @idNoticia", new { idNoticia = idNoticia }).FirstOrDefault();
+         return re;
+     }
     }
 }

@@ -20,6 +20,7 @@ namespace Bela.UI.App_Start
                 //// Selects
                 cfg.CreateMap<Bela.Datos.MensajeContacto, Models.MensajeContacto>();
                 cfg.CreateMap<Bela.Datos.Noticia, Models.Noticia>();
+                cfg.CreateMap<Bela.Datos.NoticiaDetalles, Models.NoticiaDetalles>();
 
             });
         }
