@@ -173,6 +173,8 @@
     <Compile Include="Models\MensajeContacto.cs" />
     <Compile Include="Models\Noticia.cs" />
     <Compile Include="Models\NoticiaDetalles.cs" />
+    <Compile Include="Models\Persona.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
