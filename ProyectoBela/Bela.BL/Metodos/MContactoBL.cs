@@ -11,7 +11,7 @@ namespace Bela.BL.Metodos
 {
     public class MContactoBL:IContacto
     {
-        MContactoDAL contacto = new MContactoDAL();
+        MContactoDal contacto = new MContactoDal();
 
         public void EnvioMensaje(MensajeContacto mensaje)
         {
