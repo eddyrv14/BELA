@@ -1,4 +1,4 @@
-************************MENSAJES
+************************MENSAJES*************************************
 
 CREATE OR ALTER PROC insertarMensaje
 @correo varchar(45),
@@ -11,7 +11,7 @@ go
 
 **********************FIN MENSAJES
 
-********************* NOTICIAS
+********************* NOTICIAS***************************************
 Create  or ALTER PROC listaNoticiasPublicas
 as
 SELECT idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia where idTipo=1 Order by idNoticas Desc
@@ -29,10 +29,24 @@ go
 
 Create or alter proc detalleNoticia
 @idNoticia int
+
 as
 SELECT n.idNoticia,p.Nombre,p.Apellido1,
 n.Titulo,n.Descripcion,n.Contenido,n.Imagen,n.fechaYHora from Noticia n join  Persona p on p.idPersona=n.idUsuario  where n.idNoticia=@idNoticia
 go
 
+---
 
-*******************FIN NOTICIAS
+
+*******************FIN NOTICIAS*********************************************
+
+**************Usuarios
+Create or alter proc login
+@usuario varchar(30),
+@contrasena varchar(30)
+as
+Select p.idPersona,p.nombre,p.apellido1,p.apellido2,p.correo,u.idUsuario,u.idRol,r.nombre as rolNombre,u.usuario,u.contrasena From Usuario u JOIN Persona p on p.idPersona=u.idUsuario
+JOIN Rol  r on u.idRol=r.idRol where u.usuario=@usuario and u.contrasena=@contrasena
+go
+
+**************Usuarios

@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title</title>
+    <title>@ViewBag.Title-Perfil</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/style2.css" rel="stylesheet" />
@@ -33,26 +33,22 @@
 
                                 @if (Session["UserID"] != null && Session["rol"].Equals("Administrador"))
                                 {
-                                    <li>@Html.ActionLink("Perfil", "Inicio", "Admin")</li>
+                                    <li class="active">@Html.ActionLink("Perfil", "Inicio", "Admin")</li>
                                 }
 
                                 @if (Session["UserID"] != null && Session["rol"].Equals("Profesor"))
                                 {
-                                    <li>@Html.ActionLink("Perfil", "Inicio", "Profesor")</li>
+                                    <li class="active">@Html.ActionLink("Perfil", "Inicio", "Profesor")</li>
                                 }
 
                                 @if (Session["UserID"] != null && Session["rol"].Equals("Estudiante"))
                                 {
-                                    <li>@Html.ActionLink("Perfil", "Inicio", "Estudiante")</li>
+                                    <li class="active">@Html.ActionLink("Perfil", "Inicio", "Estudiante")</li>
                                 }
 
                                 @if (Session["UserID"] != null)
                                 {
                                     <li>@Html.ActionLink("Salir", "Salir", "Usuario")</li>
-                                }
-                                else
-                                {
-                                    <li>@Html.ActionLink("Login", "Login", "Usuario")</li>
                                 }
 
                             </ul>
@@ -100,3 +96,4 @@
     @* <script src="~/Scripts/formularioContacto.js"></script>*@
 </body>
 </html>
+

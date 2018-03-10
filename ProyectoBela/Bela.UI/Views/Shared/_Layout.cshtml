@@ -1,19 +1,19 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@ViewBag.Title - Inicio</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-   <link href="~/Content/animated.css" rel="stylesheet" />
-   <link href="~/Content/fontawesome.css" rel="stylesheet" />
+    <link href="~/Content/animated.css" rel="stylesheet" />
+    <link href="~/Content/fontawesome.css" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-   <link href="~/Content/main.css" rel="stylesheet" />
-   <link href="~/Content/responsive.css" rel="stylesheet" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <link href="~/Content/responsive.css" rel="stylesheet" />
     <link href="~/Content/style.css" rel="stylesheet" />
-    
+
 </head>
 
 <body>
@@ -27,14 +27,37 @@
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="fa fa-bars"></span>
                             </button>
-                            <a href="~Views/Home/Index.cshtml" class="navbar-brand">Liceo de Puriscal</a>
+                            <a href="index.html" class="navbar-brand">Liceo de Puriscal</a>
                         </div>
                         <div class="collapse navbar-collapse navbar-right" id="mynavbar">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#header">Inicio</a></li>
-                                <li>@Html.ActionLink("Noticias","Noticias","Noticia")</li>
-                                <li>@Html.ActionLink("Contacto","EnvioMensaje","Contacto")</li>
-                                <li><a href="#">Login</a></li>
+                                <li class="active">@Html.ActionLink("Inicio", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Noticias", "Noticias", "Noticia")</li>
+                                <li>@Html.ActionLink("Contacto", "EnvioMensaje", "Contacto")</li>
+
+                                @if (Session["UserID"] != null && Session["rol"].Equals("Administrador"))
+                                {
+                                    <li>@Html.ActionLink("Perfil", "Inicio", "Admin")</li>
+                                }
+
+                                @if (Session["UserID"] != null && Session["rol"].Equals("Profesor"))
+                                {
+                                    <li>@Html.ActionLink("Perfil", "Inicio", "Profesor")</li>
+                                }
+
+                                @if (Session["UserID"] != null && Session["rol"].Equals("Estudiante"))
+                                {
+                                    <li>@Html.ActionLink("Perfil", "Inicio", "Estudiante")</li>
+                                }
+
+                                @if (Session["UserID"] != null)
+                                {
+                                    <li>@Html.ActionLink("Salir", "Salir", "Usuario")</li>
+                                }
+                                else
+                                {
+                                    <li>@Html.ActionLink("Login", "Login", "Usuario")</li>
+                                }
                             </ul>
                         </div>
                     </div>
@@ -43,23 +66,22 @@
             <!--/ nav-->
             <div class="container text-center">
                 <div class="wrapper wow fadeInUp delay-05s">
-                    @*<h2 class="top-title">Liceo</h2>*@
                     <h3 class="title">Liceo de Puriscal</h3>
                     <h4 class="sub-title">La educacion para un futuro mejor</h4>
-                    
+
                 </div>
             </div>
         </div>
     </header>
     <!--/ header-->
     <!---->
-   
-    
-           
+
+
+
     <div class="">
         @RenderBody()
         <hr />
-        
+
     </div>
 
     <footer class="" id="footer">
@@ -75,8 +97,8 @@
                     <div class="pull-right hidden-xs hidden-sm">
                         <a href="https://www.facebook.com/pg/liceodepuriscalOFICIAL/posts/?ref=page_internal" title="Facebook"><i class="fab fa-facebook-square fa-2x"></i></a>
                         @*<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                        <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
-                        <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>*@
+                            <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>*@
                         <a href="https://wego.here.com/directions/mix//Liceo-de-Puriscal,-114001-Santiago:e-eyJuYW1lIjoiTGljZW8gZGUgUHVyaXNjYWwiLCJhZGRyZXNzIjoiMTE0MDAxIFNhbnRpYWdvLCBTYW4gSm9zZSwgQ29zdGEgUmljYSIsImxhdGl0dWRlIjo5Ljg0NzM2MjM1MDIyODQsImxvbmdpdHVkZSI6LTg0LjMxMzEyNDMyMTU1NCwicHJvdmlkZXJOYW1lIjoiZmFjZWJvb2siLCJwcm92aWRlcklkIjo0Mzc3NzI2NTI5OTU3OTN9?map=9.84736,-84.31312,15,normal&fb_locale=es_LA" title="Ubicacion"><i class="fas fa-map-marker-alt fa-2x"></i></i></a>
                     </div>
                 </div>
@@ -89,9 +111,9 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     <script src="~/Scripts/wow.js"></script>
-   <script src="~/Scripts/custom.js"></script>
-   <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+    <script src="~/Scripts/main.js"></script>
 
-    
+
 </body>
 </html>

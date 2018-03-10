@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -162,10 +163,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ContactoController.cs" />
+    <Compile Include="Controllers\EstudianteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InformacionController.cs" />
     <Compile Include="Controllers\NoticiaController.cs" />
+    <Compile Include="Controllers\ProfesorController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -255,6 +259,10 @@
     <Content Include="Views\Noticia\Detalles.cshtml" />
     <Content Include="Views\Usuario\login.cshtml" />
     <Content Include="Views\Shared\_Usuario.cshtml" />
+    <Content Include="Views\Admin\Inicio.cshtml" />
+    <Content Include="Views\Estudiante\Inicio.cshtml" />
+    <Content Include="Views\Profesor\Inicio.cshtml" />
+    <Content Include="Views\Shared\_Perfil.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

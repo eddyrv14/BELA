@@ -8,8 +8,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/style2.css" rel="stylesheet" />
-    <link href="~/Content/styleNoticias.css" rel="stylesheet" />
     <link href="~/Content/animated.css" rel="stylesheet" />
+    <link href="~/Content/stylesNoticias.css" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
 </head>
@@ -31,7 +31,30 @@
                                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                                 <li class="active">@Html.ActionLink("Noticias", "Noticias", "Noticia")</li>
                                 <li>@Html.ActionLink("Contacto", "EnvioMensaje", "Contacto")</li>
-                                <li><a href="#contact">Login</a></li>
+
+                                @if (Session["UserID"] != null && Session["rol"].Equals("Administrador"))
+                                {
+                                    <li>@Html.ActionLink("Perfil", "Inicio", "Admin")</li>
+                                }
+
+                                @if (Session["UserID"] != null && Session["rol"].Equals("Profesor"))
+                                {
+                                    <li>@Html.ActionLink("Perfil", "Inicio", "Profesor")</li>
+                                }
+
+                                @if (Session["UserID"] != null && Session["rol"].Equals("Estudiante"))
+                                {
+                                    <li>@Html.ActionLink("Perfil", "Inicio", "Estudiante")</li>
+                                }
+
+                                @if (Session["UserID"] != null)
+                                {
+                                    <li>@Html.ActionLink("Salir", "Salir", "Usuario")</li>
+                                }
+                                else
+                                {
+                                    <li>@Html.ActionLink("Login", "Login", "Usuario")</li>
+                                }
                             </ul>
                         </div>
                     </div>
@@ -74,6 +97,7 @@
     @RenderSection("scripts", required: false)
     <script src="~/Scripts/wow.js"></script>
     <script src="~/Scripts/custom.js"></script>
+    <script src="~/Scripts/main.js"></script>
     @* <script src="~/Scripts/formularioContacto.js"></script>*@
 </body>
 </html>
