@@ -273,10 +273,7 @@ h3.txt-tl {
     margin-left:100px;
 }
 
-#contact
-{
-	background-color: #f8f8f8;
-}
+
 
 .validation {
     color: red;
@@ -359,6 +356,16 @@ a, a:hover
     -moz-transform: rotate(20deg);
     -webkit-transform: rotate(20deg);
     transform: rotate(20deg);
+}
+
+.user-icon-container {
+    position: absolute;
+    top: -38px;
+    right: 0;
+    padding-right: 20px;
+    font-size: 320px;
+    color: #555;
+    line-height: 300px;
 }
 
 .btn-ghost {
