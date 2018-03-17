@@ -13,6 +13,7 @@ namespace Bela.DAL.Metodos
  public   class MNoticiasDal:INoticia
     {
 
+
         private OrmLiteConnectionFactory _conex;
         private IDbConnection _db;
 

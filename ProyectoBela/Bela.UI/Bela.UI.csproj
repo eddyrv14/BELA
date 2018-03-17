@@ -262,7 +262,7 @@
     <Content Include="Views\Contacto\EnvioMensaje.cshtml" />
     <Content Include="Views\Shared\_Contacto.cshtml" />
     <Content Include="Views\Noticia\Noticias.cshtml" />
-    <Content Include="Views\Shared\_Noticia.cshtml" />
+    <Content Include="Views\Shared\_Noticias.cshtml" />
     <Content Include="Views\Shared\_Informacion.cshtml" />
     <Content Include="Views\Informacion\apoyoEducativo.cshtml" />
     <Content Include="Views\Informacion\bachilleratoInternacional.cshtml" />

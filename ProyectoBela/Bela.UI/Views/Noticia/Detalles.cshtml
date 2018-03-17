@@ -1,6 +1,7 @@
 ﻿@model Bela.UI.Models.NoticiaDetalles
 
 @{
+    @Html.ActionLink("Liceo de Puriscal", "Index", "Home", null, new {@class = "navbar-brand" })
     ViewBag.Title = "Liceo de puriscal";
     Layout = "~/Views/Shared/_Noticias.cshtml";
     List<Bela.Datos.ImagenNoticia> lista = (List<Bela.Datos.ImagenNoticia>)ViewBag.Imagenes;
