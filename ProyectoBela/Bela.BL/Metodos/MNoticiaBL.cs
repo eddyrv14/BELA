@@ -24,15 +24,21 @@ namespace Bela.BL.Metodos
             return noticias.ultimasNoticias();
         }
 
+
         public void insertarNoticia(Noticia noticia)
         {
             throw new NotImplementedException();
         }
 
-
         public NoticiaDetalles buscarNoticiaDetalle(int idNoticia)
         {
             return noticias.buscarNoticiaDetalle(idNoticia);
+        }
+
+
+        public List<ImagenNoticia> listaImagenesNoticia(int idNoticia)
+        {
+            return noticias.listaImagenesNoticia(idNoticia);
         }
     }
 }

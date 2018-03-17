@@ -12,3 +12,8 @@ C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\bin\Debug\Bela.Dato
 C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\bin\Debug\Bela.Datos.pdb
 C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.dll
 C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.pdb
+C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\bin\Debug\Bela.Datos.dll
+C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\bin\Debug\Bela.Datos.pdb
+C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.csprojResolveAssemblyReference.cache
+C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.dll
+C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.pdb

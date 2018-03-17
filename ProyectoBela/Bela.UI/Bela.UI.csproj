@@ -174,6 +174,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ImagenNoticia.cs" />
     <Compile Include="Models\MensajeContacto.cs" />
     <Compile Include="Models\Noticia.cs" />
     <Compile Include="Models\NoticiaDetalles.cs" />
@@ -188,9 +189,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fontawesome.min.css" />
+    <Content Include="Content\lighbox.css" />
+    <Content Include="Content\lightboxmin.css" />
     <Content Include="Content\responsive.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style2.css" />
+    <Content Include="Content\styleinfo.css" />
+    <Content Include="Content\styleMaterias.css" />
     <Content Include="Content\styleNoticias.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -199,7 +204,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="Imagenes\banner.jpg" />
     <Content Include="Imagenes\hd.jpg" />
+    <Content Include="Imagenes\ImagenesNoticias\4.jpg" />
+    <Content Include="Imagenes\ImagenesNoticias\5.jpg" />
     <Content Include="Imagenes\inicio3.jpg" />
+    <Content Include="Imagenes\lightbox\close.png" />
+    <Content Include="Imagenes\lightbox\loading.gif" />
+    <Content Include="Imagenes\lightbox\next.png" />
+    <Content Include="Imagenes\lightbox\prev.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\fontawesome-webfont.eot" />

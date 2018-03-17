@@ -13,5 +13,8 @@ namespace Bela.BL.Interfaces
         List<Noticia> ultimasNoticias();
         void insertarNoticia(Noticia noticia);
         NoticiaDetalles buscarNoticiaDetalle(int idNoticia);
+
+        List<ImagenNoticia> listaImagenesNoticia(int idNoticia);
+
     }
 }

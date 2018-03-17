@@ -12,25 +12,32 @@ namespace Bela.UI.Controllers
 {
     public class NoticiaController : Controller
     {
+
         INoticia noticias;
 
         public NoticiaController()
         {
             noticias = new MNoticiaBL();
         }
+
         public ActionResult Noticias()
         {
             var listaNoticias = noticias.listaNoticias();
             var lista = Mapper.Map<List<Models.Noticia>>(listaNoticias);
             return View(lista);
+
         }
 
         public ActionResult Detalles(int idNoticia)
         {
+            List<ImagenNoticia> listaImagenes = new List<ImagenNoticia>();
+            listaImagenes = noticias.listaImagenesNoticia(idNoticia);
+            ViewBag.Imagenes = listaImagenes;
+
             var noticiaDetails = noticias.buscarNoticiaDetalle(idNoticia);
             var noticiaDetailsMostrar = Mapper.Map<Models.NoticiaDetalles>(noticiaDetails);
             return View(noticiaDetailsMostrar);
 
         }
-	}
+    }
 }
