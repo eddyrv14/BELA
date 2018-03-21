@@ -14,10 +14,18 @@ go
 ********************* NOTICIAS***************************************
 Create  or ALTER PROC listaNoticiasPublicas
 as
-SELECT idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia where idTipo=1 Order by idNoticas Desc
+SELECT idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia where idTipo=1 Order by idNoticia Desc
 go
 
 ----
+
+Create  or ALTER PROC listaNoticiasInternas
+as
+SELECT idNoticia,idtipo,titulo,descripcion,imagen,fechaYHora from Noticia where idTipo=2 Order by idNoticia Desc
+go
+
+
+---
 
 Create or ALTER PROC ultimasNoticias
 as
@@ -29,13 +37,33 @@ go
 
 Create or alter proc detalleNoticia
 @idNoticia int
-
 as
 SELECT n.idNoticia,p.Nombre,p.Apellido1,
 n.Titulo,n.Descripcion,n.Contenido,n.Imagen,n.fechaYHora from Noticia n join  Persona p on p.idPersona=n.idUsuario  where n.idNoticia=@idNoticia
 go
 
 ---
+
+CREATE PROC crearNoticia
+@idAdmin int,
+@idTipo int,
+@titulo varchar(100),
+@descripcion varchar(300),
+@contenido varchar(1000),
+@imagen varchar(45),
+@fechaHora datetime
+as
+INSERT INTO Noticia values(@idAdmin,@idTipo,@titulo,@descripcion,@contenido,@imagen,@fechaHora)
+go
+
+---
+
+CREATE PROC insertarImagenes
+@imagenes varchar(50)
+as
+INSERT INTO ImagenNoticia values((Select top 1 idNoticia from Noticia order by idNoticia desc),@imagenes)
+go
+
 
 
 *******************FIN NOTICIAS*********************************************

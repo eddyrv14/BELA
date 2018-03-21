@@ -4,5 +4,50 @@
     Layout = "~/Views/Shared/_Perfil.cshtml";
 }
 
-<h1> Bienvenido Estudiante @Session["UserNombre"].ToString()</h1>
+<div class="container text-center">
+    <h1> Bienvenido Estudiante @Session["UserNombre"].ToString()</h1>
+</div>
+
+
+
+<section id="experience" class="mismaterias">
+    <div class="container">
+        <div class="heading">
+            <h2>Materias</h2>
+            <h3>Esta al tanto de cada una de tus materias</h3>
+        </div>
+
+        <div class="row media materia-bor">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="materias-ico">
+                    Materia<br>Grado
+                </div>
+            </div>
+            <div class="materias-desc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <h4>Seccion:</h4>
+                <h5>Profesor:</h5>
+                <p>
+                    ultimo  Mensaje
+                </p>
+            </div>
+        </div>
+
+        <div class="row media materia-bor">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="materias-ico">
+                    Materia<br>Grado
+                </div>
+            </div>
+            <div class="materias-desc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <h4>Seccion:</h4>
+                <h5>Profesor:</h5>
+                <p>
+                    ultimo Mensaje
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</section>
 

@@ -47,7 +47,7 @@ namespace Bela.UI.Controllers
                     }
                     else
                     {
-                        ViewBag.MensajeLogin = "No se encontro el usuario";
+                        ViewData["mensajeLogin"] = "Usuario o contraseña incorrecta";
                         return View();
                     }
 
@@ -74,6 +74,7 @@ namespace Bela.UI.Controllers
                 return View();
             }
         }
+
         public ActionResult Salir()
         {
             Session.Abandon();

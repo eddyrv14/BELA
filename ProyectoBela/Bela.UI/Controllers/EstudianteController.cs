@@ -11,6 +11,10 @@ namespace Bela.UI.Controllers
         // GET: Estudiante
         public ActionResult Inicio()
         {
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
             return View();
         }
     }

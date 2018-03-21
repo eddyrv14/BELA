@@ -197,6 +197,7 @@
     <Content Include="Content\styleinfo.css" />
     <Content Include="Content\styleMaterias.css" />
     <Content Include="Content\styleNoticias.css" />
+    <Content Include="Content\stylosInicioPerfil.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -230,6 +231,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\lightbox.js" />
     <Content Include="Scripts\lightboxmin.js" />
+    <Content Include="Scripts\menuVertical.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -275,6 +277,8 @@
     <Content Include="Views\Estudiante\Inicio.cshtml" />
     <Content Include="Views\Profesor\Inicio.cshtml" />
     <Content Include="Views\Shared\_Perfil.cshtml" />
+    <Content Include="Views\Admin\CrearNoticia.cshtml" />
+    <Content Include="Views\Noticia\NoticiasInternas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

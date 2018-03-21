@@ -22,6 +22,7 @@ table {
 .section-padding
 {
 	padding: 60px 0px;
+    background-color:white;
 }
 h1, h2, h3, h4, h5, h6
 {
@@ -29,12 +30,13 @@ h1, h2, h3, h4, h5, h6
 }
 /**media Queries**/
 .navbar-default {
-    background-color: gray;
+    background-color:rgba(0,0,0,0.8)
 }
 .main-header
 {
 	background-size: cover;
 	min-height: 100px;
+    
 
 }
 .bg-color
@@ -152,23 +154,7 @@ h1, h2, h3, h4, h5, h6
     background: #fff;
 }
 /****/
-#cta-1
-{
-	padding: 40px 0px;
-}
-.cta-info
-{
-	border: 5px solid #FFD34E;
-	padding: 40px 0px;
-}
-.cta-info h3
-{
-	font-size: 24px;
-}
-.dec-tec
-{
-	font-size: 34px;
-}
+
 /****/
 #feature
 {
@@ -324,9 +310,23 @@ a, a:hover
 }
 .cont-title
 {
-	font-size: 24px;
+	font-size: 22px;
 	padding:15px 0px;
 }
+
+.cont-title-login
+{
+	font-size: 15px;
+	padding:15px 0px;
+}
+
+.cont-login-message
+{
+	font-size: 13px;
+	padding:15px 0px;
+    color:#B40404;
+}
+
 .location-info p span {
     display: inline-block;
 }
@@ -380,6 +380,17 @@ a, a:hover
   border-color: #FFBF00;
 }
 
+.btn-crear {
+    color: #FFF;
+    background-color:  #31B404;
+    border-color: #31B404;
+}
+
+    .btn-crear:hover {
+        color: #FFF;
+        background-color: #4B8A08;
+        border-color: #4B8A08;
+    }
 
 
 
