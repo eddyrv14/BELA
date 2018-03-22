@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Bela.BL.Interfaces;
 using Bela.Datos;
 using Bela.DAL.Metodos;
+using System.Text.RegularExpressions;
 
 
 namespace Bela.BL.Metodos
@@ -19,20 +20,46 @@ namespace Bela.BL.Metodos
             return noticias.listaNoticias();
         }
 
+        public List<Noticia> listaNoticiasInternas()
+        {
+            return noticias.listaNoticiasInternas();
+        }
+
         public List<Noticia> ultimasNoticias()
         {
             return noticias.ultimasNoticias();
         }
 
+
         public void insertarNoticia(Noticia noticia)
         {
-            throw new NotImplementedException();
+            DateTime fecha = Convert.ToDateTime(DateTime.Now.ToString("G"));
+            string limImagen = Regex.Replace(noticia.imagen, @"^[~]", "");
+            noticia.fechaYHora = fecha;
+            noticia.imagen = limImagen;
+            noticias.insertarNoticia(noticia);
         }
 
+        public void insertarImagenesAdicionales(string imagenes)
+        {
+            string limImg = Regex.Replace(imagenes, @"^[~]", "");
+            noticias.insertarImagenesAdicionales(limImg);
+        }
 
         public NoticiaDetalles buscarNoticiaDetalle(int idNoticia)
         {
             return noticias.buscarNoticiaDetalle(idNoticia);
+        }
+
+        public List<TipoNoticia> listaTiposNoticias()
+        {
+            return noticias.listaTipoNoticias();
+        }
+
+
+        public List<ImagenNoticia> listaImagenesNoticia(int idNoticia)
+        {
+            return noticias.listaImagenesNoticia(idNoticia);
         }
     }
 }

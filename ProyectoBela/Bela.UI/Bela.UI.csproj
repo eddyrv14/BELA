@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -162,17 +163,23 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ContactoController.cs" />
+    <Compile Include="Controllers\EstudianteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InformacionController.cs" />
     <Compile Include="Controllers\NoticiaController.cs" />
+    <Compile Include="Controllers\ProfesorController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ImagenNoticia.cs" />
     <Compile Include="Models\MensajeContacto.cs" />
     <Compile Include="Models\Noticia.cs" />
     <Compile Include="Models\NoticiaDetalles.cs" />
+    <Compile Include="Models\Persona.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -182,10 +189,15 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fontawesome.min.css" />
+    <Content Include="Content\lighbox.css" />
+    <Content Include="Content\lightboxmin.css" />
     <Content Include="Content\responsive.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style2.css" />
+    <Content Include="Content\styleinfo.css" />
+    <Content Include="Content\styleMaterias.css" />
     <Content Include="Content\styleNoticias.css" />
+    <Content Include="Content\stylosInicioPerfil.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -193,7 +205,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="Imagenes\banner.jpg" />
     <Content Include="Imagenes\hd.jpg" />
+    <Content Include="Imagenes\ImagenesNoticias\4.jpg" />
+    <Content Include="Imagenes\ImagenesNoticias\5.jpg" />
     <Content Include="Imagenes\inicio3.jpg" />
+    <Content Include="Imagenes\lightbox\close.png" />
+    <Content Include="Imagenes\lightbox\loading.gif" />
+    <Content Include="Imagenes\lightbox\next.png" />
+    <Content Include="Imagenes\lightbox\prev.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\fontawesome-webfont.eot" />
@@ -211,6 +229,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lightbox.js" />
+    <Content Include="Scripts\lightboxmin.js" />
+    <Content Include="Scripts\menuVertical.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -227,7 +248,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -243,7 +263,7 @@
     <Content Include="Views\Contacto\EnvioMensaje.cshtml" />
     <Content Include="Views\Shared\_Contacto.cshtml" />
     <Content Include="Views\Noticia\Noticias.cshtml" />
-    <Content Include="Views\Shared\_Noticia.cshtml" />
+    <Content Include="Views\Shared\_Noticias.cshtml" />
     <Content Include="Views\Shared\_Informacion.cshtml" />
     <Content Include="Views\Informacion\apoyoEducativo.cshtml" />
     <Content Include="Views\Informacion\bachilleratoInternacional.cshtml" />
@@ -253,6 +273,12 @@
     <Content Include="Views\Noticia\Detalles.cshtml" />
     <Content Include="Views\Usuario\login.cshtml" />
     <Content Include="Views\Shared\_Usuario.cshtml" />
+    <Content Include="Views\Admin\Inicio.cshtml" />
+    <Content Include="Views\Estudiante\Inicio.cshtml" />
+    <Content Include="Views\Profesor\Inicio.cshtml" />
+    <Content Include="Views\Shared\_Perfil.cshtml" />
+    <Content Include="Views\Admin\CrearNoticia.cshtml" />
+    <Content Include="Views\Noticia\NoticiasInternas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

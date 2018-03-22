@@ -14,14 +14,17 @@ namespace Bela.UI.App_Start
             Mapper.Initialize(cfg =>
             {
                 //Inserts, Update, Deletes
-               cfg.CreateMap<Models.MensajeContacto, Bela.Datos.MensajeContacto>();
-               cfg.CreateMap<Models.Noticia, Bela.Datos.Noticia>();
+                cfg.CreateMap<Models.MensajeContacto, Bela.Datos.MensajeContacto>();
+                cfg.CreateMap<Models.Noticia, Bela.Datos.Noticia>();
+                cfg.CreateMap<Models.Usuario, Bela.Datos.Usuario>();
+                cfg.CreateMap<Models.ImagenNoticia, Bela.Datos.ImagenNoticia>();
 
                 //// Selects
                 cfg.CreateMap<Bela.Datos.MensajeContacto, Models.MensajeContacto>();
                 cfg.CreateMap<Bela.Datos.Noticia, Models.Noticia>();
                 cfg.CreateMap<Bela.Datos.NoticiaDetalles, Models.NoticiaDetalles>();
-
+                cfg.CreateMap<Bela.Datos.Usuario, Models.Usuario>();
+                cfg.CreateMap<Bela.Datos.ImagenNoticia, Models.ImagenNoticia>();
             });
         }
 
@@ -29,3 +32,4 @@ namespace Bela.UI.App_Start
 
 
 }
+

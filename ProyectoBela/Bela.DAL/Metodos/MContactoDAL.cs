@@ -15,6 +15,7 @@ namespace Bela.DAL.Metodos
     public class MContactoDal : IContacto
     {
 
+
         private OrmLiteConnectionFactory _conex;
         private IDbConnection _db;
 
@@ -43,3 +44,4 @@ namespace Bela.DAL.Metodos
         }
     }
 }
+

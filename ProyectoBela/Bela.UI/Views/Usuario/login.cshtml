@@ -1,9 +1,9 @@
-﻿@model Bela.UI.Models.MensajeContacto
-@{
-    ViewBag.Title = "Liceo de puriscal";
-    Layout = "~/Views/Shared/_Contacto.cshtml";
-}
+﻿@model Bela.UI.Models.Usuario
 
+@{
+    ViewBag.Title = "Liceo de puriscal-Login";
+    Layout = "~/Views/Shared/_Usuario.cshtml";
+}
 
 
 @using (Html.BeginForm("Login", "Usuario", FormMethod.Post))
@@ -14,41 +14,32 @@
 
     <section class="section-padding" id="contact">
         <div class="container">
-            @if (Session["MensajeEnviado"] != null)
-            {
-                <div class="text-center" style="color:green;">Mensaje Enviado</div>
-            }
+
             <div class="row white">
-                <div class="col-md-8 col-sm-12">
+                <div class="col-md-8 col-md-offset-2">
                     <div class="section-title">
                         <h2 class="head-title black">Login</h2>
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12">
-                    <div class="col-md-4 col-sm-6" style="padding-left:0px;">
-                        <h3 class="cont-title">Usuario</h3>
-
+                <div class="col-md-11 col-md-offset-1">
+                    <div class="col-md-4 col-sm-6">
+                        <h3 class="cont-title-login">Ingrese nombre de usuario y contraseña</h3>
+                        <h4 class="cont-login-message">@ViewData["mensajeLogin"]</h4>
                         <div id="errormessage"></div>
                         <div class="contact-info">
                             <form action="" method="post" role="form" class="contactForm">
 
                                 <div class="form-group">
-                                    @Html.TextBoxFor(x => x.correo, new { @type = "email", @class = "form-control", @name = "email", id = "email", @placeholder = "Usuario" })
-                                    @Html.ValidationMessageFor(model => model.correo)
+                                    @Html.TextBoxFor(x => x.usuario, new { @class = "form-control", @name = "usuario", @placeholder = "Usuario" })
+                                    @Html.ValidationMessageFor(model => model.usuario)
                                 </div>
 
                                 <div class="form-group">
-                                    @Html.TextBoxFor(x => x.asunto, new { @type = "password", @class = "form-control", @name = "subjet", id = "subjet", @placeholder = "Contraseña" })
-                                    @Html.ValidationMessageFor(model => model.asunto)
+                                    @Html.TextBoxFor(x => x.contrasena, new { @type = "password", @class = "form-control", @name = "contrasena", id = "contrasena", @placeholder = "Contraseña" })
+                                    @Html.ValidationMessageFor(model => model.contrasena)
                                 </div>
 
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                    @if (Session["errorMensaje"] != null)
-                                    {
-                                        <div class="error" style="color:red;">Ingrese un mensaje</div>
-                                    }
-                                </div>
+
 
                                 <button type="submit" class="btn btn-ghost">Enviar</button>
 
@@ -56,9 +47,9 @@
                         </div>
 
                     </div>
-                    
-                    <div class="col-md-4">
-                        <div class="contact-icon-container hidden-md hidden-sm hidden-xs">
+
+                    <div class=" container col-md-6">
+                        <div class="user-icon-container hidden-md hidden-sm hidden-xs">
                             <span aria-hidden="true" class="glyphicon glyphicon-user"></span>
                         </div>
                     </div>
@@ -68,3 +59,7 @@
     </section>
 
 }
+
+<br />
+<br />
+<br />

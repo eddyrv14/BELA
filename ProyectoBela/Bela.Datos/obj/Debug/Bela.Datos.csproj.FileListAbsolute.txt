@@ -8,3 +8,12 @@ C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\Proyect
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.csprojResolveAssemblyReference.cache
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.dll
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.pdb
+C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\bin\Debug\Bela.Datos.dll
+C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\bin\Debug\Bela.Datos.pdb
+C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.dll
+C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.pdb
+C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\bin\Debug\Bela.Datos.dll
+C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\bin\Debug\Bela.Datos.pdb
+C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.csprojResolveAssemblyReference.cache
+C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.dll
+C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.pdb

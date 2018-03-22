@@ -65,8 +65,10 @@
     </Compile>
     <Compile Include="Interfaces\IContacto.cs" />
     <Compile Include="Interfaces\INoticia.cs" />
+    <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Metodos\MContactoDal.cs" />
     <Compile Include="Metodos\MNoticiasDal.cs" />
+    <Compile Include="Metodos\MUsuarioDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
