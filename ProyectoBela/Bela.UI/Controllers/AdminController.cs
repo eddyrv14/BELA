@@ -15,10 +15,12 @@ namespace Bela.UI.Controllers
     public class AdminController : Controller
     {
         INoticia noticiasAdmin;
+        IContacto contactoAct;
 
         public AdminController()
         {
             noticiasAdmin = new MNoticiaBL();
+            contactoAct = new MContactoBL();
         }
 
         public ActionResult Inicio()
@@ -125,6 +127,17 @@ namespace Bela.UI.Controllers
             {
                 return View(noticia);
             }
+        }
+
+        public ActionResult Mensajes()
+        {
+            if (Session["UserID"] != null)
+            {
+                var listaMensajes = contactoAct.listaMensajes();
+                var lista = Mapper.Map<List<Models.MensajeContacto>>(listaMensajes);
+                return View(lista);
+            }
+            return RedirectToAction("Login", "Usuario");
         }
     }
 }

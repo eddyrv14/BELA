@@ -10,5 +10,7 @@ namespace Bela.DAL.Interfaces
     public interface IUsuario
     {
         Usuario Login(string usuario, string contrasena);
+        List<Rol> ListaRoles();
+        string InsertPersona(Usuario persona);
     }
 }

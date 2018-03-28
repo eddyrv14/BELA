@@ -11,6 +11,8 @@ namespace Bela.BL.Interfaces
     public interface IUsuario
     {
         Usuario Login(string usurio, string contrasena);
+        List<Rol> listaRoles();
+        string InsertPersona(Usuario persona);
     }
 }
 

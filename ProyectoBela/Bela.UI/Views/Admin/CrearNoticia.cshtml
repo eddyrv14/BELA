@@ -24,7 +24,7 @@
                 @Html.ActionLink("Crear Noticia", "CrearNoticia", "Admin", null, new { @class = "activeMenu" })
             </li>
             <li>
-                @Html.ActionLink("Mensajes", "CrearNoticia", "Admin")
+                @Html.ActionLink("Mensajes", "Mensajes", "Admin")
             </li>
             <li>
                 @Html.ActionLink("NoticiasInternas", "NoticiasInternas", "Noticia")
@@ -33,7 +33,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cuentas<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">Opciones</li>
-                    <li><a href="#">Crear Cuenta</a></li>
+                    <li>@Html.ActionLink("Crear Cuenta","CrearCuenta","Usuario")</li>
                     <li><a href="#">Modificar Cuenta</a></li>
                     <li><a href="#">Eliminar Cuenta</a></li>
                 </ul>

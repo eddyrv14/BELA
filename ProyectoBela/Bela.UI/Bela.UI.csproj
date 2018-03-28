@@ -175,6 +175,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ImagenNoticia.cs" />
+    <Compile Include="Models\Materia.cs" />
     <Compile Include="Models\MensajeContacto.cs" />
     <Compile Include="Models\Noticia.cs" />
     <Compile Include="Models\NoticiaDetalles.cs" />
@@ -280,6 +281,8 @@
     <Content Include="Views\Shared\_Perfil.cshtml" />
     <Content Include="Views\Admin\CrearNoticia.cshtml" />
     <Content Include="Views\Noticia\NoticiasInternas.cshtml" />
+    <Content Include="Views\Usuario\CrearCuenta.cshtml" />
+    <Content Include="Views\Admin\Mensajes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

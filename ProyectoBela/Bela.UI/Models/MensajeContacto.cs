@@ -9,7 +9,7 @@ namespace Bela.UI.Models
 {
     public class MensajeContacto
     {
-        public int idMensajeContacto { get; set; }
+        public int idMensaje { get; set; }
         [Required(ErrorMessage="Ingrese un asunto")]
         public string asunto { get; set; }
         [Required(ErrorMessage="Ingrese tu correo")]
