@@ -77,4 +77,37 @@ Select p.idPersona,p.nombre,p.apellido1,p.apellido2,p.correo,u.idUsuario,u.idRol
 JOIN Rol  r on u.idRol=r.idRol where u.usuario=@usuario and u.contrasena=@contrasena
 go
 
+--
+
+Create or alter proc crearPersona
+@nombre varchar(60),
+@apellido1 varchar(60),
+@apellido2 varchar(60),
+@correo varchar(100)
+as
+Insert into Persona values(@nombre,@apellido1,@apellido2,@correo)
+go
+
+--
+
+Create or alter proc crearUsuario
+@idRol int,
+@usuario varchar(30),
+@contrasena varchar(30)
+as
+Insert into Usuario(idUsuario,idRol,usuario,contrasena) values((Select TOP 1 idPersona From Persona order by idPersona desc),@idRol,@usuario,@contrasena)
+go  
+
 **************Usuarios
+
+************DetalleMaterias
+CREATE OR ALTER proc listaMaterias
+@idUsuario int
+as
+Select de.idDetalleMateria,m.nombre as Materia, concat(p.nombre,' ',p.apellido1,' ',p.apellido2) as nomProfesor,s.nombre as Seccion,grado 
+   From Detallemateria de JOIN Materia m on de.idMateria=m.idMateria Join Persona p  on de.idUsuario=p.idPersona 
+   JOIN Seccion s on de.idSeccion=de.idSeccion  JOIN EstudiantesMaterias es on es.idDetalleMateria=de.idDetalleMateria where es.idUsuario=@idUsuario
+   go
+
+
+***************FIN MATERIAS****************************
