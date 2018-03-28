@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<Bela.UI.Models.Materia>
+
 @{
     ViewBag.Title = "Liceo de puriscal";
     Layout = "~/Views/Shared/_Perfil.cshtml";
@@ -17,37 +18,26 @@
             <h3>Esta al tanto de cada una de tus materias</h3>
         </div>
 
-        <div class="row media materia-bor">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="materias-ico">
-                    Materia<br>Grado
+        @foreach (var item in Model)
+        {
+
+            <div class="row media materia-bor">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="materias-ico">
+                        Materia: @Html.DisplayFor(modelItem => item.materia)<br>Grado: @Html.DisplayFor(modelIterm => item.grado)
+                    </div>
+                </div>
+                <div class="materias-desc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <h4>Seccion: @Html.DisplayFor(modelItem => item.seccion)</h4>
+                    <h5>Profesor: @Html.DisplayFor(modelItem => item.nomProfesor)</h5>
+                    <p>
+                        ultimo  Mensaje
+                    </p>
                 </div>
             </div>
-            <div class="materias-desc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <h4>Seccion:</h4>
-                <h5>Profesor:</h5>
-                <p>
-                    ultimo  Mensaje
-                </p>
-            </div>
-        </div>
-
-        <div class="row media materia-bor">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="materias-ico">
-                    Materia<br>Grado
-                </div>
-            </div>
-            <div class="materias-desc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <h4>Seccion:</h4>
-                <h5>Profesor:</h5>
-                <p>
-                    ultimo Mensaje
-                </p>
-            </div>
-        </div>
 
 
+
+        }
     </div>
 </section>
-

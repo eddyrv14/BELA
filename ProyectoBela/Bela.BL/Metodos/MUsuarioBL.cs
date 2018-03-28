@@ -16,5 +16,16 @@ namespace Bela.BL.Metodos
         {
             return usuarios.Login(usuario, contrasena);
         }
+
+
+        public List<Rol> listaRoles()
+        {
+            return usuarios.ListaRoles();
+        }
+
+        public string InsertPersona(Usuario persona)
+        {
+            return usuarios.InsertPersona(persona);
+        }
     }
 }

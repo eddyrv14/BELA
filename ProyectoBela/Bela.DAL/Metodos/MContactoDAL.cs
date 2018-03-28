@@ -40,7 +40,7 @@ namespace Bela.DAL.Metodos
 
         public List<MensajeContacto> listaMensajes()
         {
-            throw new NotImplementedException();
+            return _db.Select<MensajeContacto>();
         }
     }
 }

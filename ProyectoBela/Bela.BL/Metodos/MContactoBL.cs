@@ -17,5 +17,11 @@ namespace Bela.BL.Metodos
         {
             contacto.EnvioMensaje(mensaje);
         }
+
+
+        public List<MensajeContacto> listaMensajes()
+        {
+            return contacto.listaMensajes();
+        }
     }
 }

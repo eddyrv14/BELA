@@ -40,9 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IContacto.cs" />
+    <Compile Include="Interfaces\IEstudiante.cs" />
     <Compile Include="Interfaces\INoticia.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Metodos\MContactoBL.cs" />
+    <Compile Include="Metodos\MEstudianteBL.cs" />
     <Compile Include="Metodos\MNoticiaBL.cs" />
     <Compile Include="Metodos\MUsuarioBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

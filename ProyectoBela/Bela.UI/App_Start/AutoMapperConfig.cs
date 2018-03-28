@@ -18,6 +18,7 @@ namespace Bela.UI.App_Start
                 cfg.CreateMap<Models.Noticia, Bela.Datos.Noticia>();
                 cfg.CreateMap<Models.Usuario, Bela.Datos.Usuario>();
                 cfg.CreateMap<Models.ImagenNoticia, Bela.Datos.ImagenNoticia>();
+                cfg.CreateMap<Models.Materia, Bela.Datos.Materia>();
 
                 //// Selects
                 cfg.CreateMap<Bela.Datos.MensajeContacto, Models.MensajeContacto>();
@@ -25,6 +26,7 @@ namespace Bela.UI.App_Start
                 cfg.CreateMap<Bela.Datos.NoticiaDetalles, Models.NoticiaDetalles>();
                 cfg.CreateMap<Bela.Datos.Usuario, Models.Usuario>();
                 cfg.CreateMap<Bela.Datos.ImagenNoticia, Models.ImagenNoticia>();
+                cfg.CreateMap<Bela.Datos.Materia, Models.Materia>();
             });
         }
 
