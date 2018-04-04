@@ -13,6 +13,10 @@ namespace Bela.BL.Interfaces
         Usuario Login(string usurio, string contrasena);
         List<Rol> listaRoles();
         string InsertPersona(Usuario persona);
+        List<Usuario> ListaUsuarios();
+        Usuario BuscarCuenta(int idPersona);
+        string ModificarCuenta(Usuario usuario);
+        string EliminarCuenra(int idUsuario);
     }
 }
 
