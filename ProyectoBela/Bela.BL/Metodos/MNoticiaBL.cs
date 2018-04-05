@@ -51,6 +51,11 @@ namespace Bela.BL.Metodos
             return noticias.buscarNoticiaDetalle(idNoticia);
         }
 
+        public Noticia buscarNoticia(int idNoticia)
+        {
+            return noticias.buscarNoticia(idNoticia);
+        }
+
         public List<TipoNoticia> listaTiposNoticias()
         {
             return noticias.listaTipoNoticias();
@@ -60,6 +65,22 @@ namespace Bela.BL.Metodos
         public List<ImagenNoticia> listaImagenesNoticia(int idNoticia)
         {
             return noticias.listaImagenesNoticia(idNoticia);
+        }
+
+
+        public List<Noticia> ListaNoticiasAdmin(int idAdmin)
+        {
+            return noticias.ListaNoticiasAdmin(idAdmin);
+        }
+
+        public string EliminarNoticia(int idNoticia)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string ModificarNoticia(Noticia noticia)
+        {
+            return noticias.ModificarNoticia(noticia);
         }
     }
 }

@@ -188,6 +188,8 @@
     <Content Include="Content\animated.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\datatable.css" />
+    <Content Include="Content\datatable_bootstrap.css" />
     <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fontawesome.min.css" />
     <Content Include="Content\lighbox.css" />
@@ -223,6 +225,9 @@
     <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\datatable.js" />
+    <Content Include="Scripts\datatable_bootstrap.js" />
+    <Content Include="Scripts\datatable_init.js" />
     <Content Include="Scripts\formularioContacto.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

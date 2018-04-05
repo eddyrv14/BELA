@@ -30,7 +30,9 @@ namespace Bela.UI.Controllers
                 return RedirectToAction("Login", "Usuario");
             }
 
-            return View();
+            var listaNoticias = noticiasAdmin.ListaNoticiasAdmin(Convert.ToInt32(Session["UserID"]));
+            var mostrarNoticias = Mapper.Map<List<Models.Noticia>>(listaNoticias);
+            return View(mostrarNoticias);
         }
 
         public ActionResult CrearNoticia()
@@ -46,6 +48,7 @@ namespace Bela.UI.Controllers
             //    return RedirectToAction("Login", "Usuario");
             //}
         }
+
 
         [HttpPost]
         public ActionResult CrearNoticia(Models.Noticia noticia, FormCollection form, HttpPostedFileBase uploadFile, IEnumerable<HttpPostedFileBase> uploadfiles)
@@ -131,13 +134,81 @@ namespace Bela.UI.Controllers
 
         public ActionResult Mensajes()
         {
-            if (Session["UserID"] != null)
-            {
-                var listaMensajes = contactoAct.listaMensajes();
-                var lista = Mapper.Map<List<Models.MensajeContacto>>(listaMensajes);
-                return View(lista);
-            }
-            return RedirectToAction("Login", "Usuario");
+            var listaMensajes = contactoAct.listaMensajes();
+            var lista = Mapper.Map<List<Models.MensajeContacto>>(listaMensajes);
+            return View(lista);
         }
+
+        public ActionResult ModificarNoticia(int idNoticia)
+        {
+
+            var noticia = noticiasAdmin.buscarNoticia(idNoticia);
+            var listaTipos = noticiasAdmin.listaTiposNoticias();
+            ViewBag.Tipos = new SelectList(listaTipos, "idTipoNoticia", "nombre", noticia.idtipo);
+            ViewBag.imagen = noticia.imagen;
+            var mostrar = Mapper.Map<Models.Noticia>(noticia);
+            return View(mostrar);
+        }
+
+        [HttpPost]
+        public ActionResult ModificarNoticia(Noticia noticia, FormCollection form, HttpPostedFileBase uploadFile)
+        {
+            string mensaje = "";
+            string guardaEn = "~/Imagenes/ImagenesNoticias/";
+
+
+            var listaTipos = noticiasAdmin.listaTiposNoticias();
+            ViewBag.Tipos = new SelectList(listaTipos, "idTipoNoticia", "nombre");
+
+            if (ModelState.IsValid)
+            {
+
+
+                try
+                {
+                    //Noticia noticiaInser = new Noticia();
+                    noticia.idtipo = Convert.ToInt32(form["dropIdTipo"]);
+
+                    //noticiaInser.idUsuario = Convert.ToInt32(Session["UserID"]);
+                    //noticiaInser.titulo = noticia.titulo;
+                    //noticiaInser.descripcion = form["txtDescripcion"];
+                    //noticiaInser.contenido = form["txtContenido"];
+
+                    /*Imagen Obligatoria*/
+                    if (uploadFile != null)
+                    {
+                        var fileName = Path.GetFileName(uploadFile.FileName);
+                        var path = Path.Combine(Server.MapPath(guardaEn), fileName);
+                        uploadFile.SaveAs(path);
+                        string imagenNoticia = guardaEn + fileName;
+                        noticia.imagen = imagenNoticia;
+
+                        //noticiasAdmin.insertarNoticia(noticiaInser);
+                        mensaje = noticiasAdmin.ModificarNoticia(noticia);
+
+                    }
+                    else
+                    {
+                        noticia.imagen = form["txtImagen"];
+                        mensaje = noticiasAdmin.ModificarNoticia(noticia);
+
+                    }
+
+                    TempData["estadoNoticia"] = mensaje;
+                    return RedirectToAction("Inicio");
+                }
+                catch (Exception e)
+                {
+                    ViewData["mensajeAdmin"] = e;
+                    return View();
+                }
+            }
+            else
+            {
+                return View(noticia);
+            }
+        }
+
+
     }
 }
