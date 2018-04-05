@@ -2,6 +2,30 @@
     margin-top: 50px;
 }
 
+.btn-ghost-modificar {
+  color: #FFF;
+  background-color: #E05533;
+  border-color: #E05533;
+}
+.btn-ghost-modificar:hover
+ {
+  color: #FFF;
+  background-color: #E33105;
+  border-color: #E33105;
+}
+
+.btn-ghost-eliminar {
+  color: #FFF;
+  background-color: #E0384C;
+  border-color: #E0384C;
+}
+.btn-ghost-eliminar:hover
+ {
+  color: #FFF;
+  background-color: #FF0221;
+  border-color: #FF0221;
+}
+
 
 
 .btn-ghost {

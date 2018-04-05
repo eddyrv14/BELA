@@ -27,5 +27,25 @@ namespace Bela.BL.Metodos
         {
             return usuarios.InsertPersona(persona);
         }
+
+        public List<Usuario> ListaUsuarios()
+        {
+            return usuarios.ListaUsuarios();
+        }
+
+        public Usuario BuscarCuenta(int idPersona)
+        {
+            return usuarios.BuscarCuenta(idPersona);
+        }
+
+        public string ModificarCuenta(Usuario usuario)
+        {
+            return usuarios.ModificarCuenta(usuario);
+        }
+
+        public string EliminarCuenra(int idUsuario)
+        {
+            return usuarios.EliminarCuenta(idUsuario);
+        }
     }
 }
