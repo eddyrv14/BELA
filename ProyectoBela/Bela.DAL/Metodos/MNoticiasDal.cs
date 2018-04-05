@@ -89,7 +89,37 @@ namespace Bela.DAL.Metodos
 
         public string EliminarNoticia(int idNoticia)
         {
-            throw new NotImplementedException();
+            string res = "";
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "eliminarImagenNoticia";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@idNoticia", SqlDbType.Int).Value =idNoticia;
+                res = cmd.ExecuteNonQuery() == 1 ? "Imagenes eliminadas" : "Error al eliminar";
+
+                if (res.Equals("Imagenes eliminadas"))
+                {
+
+                    SqlCommand cmd2 = new SqlCommand();
+                    cmd2.Connection = cn;
+                    cmd2.CommandText = "eliminarNoticia";
+                    cmd2.CommandType = CommandType.StoredProcedure;
+                    cmd2.Parameters.Add("@idNoticia", SqlDbType.Int).Value = idNoticia;
+                    res = cmd2.ExecuteNonQuery() == 1 ? "Noticia eliminada" : "Error al eliminar";
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                res = ex.Message;
+                cn.Close();
+            }
+            cn.Close();
+            return res;
         }
 
         public string ModificarNoticia(Noticia noticia)

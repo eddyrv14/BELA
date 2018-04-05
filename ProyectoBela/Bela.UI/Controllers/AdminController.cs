@@ -209,6 +209,16 @@ namespace Bela.UI.Controllers
             }
         }
 
+        public ActionResult EliminarNoticia(int idNoticia)
+        {
+            string res = "";
+            res=noticiasAdmin.EliminarNoticia(idNoticia);
+            TempData["estadoNoticia"] = res;
+            return RedirectToAction("Inicio");
+        }
+
+
+
 
     }
 }

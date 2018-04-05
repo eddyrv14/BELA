@@ -288,6 +288,9 @@
     <Content Include="Views\Noticia\NoticiasInternas.cshtml" />
     <Content Include="Views\Usuario\CrearCuenta.cshtml" />
     <Content Include="Views\Admin\Mensajes.cshtml" />
+    <Content Include="Views\Admin\ModificarNoticia.cshtml" />
+    <Content Include="Views\Usuario\Cuentas.cshtml" />
+    <Content Include="Views\Usuario\EditarCuenta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
