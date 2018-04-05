@@ -12,5 +12,9 @@ namespace Bela.DAL.Interfaces
         Usuario Login(string usuario, string contrasena);
         List<Rol> ListaRoles();
         string InsertPersona(Usuario persona);
+        List<Usuario> ListaUsuarios();
+        Usuario BuscarCuenta(int idPersona);
+        string ModificarCuenta(Usuario usuario);
+        string EliminarCuenta(int idUsuario);
     }
 }

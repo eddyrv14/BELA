@@ -3,8 +3,9 @@
 @{
     ViewBag.Title = "Liceo de puriscal";
     Layout = "~/Views/Shared/_Perfil.cshtml";
-    //List<>
+
 }
+
 
 <div id="wrapper">
     <div class="overlay"></div>
@@ -21,10 +22,10 @@
                 @Html.ActionLink("Inicio", "Inicio", "Admin")
             </li>
             <li>
-                @Html.ActionLink("Crear Noticia", "CrearNoticia", "Admin")
+                @Html.ActionLink("Crear Noticia", "CrearNoticia", "Admin", null)
             </li>
             <li>
-                @Html.ActionLink("Mensajes", "Mensajes", "Admin")
+                @Html.ActionLink("Mensajes", "CrearNoticia", "Admin")
             </li>
             <li>
                 @Html.ActionLink("NoticiasInternas", "NoticiasInternas", "Noticia")
@@ -33,8 +34,8 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cuentas<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">Opciones</li>
-                    <li>@Html.ActionLink("Crear Cuenta", "CrearCuenta", "Usuario", null, new { @class = "activeMenu" })</li>
-                    <li>@Html.ActionLink("Administrar Cuentas", "Cuentas", "Usuario")</li>
+                    <li>@Html.ActionLink("Crear Cuenta", "CrearCuenta", "Usuario")</li>
+                    <li>@Html.ActionLink("Administrar Cuentas", "Cuentas", "Usuario", null, new { @class = "activeMenu" })</li>
                     <li>@Html.ActionLink("Mi Cuenta", "MiCuenta", "Usuario")</li>
                 </ul>
             </li>
@@ -49,10 +50,11 @@
             <span class="hamb-bottom"></span>
         </button>
 
+
         @if (TempData["estado"] != null)
         {
             <div class="container">
-                <div class="alert alert-success alert-dismissable">
+                <div class="alert alert-danger alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                     <strong>@TempData["estado"]</strong>
                 </div>
@@ -60,7 +62,8 @@
         }
 
 
-        @using (Html.BeginForm("CrearCuenta", "Usuario", FormMethod.Post))
+
+        @using (Html.BeginForm("EditarCuenta", "Usuario", FormMethod.Post))
         {
             Html.ValidationSummary(true);
             Html.EnableClientValidation(true);
@@ -85,19 +88,23 @@
                     <div class="row white">
                         <div class="col-md-8 col-md-offset-4">
                             <div class="section-title">
-                                <h2 class="head-title black">  Crear Cuenta</h2>
+                                <h2 class="head-title black"> Datos de Cuenta</h2>
                             </div>
                         </div>
                         <div class="col-md-11 col-md-offset-4">
                             <div class="col-md-4 col-sm-6" style="padding-left:0px;">
-                                <h3 class="cont-title-login">Ingrese los datos necesarios para la creacion de la cuenta</h3>
+                                <h3 class="cont-title-login">Modifique datos o elimine la cuenta</h3>
 
                                 <div class="contact-info">
                                     <form action="" method="post" role="form" class="contactForm">
 
                                         <div class="form-group">
-                                            @Html.Label("Nombre")
-                                            @*  @Html.DropDownList("dropIdTipo", (SelectList)ViewBag.Tipos, "Seleccione Tipo", new { @class = "form-control" })*@
+                                            @Html.TextBoxFor(x => x.idPersona, new { @class = "form-control", @name = "idPersona", @readonly = true, style = "display: none;" })
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="nombre">Nombre</label>
                                             @Html.TextBoxFor(x => x.nombre, new { @class = "form-control", @name = "nombre", @placeholder = "Nombre" })
 
                                         </div>
@@ -121,7 +128,7 @@
 
                                         <div class="form-group">
                                             @Html.Label("Tipo de usuario")
-                                            @Html.DropDownList("dropIdTipoUsuario", (SelectList)ViewBag.TiposUsuarios, "Seleccione Tipo de usuario", new { @class = "form-control" })
+                                            @Html.DropDownList("dropIdTipoUsuario", (SelectList)ViewBag.TiposUsuarios, "Seleccione Tipo de usuario", new { @Value = "1", @class = "form-control" })
                                         </div>
 
                                         <div class="form-group">
@@ -136,8 +143,10 @@
 
                                         </div>
 
-
-                                        <button type="submit" class="btn btn-crear">Crear Cuenta</button>
+                                        <div class="btn-group">
+                                            <button type="submit" class="btn btn-crear">Modificar Cuenta</button>
+                                            <button class="btn btn-danger" data-title="Delete" data-toggle="modal" data-target="#delete">Eliminar</button>
+                                        </div>
 
                                     </form>
                                 </div>
@@ -148,9 +157,39 @@
                 </div>
             </section>
 
+
+
+
+
         }
 
     </div>
     <!-- /#page-content-wrapper -->
 </div>
 <!-- /#wrapper -->
+
+
+
+
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                <h4 class="modal-title custom_align" id="Heading">Eliminar esta cuenta</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Estas seguro de que quieres eliminar esta cuenta</div>
+
+            </div>
+
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("EliminarCuenta", "Usuario", new {idPersona=Model.idPersona })'"><span class="glyphicon glyphicon-ok-sign"></span> Si</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

@@ -32,8 +32,8 @@
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">Opciones</li>
                     <li>@Html.ActionLink("Crear Cuenta", "CrearCuenta", "Usuario")</li>
-                    <li><a href="#">Modificar Cuenta</a></li>
-                    <li><a href="#">Eliminar Cuenta</a></li>
+                    <li>@Html.ActionLink("Administrar Cuentas", "Cuentas", "Usuario")</li>
+                    <li>@Html.ActionLink("Mi Cuenta", "MiCuenta", "Usuario")</li>
                 </ul>
             </li>
         </ul>
@@ -48,46 +48,55 @@
         </button>
         <br />
         <div class="text-center"><h2>Lista Mensajes</h2></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-hover">
 
+        <div class="container " style="margin-bottom:100px">
+            <div class="row">
+
+
+                <div class="col-md-12">
+                    <h2 class="text-center">Mensajes</h2>
+                    <div class="table-responsive">
+
+                        <table id="example" class="table table-striped table-bordered" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>@Html.DisplayNameFor(model => model.idMensaje)</th>
-                                    <th>@Html.DisplayNameFor(model => model.asunto)</th>
-                                    <th>@Html.DisplayNameFor(model => model.correo)</th>
-                                    <th>@Html.DisplayNameFor(model => model.mensaje)</th>
-                                    <th>Acciones</th>
+                                    <th>NumMensaje</th>
+                                    <th>Asunto</th>
+                                    <th>Correo</th>
+                                    <th>Mensaje</th>
+                                    <th>Responder</th>
+                                    <th>Eliminar</th>
+
                                 </tr>
                             </thead>
                             <tbody>
+
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.idMensaje)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.asunto)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.correo)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.mensaje)
-                                        </td>
-                                        <td>
-                                            @Html.ActionLink("Responder", "Admin", new { /* id=item.PrimaryKey */ }) |
-                                            @Html.ActionLink("Borrar", "Admin", new { /* id=item.PrimaryKey */ })
+                                        <td>@Html.DisplayFor(modelItem => item.idMensaje)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.asunto)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.correo)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.mensaje)</td>
+                                        <td><button class="btn btn-warning" onclick="location.href='@Url.Action("Responder", "Admin", new { idMensaje = item.idMensaje})'">Responder</button></td>
+                                        <td><button class="btn btn-danger" data-title="Delete" data-toggle="modal" data-target="#delete" onclick="location.href='@Url.Action("EliminarMensaje", "Admin", new { idMensaje = item.idMensaje })'">Eliminar</button></td>
 
-                                        </td>
                                     </tr>
                                 }
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>NumMensaje</th>
+                                    <th>Asunto</th>
+                                    <th>Correo</th>
+                                    <th>Mensaje</th>
+                                    <th>Responder</th>
+                                    <th>Eliminar</th>
+
+                                </tr>
+                            </tfoot>
                         </table>
+
                     </div>
                 </div>
             </div>
@@ -95,9 +104,10 @@
 
 
 
+
+
+
     </div>
     <!-- /#page-content-wrapper -->
 </div>
 <!-- /#wrapper -->
-
-<div style="margin-bottom:454px;"></div>
