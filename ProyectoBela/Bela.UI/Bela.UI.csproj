@@ -199,6 +199,7 @@
     <Content Include="Content\style2.css" />
     <Content Include="Content\styleinfo.css" />
     <Content Include="Content\styleMaterias.css" />
+    <Content Include="Content\styleMenuVerticaNoticias.css" />
     <Content Include="Content\styleNoticias.css" />
     <Content Include="Content\Style_BI.css" />
     <Content Include="Content\stylosInicioPerfil.css" />

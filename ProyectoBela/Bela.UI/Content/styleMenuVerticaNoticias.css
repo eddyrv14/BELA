@@ -1,0 +1,30 @@
+﻿.social2 {
+	position: fixed; 
+	left: 0; 
+	top: 200px; 
+    transform: translate(-40px);
+	z-index: 2000; 
+}
+ 
+	.social2 ul {
+		list-style: none;
+	}
+ 
+	.social2 ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; 
+	}
+ 
+	.social2 ul li .far fa-bell {background:#848484;} 
+
+ 
+	.social2 ul li a:hover {
+		background: #000; 
+		padding: 10px 30px; 
+	}

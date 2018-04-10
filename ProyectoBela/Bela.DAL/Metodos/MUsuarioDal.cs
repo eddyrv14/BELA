@@ -175,6 +175,35 @@ namespace Bela.DAL.Metodos
             cn.Close();
             return res;
         }
+
+        public string ActivarNotificaciones(string correo)
+        {
+            string res = "";
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "agregarCorreoNotiEx";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@correo", SqlDbType.VarChar, 100).Value = correo;
+                res = cmd.ExecuteNonQuery() == 1 ? "Se agrego correo" : "Error al agregar";
+
+            }
+            catch (Exception ex)
+            {
+                res = ex.Message;
+                cn.Close();
+            }
+            cn.Close();
+            return res;
+        }
+
+        public List<NotiExternas> ListaCorreoNotiExternas()
+        {
+            return _db.Select<NotiExternas>().ToList();
+        }
     }
 }
 

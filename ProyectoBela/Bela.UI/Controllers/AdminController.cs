@@ -10,17 +10,23 @@ using Bela.BL.Metodos;
 using AutoMapper;
 using System.IO;
 
+using System.Text;
+using System.Net.Mail;
+using System.Net;
+
 namespace Bela.UI.Controllers
 {
     public class AdminController : Controller
     {
         INoticia noticiasAdmin;
         IContacto contactoAct;
+        IUsuario usuarioActi;
 
         public AdminController()
         {
             noticiasAdmin = new MNoticiaBL();
             contactoAct = new MContactoBL();
+            usuarioActi = new MUsuarioBL();
         }
 
         public ActionResult Inicio()
@@ -217,8 +223,87 @@ namespace Bela.UI.Controllers
             return RedirectToAction("Inicio");
         }
 
+        public string enviarCorreosExternos()
+        {
+            string res = "";
+            try
+            {
+                var listaCorreos = usuarioActi.ListaCorreoNotiExternas();
+
+                if (listaCorreos.Count != 0)
+                {
+
+                    MailMessage mail = new MailMessage();
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                    mail.From = new MailAddress("liceodepuriscalcr@gmail.com", "Liceo de Puriscal", Encoding.UTF8);
+                    mail.Subject = "Nueva noticia-Liceo de Puriscal";
+                    mail.Body = "Visita la seccion Noticias de nuestra pagina";
 
 
+                    foreach (var copi in listaCorreos)
+                    {
+                        mail.To.Add(copi.correo);
+                    }
+
+                    /**********************************************************************************************************************************************/
+                    SmtpServer.Port = 587;
+                    SmtpServer.Credentials = new System.Net.NetworkCredential("liceodepuriscalcr@gmail.com", "PurisCR12");
+                    SmtpServer.EnableSsl = true;
+                    SmtpServer.Send(mail);
+                }
+                else
+                {
+                    res = "No hay correos";
+                    return res;
+                }
+            }
+            catch (Exception ex)
+            {
+                res = ex.Message;
+            }
+            return res;
+        }
+
+        public string enviarCorreosInternos()
+        {
+            string res = "";
+            try
+            {
+                var listaCorreos = usuarioActi.ListaCorreoNotiExternas();
+
+                if (listaCorreos.Count != 0)
+                {
+
+                    MailMessage mail = new MailMessage();
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                    mail.From = new MailAddress("liceodepuriscalcr@gmail.com", "Liceo de Puriscal", Encoding.UTF8);
+                    mail.Subject = "Nueva noticia-Liceo de Puriscal";
+                    mail.Body = "Visita la seccion Noticias de nuestra pagina";
+
+
+                    foreach (var copi in listaCorreos)
+                    {
+                        mail.To.Add(copi.correo);
+                    }
+
+                    /**********************************************************************************************************************************************/
+                    SmtpServer.Port = 587;
+                    SmtpServer.Credentials = new System.Net.NetworkCredential("liceodepuriscalcr@gmail.com", "PurisCR12");
+                    SmtpServer.EnableSsl = true;
+                    SmtpServer.Send(mail);
+                }
+                else
+                {
+                    res = "No hay correos";
+                    return res;
+                }
+            }
+            catch (Exception ex)
+            {
+                res = ex.Message;
+            }
+            return res;
+        }
 
     }
 }

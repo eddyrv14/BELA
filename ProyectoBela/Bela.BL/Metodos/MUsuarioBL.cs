@@ -47,5 +47,15 @@ namespace Bela.BL.Metodos
         {
             return usuarios.EliminarCuenta(idUsuario);
         }
+
+        public string ActivarNoticaciones(string correo)
+        {
+            return usuarios.ActivarNotificaciones(correo);
+        }
+
+        public List<NotiExternas> ListaCorreoNotiExternas()
+        {
+            return usuarios.ListaCorreoNotiExternas();
+        }
     }
 }
