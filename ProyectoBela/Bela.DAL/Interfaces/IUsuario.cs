@@ -16,7 +16,12 @@ namespace Bela.DAL.Interfaces
         Usuario BuscarCuenta(int idPersona);
         string ModificarCuenta(Usuario usuario);
         string EliminarCuenta(int idUsuario);
+        
         string ActivarNotificaciones(string correo);
+        string ActivarNotificacionesInternas(string correo);
+        
         List<NotiExternas> ListaCorreoNotiExternas();
+        List<NotiInternas> ListaCorreoNotiInternas();
+
     }
 }

@@ -45,6 +45,7 @@
     <Compile Include="Noticia.cs" />
     <Compile Include="NoticiaDetalles.cs" />
     <Compile Include="NotiExternas.cs" />
+    <Compile Include="NotiInternas.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rol.cs" />

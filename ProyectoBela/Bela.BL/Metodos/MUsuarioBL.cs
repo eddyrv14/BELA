@@ -57,5 +57,16 @@ namespace Bela.BL.Metodos
         {
             return usuarios.ListaCorreoNotiExternas();
         }
+
+
+        public string ActivarNoticacionesInternas(string correo)
+        {
+            return usuarios.ActivarNotificacionesInternas(correo);
+        }
+
+        public List<NotiInternas> ListaCorreoNotiInternas()
+        {
+            return usuarios.ListaCorreoNotiInternas();
+        }
     }
 }

@@ -19,7 +19,9 @@ namespace Bela.BL.Interfaces
         string EliminarCuenra(int idUsuario);
 
         string ActivarNoticaciones(string correo);
+        string ActivarNoticacionesInternas(string correo);
         List<NotiExternas> ListaCorreoNotiExternas();
+        List<NotiInternas> ListaCorreoNotiInternas();
     }
 }
 

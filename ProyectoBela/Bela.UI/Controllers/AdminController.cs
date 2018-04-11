@@ -14,6 +14,7 @@ using System.Text;
 using System.Net.Mail;
 using System.Net;
 
+
 namespace Bela.UI.Controllers
 {
     public class AdminController : Controller
@@ -65,19 +66,25 @@ namespace Bela.UI.Controllers
 
             var listaTipos = noticiasAdmin.listaTiposNoticias();
             ViewBag.Tipos = new SelectList(listaTipos, "idTipoNoticia", "nombre");
+            if (form["dropIdTipo"].Equals(""))
+            {
+                ViewData["mensajeAdmin"] = "Elija un tipo de noticia";
+                return View();
+            }
+
 
             if (ModelState.IsValid)
             {
-
+                Noticia noticiaInser = new Noticia();
+                noticiaInser.idtipo = Convert.ToInt32(form["dropIdTipo"]);
+                noticiaInser.idUsuario = Convert.ToInt32(Session["UserID"]);
+                noticiaInser.titulo = noticia.titulo;
+                noticiaInser.descripcion = form["txtDescripcion"];
+                noticiaInser.contenido = form["txtContenido"];
 
                 try
                 {
-                    Noticia noticiaInser = new Noticia();
-                    noticiaInser.idtipo = Convert.ToInt32(form["dropIdTipo"]);
-                    noticiaInser.idUsuario = Convert.ToInt32(Session["UserID"]);
-                    noticiaInser.titulo = noticia.titulo;
-                    noticiaInser.descripcion = form["txtDescripcion"];
-                    noticiaInser.contenido = form["txtContenido"];
+
 
                     /*Imagen Obligatoria*/
                     if (uploadFile != null)
@@ -118,13 +125,32 @@ namespace Bela.UI.Controllers
                     }
 
                     ViewData["mensajeAdmin"] = mensaje;
+                    if (noticiaInser.idtipo == 1)
+                    {
+                        enviarCorreosExternos(noticiaInser.titulo, noticiaInser.descripcion);
+                    }
+                    else
+                    {
+                        enviarCorreosInternos(noticiaInser.titulo, noticiaInser.descripcion);
+                    }
                     return View();
+
                 }
                 catch (NullReferenceException)
                 {
 
                     ViewData["mensajeAdmin"] = "Noticia Creada";
-                    return View();
+                    if (noticiaInser.idtipo == 1)
+                    {
+                        enviarCorreosExternos(noticiaInser.titulo, noticiaInser.descripcion);
+                        return View();
+                    }
+                    else
+                    {
+                        enviarCorreosInternos(noticiaInser.titulo, noticiaInser.descripcion);
+                        return View();
+                    }
+
                 }
                 catch (Exception)
                 {
@@ -218,12 +244,12 @@ namespace Bela.UI.Controllers
         public ActionResult EliminarNoticia(int idNoticia)
         {
             string res = "";
-            res=noticiasAdmin.EliminarNoticia(idNoticia);
+            res = noticiasAdmin.EliminarNoticia(idNoticia);
             TempData["estadoNoticia"] = res;
             return RedirectToAction("Inicio");
         }
 
-        public string enviarCorreosExternos()
+        public string enviarCorreosExternos(string titulo, string descripcion)
         {
             string res = "";
             try
@@ -232,20 +258,20 @@ namespace Bela.UI.Controllers
 
                 if (listaCorreos.Count != 0)
                 {
-
+                    /*Mensaje*/
                     MailMessage mail = new MailMessage();
-                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
                     mail.From = new MailAddress("liceodepuriscalcr@gmail.com", "Liceo de Puriscal", Encoding.UTF8);
-                    mail.Subject = "Nueva noticia-Liceo de Puriscal";
-                    mail.Body = "Visita la seccion Noticias de nuestra pagina";
-
+                    mail.Subject = "Nueva noticia: " + titulo;
+                    mail.Body = descripcion + "<br />  Visita la seccion Noticias de nuestra <br />  pagina";
+                    mail.IsBodyHtml = true;
 
                     foreach (var copi in listaCorreos)
                     {
                         mail.To.Add(copi.correo);
                     }
 
-                    /**********************************************************************************************************************************************/
+                    /*Datos serv*/
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
                     SmtpServer.Port = 587;
                     SmtpServer.Credentials = new System.Net.NetworkCredential("liceodepuriscalcr@gmail.com", "PurisCR12");
                     SmtpServer.EnableSsl = true;
@@ -264,29 +290,29 @@ namespace Bela.UI.Controllers
             return res;
         }
 
-        public string enviarCorreosInternos()
+        public string enviarCorreosInternos(string titulo, string descripcion)
         {
             string res = "";
             try
             {
-                var listaCorreos = usuarioActi.ListaCorreoNotiExternas();
+                var listaCorreos = usuarioActi.ListaCorreoNotiInternas();
 
                 if (listaCorreos.Count != 0)
                 {
-
+                    /*Mensaje*/
                     MailMessage mail = new MailMessage();
-                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
                     mail.From = new MailAddress("liceodepuriscalcr@gmail.com", "Liceo de Puriscal", Encoding.UTF8);
-                    mail.Subject = "Nueva noticia-Liceo de Puriscal";
-                    mail.Body = "Visita la seccion Noticias de nuestra pagina";
-
+                    mail.Subject = "Nueva noticia de Personal: " + titulo;
+                    mail.Body = descripcion + "<br />  Visita la seccion Noticias internas de nuestra pagina";
+                    mail.IsBodyHtml = true;
 
                     foreach (var copi in listaCorreos)
                     {
                         mail.To.Add(copi.correo);
                     }
 
-                    /**********************************************************************************************************************************************/
+                    /*Datos serv*/
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
                     SmtpServer.Port = 587;
                     SmtpServer.Credentials = new System.Net.NetworkCredential("liceodepuriscalcr@gmail.com", "PurisCR12");
                     SmtpServer.EnableSsl = true;
@@ -303,7 +329,8 @@ namespace Bela.UI.Controllers
                 res = ex.Message;
             }
             return res;
-        }
 
+        }
     }
 }
+
