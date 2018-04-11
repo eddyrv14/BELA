@@ -294,6 +294,7 @@
     <Content Include="Views\Admin\ModificarNoticia.cshtml" />
     <Content Include="Views\Usuario\Cuentas.cshtml" />
     <Content Include="Views\Usuario\EditarCuenta.cshtml" />
+    <Content Include="Views\Shared\_Nosotros.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

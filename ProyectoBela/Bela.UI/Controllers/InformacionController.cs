@@ -34,5 +34,10 @@ namespace Bela.UI.Controllers
         {
             return View();
         }
+
+        public ActionResult Nosotros() 
+        {
+            return View();
+        }
 	}
 }
