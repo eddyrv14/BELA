@@ -74,3 +74,25 @@ C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack
 C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.csprojResolveAssemblyReference.cache
 C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.dll
 C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.pdb
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\Bela.BL.dll
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\Bela.BL.pdb
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\Bela.DAL.dll
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\Bela.Datos.dll
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack.OrmLite.dll
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack.Common.dll
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack.Text.dll
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\Bela.DAL.pdb
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\Bela.DAL.dll.config
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\Bela.Datos.pdb
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack.OrmLite.xml
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack.OrmLite.SqlServer.xml
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack.Common.xml
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack.Interfaces.xml
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\bin\Debug\ServiceStack.Text.xml
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.csprojResolveAssemblyReference.cache
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.csproj.CoreCompileInputs.cache
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.csproj.CopyComplete
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.dll
+C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.BL\obj\Debug\Bela.BL.pdb
