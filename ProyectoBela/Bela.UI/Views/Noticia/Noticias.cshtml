@@ -32,6 +32,15 @@
             </div>
         </div>
     }
+    else if (TempData["estadoNotificacion"] != null && TempData["estadoNotificacion"].Equals("ErrorNoIngresoCorreo"))
+    {
+        <div class="container">
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>@TempData["mensaje"]</strong>
+            </div>
+        </div>
+    }
 
     <h1>Noticias</h1>
 </div>
@@ -64,7 +73,7 @@
             </div>
             <div class="modal-body">
 
-                <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Estas seguro de que quieres eliminar esta cuenta</div>
+                <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Estas seguro de que quieres enviar notificaciones al correo?</div>
                 @using (Html.BeginForm("ActivarNotificaciones", "Usuario", FormMethod.Post))
                 {
                     <form method="post">
@@ -88,3 +97,6 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
+
+
+

@@ -17,6 +17,7 @@ namespace Bela.BL.Interfaces
         Usuario BuscarCuenta(int idPersona);
         string ModificarCuenta(Usuario usuario);
         string EliminarCuenra(int idUsuario);
+
         string ActivarNoticaciones(string correo);
         List<NotiExternas> ListaCorreoNotiExternas();
     }
