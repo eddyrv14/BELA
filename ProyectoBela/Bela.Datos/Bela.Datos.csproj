@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetalleMateria.cs" />
     <Compile Include="ImagenNoticia.cs" />
     <Compile Include="Materia.cs" />
     <Compile Include="MensajeContacto.cs" />

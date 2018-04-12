@@ -66,10 +66,12 @@
     <Compile Include="Interfaces\IContacto.cs" />
     <Compile Include="Interfaces\IEstudiante.cs" />
     <Compile Include="Interfaces\INoticia.cs" />
+    <Compile Include="Interfaces\IProfesor.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Metodos\MContactoDal.cs" />
     <Compile Include="Metodos\MEstudianteDal.cs" />
     <Compile Include="Metodos\MNoticiasDal.cs" />
+    <Compile Include="Metodos\MProfesorDal.cs" />
     <Compile Include="Metodos\MUsuarioDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
