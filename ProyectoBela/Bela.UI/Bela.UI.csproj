@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -186,6 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animated.css" />
+    <Content Include="Content\BI.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\datatable.css" />
@@ -199,6 +201,7 @@
     <Content Include="Content\style2.css" />
     <Content Include="Content\styleinfo.css" />
     <Content Include="Content\styleMaterias.css" />
+    <Content Include="Content\styleMenuVerticaNoticias.css" />
     <Content Include="Content\styleNoticias.css" />
     <Content Include="Content\Style_BI.css" />
     <Content Include="Content\stylosInicioPerfil.css" />
@@ -291,6 +294,8 @@
     <Content Include="Views\Admin\ModificarNoticia.cshtml" />
     <Content Include="Views\Usuario\Cuentas.cshtml" />
     <Content Include="Views\Usuario\EditarCuenta.cshtml" />
+    <Content Include="Views\Informacion\nosotros.cshtml" />
+    <Content Include="Views\Profesor\CrearMaterial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

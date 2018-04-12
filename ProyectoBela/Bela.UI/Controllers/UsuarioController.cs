@@ -242,5 +242,57 @@ namespace Bela.UI.Controllers
             return RedirectToAction("EditarCuenta", "Usuario", new { idPersona = idPersona });
 
         }
+
+        [HttpPost]
+        public ActionResult ActivarNotificaciones(FormCollection form)
+        {
+            string res = "";
+            string correo = form["txtCorreo"];
+
+            if (correo.Equals(""))
+            {
+                TempData["estadoNotificacion"] = "ErrorNoIngresoCorreo";
+                TempData["mensaje"] = "No se escribio ningun correo!";
+                return RedirectToAction("Noticias", "Noticia");
+            }
+
+
+            res = usuariosActividad.ActivarNoticaciones(correo);
+            if (res.Equals("Se agrego correo"))
+            {
+                TempData["estadoNotificacion"] = res;
+                TempData["mensaje"] = "Se agrego correo:  " + correo + "  a notificaciones";
+            }
+            else
+            {
+                TempData["estadoNotificacion"] = "Error";
+            }
+            return RedirectToAction("Noticias", "Noticia");
+        }
+
+        [HttpPost]
+        public ActionResult ActivarNotificacionesInternas(FormCollection form)
+        {
+            string res = "";
+            string correo = form["txtCorreo"];
+            if (correo.Equals(""))
+            {
+                TempData["estadoNotificacion"] = "ErrorNoIngresoCorreo";
+                TempData["mensaje"] = "No se escribio ningun correo!";
+                return RedirectToAction("Noticias", "Noticia");
+            }
+
+            res = usuariosActividad.ActivarNoticacionesInternas(correo);
+            if (res.Equals("Se agrego correo"))
+            {
+                TempData["estadoNotificacion"] = res;
+                TempData["mensaje"] = "Se agrego correo:  " + correo + "  a notificaciones";
+            }
+            else
+            {
+                TempData["estadoNotificacion"] = "Error";
+            }
+            return RedirectToAction("NoticiasInternas", "Noticia");
+        }
     }
 }

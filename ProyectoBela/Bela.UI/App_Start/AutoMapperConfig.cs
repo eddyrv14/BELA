@@ -16,6 +16,7 @@ namespace Bela.UI.App_Start
                 //Inserts, Update, Deletes
                 cfg.CreateMap<Models.MensajeContacto, Bela.Datos.MensajeContacto>();
                 cfg.CreateMap<Models.Noticia, Bela.Datos.Noticia>();
+                cfg.CreateMap<Models.NoticiaDetalles, Bela.Datos.NoticiaDetalles>();
                 cfg.CreateMap<Models.Usuario, Bela.Datos.Usuario>();
                 cfg.CreateMap<Models.ImagenNoticia, Bela.Datos.ImagenNoticia>();
                 cfg.CreateMap<Models.Materia, Bela.Datos.Materia>();
