@@ -295,6 +295,7 @@
     <Content Include="Views\Usuario\Cuentas.cshtml" />
     <Content Include="Views\Usuario\EditarCuenta.cshtml" />
     <Content Include="Views\Informacion\nosotros.cshtml" />
+    <Content Include="Views\Profesor\CrearMaterial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

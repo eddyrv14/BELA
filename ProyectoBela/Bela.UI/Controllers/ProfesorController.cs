@@ -17,5 +17,10 @@ namespace Bela.UI.Controllers
             }
             return View();
         }
+
+        public ActionResult CrearMaterial()
+        {
+            return View();
+        }
     }
 }
