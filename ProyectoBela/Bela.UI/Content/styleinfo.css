@@ -1,1 +1,41 @@
-﻿
+﻿/*BI*/
+
+.sangria {
+    text-indent: 10px;
+}
+
+
+.parrafos {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 27px;
+    color: #000;
+}
+
+
+.aboutBI {
+    background: #ffffff;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+    .aboutBI p {
+        font-size: 16px;
+    }
+
+    .aboutBI .container {
+        padding-top: 10px;
+        padding-bottom: 47px;
+    }
+
+    .aboutBI img {
+        padding: 7px;
+        display: block;
+        border: 1px solid #bab4bb;
+    }
+
+.heading {
+    text-align: center;
+    padding-bottom: 70px;
+}
