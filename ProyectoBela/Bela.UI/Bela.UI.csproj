@@ -211,6 +211,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Imagenes\activadadesDepor.jpg" />
     <Content Include="Imagenes\banner.jpg" />
+    <Content Include="Imagenes\BI.png" />
     <Content Include="Imagenes\hd.jpg" />
     <Content Include="Imagenes\ImagenesNoticias\4.jpg" />
     <Content Include="Imagenes\ImagenesNoticias\5.jpg" />
