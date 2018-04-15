@@ -209,6 +209,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\activadadesDepor.jpg" />
     <Content Include="Imagenes\banner.jpg" />
     <Content Include="Imagenes\hd.jpg" />
     <Content Include="Imagenes\ImagenesNoticias\4.jpg" />
