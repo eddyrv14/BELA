@@ -8,10 +8,7 @@ namespace Bela.Datos
 {
     public class Materia
     {
-        public int idDetalleMateria { get; set; }
-        public string materia { get; set; }
-        public string nomProfesor { get; set; }
-        public string seccion { get; set; }
-        public int grado { get; set; }
+        public int idMateria { get; set; }
+        public string nombre { get; set; }
     }
 }
