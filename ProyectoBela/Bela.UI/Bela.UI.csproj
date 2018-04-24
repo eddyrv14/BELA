@@ -214,6 +214,9 @@
     <Content Include="Imagenes\banner.jpg" />
     <Content Include="Imagenes\BI.png" />
     <Content Include="Imagenes\hd.jpg" />
+    <Content Include="Imagenes\ImagenesMatricula\1.jpg" />
+    <Content Include="Imagenes\ImagenesMatricula\2.jpg" />
+    <Content Include="Imagenes\ImagenesMatricula\3.jpg" />
     <Content Include="Imagenes\ImagenesNoticias\4.jpg" />
     <Content Include="Imagenes\ImagenesNoticias\5.jpg" />
     <Content Include="Imagenes\inicio3.jpg" />
