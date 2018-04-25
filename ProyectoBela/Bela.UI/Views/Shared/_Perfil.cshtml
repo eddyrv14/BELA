@@ -13,7 +13,8 @@
     <link href="~/Content/styleMaterias.css" rel="stylesheet" />
     <link href="~/Content/stylosInicioPerfil.css" rel="stylesheet" />
     <link href="~/Content/datatable_bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/styleNoticias.css" rel="stylesheet" />
+    <link href="~/Content/stylesNoticias.css" rel="stylesheet" />
+    <link href="~/Content/styleProfesores.css" rel="stylesheet" />
 </head>
 <body>
     <header class="main-header" id="header">
@@ -32,7 +33,6 @@
                             <ul class="nav navbar-nav">
                                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                                 <li>@Html.ActionLink("Noticias", "Noticias", "Noticia")</li>
-                                <li>@Html.ActionLink("Nosotros", "nosotros", "Informacion")</li>
                                 <li>@Html.ActionLink("Contacto", "EnvioMensaje", "Contacto")</li>
 
                                 @if (Session["UserID"] != null && Session["rol"].Equals("Administrador"))
@@ -64,13 +64,13 @@
         </div>
     </header>
 
-    <div class="">
+    <div class="body-content">
         @RenderBody()
         <hr />
 
     </div>
 
-    <footer class="footer" id="footer">
+    <footer class="footer" id="footer" data-toggle="offcanvas">
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 footer-copyright">
@@ -85,23 +85,23 @@
                         @*<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
                             <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
                             <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>*@
-                        <a href="https://wego.here.com/directions/mix//Liceo-de-Puriscal,-114001-Santiago:e-eyJuYW1lIjoiTGljZW8gZGUgUHVyaXNjYWwiLCJhZGRyZXNzIjoiMTE0MDAxIFNhbnRpYWdvLCBTYW4gSm9zZSwgQ29zdGEgUmljYSIsImxhdGl0dWRlIjo5Ljg0NzM2MjM1MDIyODQsImxvbmdpdHVkZSI6LTg0LjMxMzEyNDMyMTU1NCwicHJvdmlkZXJOYW1lIjoiZmFjZWJvb2siLCJwcm92aWRlcklkIjo0Mzc3NzI2NTI5OTU3OTN9?map=9.84736,-84.31312,15,normal&fb_locale=es_LA" title="Ubicacion"><i class="fas fa-map-marker-alt fa-2x"></i></a>
+                        <a href="https://wego.here.com/directions/mix//Liceo-de-Puriscal,-114001-Santiago:e-eyJuYW1lIjoiTGljZW8gZGUgUHVyaXNjYWwiLCJhZGRyZXNzIjoiMTE0MDAxIFNhbnRpYWdvLCBTYW4gSm9zZSwgQ29zdGEgUmljYSIsImxhdGl0dWRlIjo5Ljg0NzM2MjM1MDIyODQsImxvbmdpdHVkZSI6LTg0LjMxMzEyNDMyMTU1NCwicHJvdmlkZXJOYW1lIjoiZmFjZWJvb2siLCJwcm92aWRlcklkIjo0Mzc3NzI2NTI5OTU3OTN9?map=9.84736,-84.31312,15,normal&fb_locale=es_LA" title="Ubicacion"><i class="fas fa-map-marker-alt fa-2x"></i></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     <script src="~/Scripts/wow.js"></script>
     <script src="~/Scripts/custom.js"></script>
-    <script src="~/Scripts/menuVertical.js"></script>
     <script src="~/Scripts/datatable.js"></script>
     <script src="~/Scripts/datatable_bootstrap.js"></script>
-    <script src="~/Scripts/datatable_init.js"></script>
-
+    <script src="~/Scripts/mn.js"></script>
+    <script src="~/Scripts/menuVertical.js"></script>
 </body>
 </html>
 

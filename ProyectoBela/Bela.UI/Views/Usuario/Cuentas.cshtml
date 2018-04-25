@@ -54,7 +54,7 @@
 
         @if (TempData["estado"] != null && TempData["estado"].Equals("Cuenta Eliminada"))
         {
-            <div class="container">
+            <div id="Mensaje" class="container">
                 <div class="alert alert-danger alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                     <strong>@TempData["estado"]</strong>
@@ -63,7 +63,7 @@
         }
         else if (TempData["estado"] != null && TempData["estado"].Equals("Cuenta Modificada"))
         {
-            <div class="container">
+            <div id="Mensaje" class="container">
                 <div class="alert alert-warning alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                     <strong>@TempData["estado"]</strong>
@@ -127,3 +127,9 @@
 </div>
 <!-- /#wrapper -->
 
+
+<script>
+    window.onload = function () {
+        $("#Mensaje").fadeOut(4000);
+    }
+</script>

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<Bela.UI.Models.MateriaDeta>
+
+@{
     ViewBag.Title = "Liceo de puriscal";
     Layout = "~/Views/Shared/_Perfil.cshtml";
 }
@@ -16,7 +18,7 @@
                 </a>
             </li>
             <li>
-                @Html.ActionLink("Inicio", "Inicio", "Admin", null, new { @class = "activeMenu" })
+                @Html.ActionLink("Inicio", "Inicio", "Profesor", null, new { @class = "activeMenu" })
             </li>
             <li>
                 @Html.ActionLink("Crear Material", "CrearMaterial", "Profesor")
@@ -46,10 +48,53 @@
         </button>
 
         <div class="container text-center">
-            <h1 class="te"> Bienvenido Profesor @Session["UserNombre"].ToString()</h1>
+            <h1 class="titulos"> Bienvenido Profesor @Session["UserNombre"].ToString()</h1>
 
-            <h2><small>Ultimas movimientos realizados </small></h2>
+            <h2><small>Materias</small></h2>
             <p><span class="glyphicon glyphicon-chevron-down"></span></p>
+        </div>
+
+
+        @*<div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
+                        <div class="align-center">
+                            <h4>Ciencias</h4>
+                            <br />
+                            <h3>Seccion: 7-1</h3>
+
+                            <div class="ficon">
+                                @Html.ActionLink("Administrar", "AdministrarMateria", "Profesor", null, new { @class = "btn btn-default" })
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+
+        <div class="container">
+            <div class="row">
+
+                @foreach (var item in Model)
+                {
+
+                    <div class="col-md-4" onclick="location.href='@Url.Action("ListaMateriales","Material", new {idDetalleMateria=item.idDetalleMateria })'">
+                        <div class="wow bounceIn">
+                            <div class="align-center">
+                                <h4>@Html.DisplayFor(modelItem => item.materia)</h4>
+                                <br />
+                                <h3>@Html.DisplayFor(modelItem => item.seccion)</h3>
+
+                                <div class="ficon">
+                                    <a class="btn btn-warning" role="button" onclick="location.href='@Url.Action("ListaMateriales", "Material", new {idMaterial=item.idDetalleMateria })'">Administrar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+
+            </div>
         </div>
 
 

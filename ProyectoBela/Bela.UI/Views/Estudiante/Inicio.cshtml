@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Bela.UI.Models.Materia>
+﻿@model IEnumerable<Bela.UI.Models.MateriaDeta>
 
 @{
     ViewBag.Title = "Liceo de puriscal";
@@ -6,7 +6,7 @@
 }
 
 <div class="container text-center">
-    <h1> Bienvenido Estudiante @Session["UserNombre"].ToString()</h1>
+    <h1 class="titulos"> Bienvenido Estudiante @Session["UserNombre"].ToString()</h1>
 </div>
 
 
@@ -22,12 +22,12 @@
         {
 
             <div class="row media materia-bor">
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <div class="materias-ico">
-                        Materia: @Html.DisplayFor(modelItem => item.materia)<br>Grado: @Html.DisplayFor(modelIterm => item.grado)
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" onclick="location.href='@Url.Action("ListaMateriales","Material", new {idDetalleMateria=item.idDetalleMateria })'">
+                    <div class="materias-ico parrafos">
+                        Materia: @Html.DisplayFor(modelItem => item.materia)
                     </div>
                 </div>
-                <div class="materias-desc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <div class="materias-desc col-xs-12 col-sm-9 col-md-9 col-lg-9 parrafos" onclick="location.href='@Url.Action("ListaMateriales","Material", new {idDetalleMateria=item.idDetalleMateria })'">
                     <h4>Seccion: @Html.DisplayFor(modelItem => item.seccion)</h4>
                     <h5>Profesor: @Html.DisplayFor(modelItem => item.nomProfesor)</h5>
                     <p>

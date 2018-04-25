@@ -9,11 +9,10 @@
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/animated.css" rel="stylesheet" />
     <link href="~/Content/fontawesome.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="~/Content/main.css" rel="stylesheet" />
     <link href="~/Content/responsive.css" rel="stylesheet" />
     <link href="~/Content/style.css" rel="stylesheet" />
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    
 
 </head>
 
@@ -28,6 +27,7 @@
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="fa fa-bars"></span>
                             </button>
+
                             @Html.ActionLink("Liceo de Puriscal", "Index", "Home", null, new { @class = "navbar-brand" })
                         </div>
                         <div class="collapse navbar-collapse navbar-right" id="mynavbar">
@@ -36,7 +36,7 @@
                                 <li>@Html.ActionLink("Noticias", "Noticias", "Noticia")</li>
                                 <li>@Html.ActionLink("Nosotros", "nosotros", "Informacion")</li>
                                 <li>@Html.ActionLink("Contacto", "EnvioMensaje", "Contacto")</li>
-                                
+
                                 @if (Session["UserID"] != null && Session["rol"].Equals("Administrador"))
                                 {
                                     <li>@Html.ActionLink("Perfil", "Inicio", "Admin")</li>
@@ -68,7 +68,7 @@
             <!--/ nav-->
             <div class="container text-center">
                 <div class="wrapper wow fadeInUp delay-05s">
-                    <h3 class="title">Liceo de Puriscal</h3>
+                    <h3 class="title titulo-height">Liceo de Puriscal</h3>
                     <h4 class="sub-title">La educacion para un futuro mejor</h4>
 
                 </div>
@@ -101,7 +101,7 @@
                         @*<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
                             <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
                             <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>*@
-                        <a href="https://wego.here.com/directions/mix//Liceo-de-Puriscal,-114001-Santiago:e-eyJuYW1lIjoiTGljZW8gZGUgUHVyaXNjYWwiLCJhZGRyZXNzIjoiMTE0MDAxIFNhbnRpYWdvLCBTYW4gSm9zZSwgQ29zdGEgUmljYSIsImxhdGl0dWRlIjo5Ljg0NzM2MjM1MDIyODQsImxvbmdpdHVkZSI6LTg0LjMxMzEyNDMyMTU1NCwicHJvdmlkZXJOYW1lIjoiZmFjZWJvb2siLCJwcm92aWRlcklkIjo0Mzc3NzI2NTI5OTU3OTN9?map=9.84736,-84.31312,15,normal&fb_locale=es_LA" title="Ubicacion"><i class="fas fa-map-marker-alt fa-2x"></i></a>
+                        <a href="https://wego.here.com/directions/mix//Liceo-de-Puriscal,-114001-Santiago:e-eyJuYW1lIjoiTGljZW8gZGUgUHVyaXNjYWwiLCJhZGRyZXNzIjoiMTE0MDAxIFNhbnRpYWdvLCBTYW4gSm9zZSwgQ29zdGEgUmljYSIsImxhdGl0dWRlIjo5Ljg0NzM2MjM1MDIyODQsImxvbmdpdHVkZSI6LTg0LjMxMzEyNDMyMTU1NCwicHJvdmlkZXJOYW1lIjoiZmFjZWJvb2siLCJwcm92aWRlcklkIjo0Mzc3NzI2NTI5OTU3OTN9?map=9.84736,-84.31312,15,normal&fb_locale=es_LA" title="Ubicacion"><i class="fas fa-map-marker-alt fa-2x"></i></i></a>
                     </div>
                 </div>
             </div>

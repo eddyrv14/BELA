@@ -270,15 +270,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Contacto\EnvioMensaje.cshtml" />
     <Content Include="Views\Shared\_Contacto.cshtml" />
     <Content Include="Views\Noticia\Noticias.cshtml" />
@@ -304,12 +295,13 @@
     <Content Include="Views\Usuario\Cuentas.cshtml" />
     <Content Include="Views\Usuario\EditarCuenta.cshtml" />
     <Content Include="Views\Informacion\nosotros.cshtml" />
-    <Content Include="Views\Profesor\CrearMaterial.cshtml" />
+    <Content Include="Views\Material\DetalleMaterial.cshtml" />
+    <Content Include="Views\Material\ListaMateriales.cshtml" />
+    <Content Include="Views\Profesor\ss.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Materiales\" />
-    <Folder Include="Views\Material\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

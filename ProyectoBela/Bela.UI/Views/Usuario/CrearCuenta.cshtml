@@ -3,8 +3,10 @@
 @{
     ViewBag.Title = "Liceo de puriscal";
     Layout = "~/Views/Shared/_Perfil.cshtml";
-    //List<>
+
 }
+
+
 
 <div id="wrapper">
     <div class="overlay"></div>
@@ -21,10 +23,10 @@
                 @Html.ActionLink("Inicio", "Inicio", "Admin")
             </li>
             <li>
-                @Html.ActionLink("Crear Noticia", "CrearNoticia", "Admin")
+                @Html.ActionLink("Crear Noticia", "CrearNoticia", "Admin", null)
             </li>
             <li>
-                @Html.ActionLink("Mensajes", "Mensajes", "Admin")
+                @Html.ActionLink("Mensajes", "CrearNoticia", "Admin")
             </li>
             <li>
                 @Html.ActionLink("NoticiasInternas", "NoticiasInternas", "Noticia")
@@ -49,15 +51,32 @@
             <span class="hamb-bottom"></span>
         </button>
 
-        @if (TempData["estado"] != null)
+
+        @if (TempData["mensajeError"] != null && TempData["mensajeError"].Equals("Error"))
         {
             <div class="container">
-                <div class="alert alert-success alert-dismissable">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <strong>@TempData["estado"]</strong>
+                <div id="Mensaje">
+                    <div class=" alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Ingrese todos los datos necesarios</strong>
+                    </div>
                 </div>
             </div>
+
         }
+        else if (TempData["estado"] != null && TempData["estado"].Equals("Usuario creado"))
+        {
+            <div class="container">
+                <div id="Mensaje">
+                    <div class=" alert alert-success alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Cuenta Creada</strong>
+                    </div>
+                </div>
+            </div>
+
+        }
+
 
 
         @using (Html.BeginForm("CrearCuenta", "Usuario", FormMethod.Post))
@@ -68,6 +87,7 @@
 
             <section class="section-padding" id="contact">
                 <div class="container">
+
                     @if (@ViewData["mensajeCuenta"] != null)
                     {
                         <div class="text-center" style="color:green;">
@@ -96,43 +116,101 @@
                                     <form action="" method="post" role="form" class="contactForm">
 
                                         <div class="form-group">
+                                            @Html.Label("Tipo de usuario")
+                                            @Html.DropDownList("dropIdTipoUsuario", (SelectList)ViewBag.TiposUsuarios, "Seleccione Tipo de usuario", new { @class = "form-control", onchange = "mostrarSecciones()", required = "required" })
+                                        </div>
+
+                                        <div class="form-group" id="divSecciones" style="display:none">
+                                            @Html.Label("Seccion")
+                                            @Html.DropDownList("dropIdSeccion", (SelectList)ViewBag.Secciones, "Seleccione una Seccion", new { @class = "form-control" })
+                                        </div>
+
+
+                                        <div class="form-group">
                                             @Html.Label("Nombre")
-                                            @*  @Html.DropDownList("dropIdTipo", (SelectList)ViewBag.Tipos, "Seleccione Tipo", new { @class = "form-control" })*@
-                                            @Html.TextBoxFor(x => x.nombre, new { @class = "form-control", @name = "nombre", @placeholder = "Nombre" })
+                                            @Html.TextBoxFor(x => x.nombre, new
+                                       {
+                                           @class = "form-control",
+                                           @name = "nombre",
+                                           @placeholder = "Nombre",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Ingrese un Nombre')",
+                                           oninput = "setCustomValidity('')"
+                                       })
 
                                         </div>
 
                                         <div class=" form-group">
                                             @Html.Label("Apellido 1")
-                                            @Html.TextBoxFor(x => x.apellido1, new { @class = "form-control", @name = "apellido1", @placeholder = "Apellido1" })
+                                            @Html.TextBoxFor(x => x.apellido1, new
+                                       {
+                                           @class = "form-control",
+                                           @name = "apellido1",
+                                           @placeholder = "Apellido1",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Ingrese el primer apellido')",
+                                           oninput = "setCustomValidity('')"
+                                       })
 
                                         </div>
 
                                         <div class="form-group">
                                             @Html.Label("Apellido 2")
-                                            @Html.TextBoxFor(x => x.apellido2, new { @class = "form-control", @name = "apellido2", @placeholder = "Apellido2" })
+                                            @Html.TextBoxFor(x => x.apellido2, new
+                                       {
+                                           @class = "form-control",
+                                           @name = "apellido2",
+                                           @placeholder = "Apellido2",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Ingrese el segundo')",
+                                           oninput = "setCustomValidity('')"
+                                       })
 
                                         </div>
 
                                         <div class="form-group">
                                             @Html.Label("Correo")
-                                            @Html.TextBoxFor(x => x.correo, new { @Type = "email", @class = "form-control", @name = "correo", @placeholder = "Correo" })
+                                            @Html.TextBoxFor(x => x.correo, new
+                                       {
+                                           @Type = "email",
+                                           @class = "form-control",
+                                           @name = "correo",
+                                           @placeholder = "Correo",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Ingrese un correo')",
+                                           oninput = "setCustomValidity('')"
+                                       })
                                         </div>
 
-                                        <div class="form-group">
-                                            @Html.Label("Tipo de usuario")
-                                            @Html.DropDownList("dropIdTipoUsuario", (SelectList)ViewBag.TiposUsuarios, "Seleccione Tipo de usuario", new { @class = "form-control" })
-                                        </div>
+
 
                                         <div class="form-group">
                                             @Html.Label("Usuario")
-                                            @Html.TextBoxFor(x => x.usuario, new { @Type = "Text", @class = "form-control", @name = "usuario", @placeholder = "Usuario" })
+                                            @Html.TextBoxFor(x => x.usuario, new
+                                       {
+                                           @Type = "Text",
+                                           @class = "form-control",
+                                           @name = "usuario",
+                                           @placeholder = "Usuario",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Ingrese un usuario')",
+                                           oninput = "setCustomValidity('')"
+                                       })
 
                                         </div>
 
                                         <div class="form-group">
                                             @Html.Label("Contraseña")
-                                            @Html.TextBoxFor(x => x.contrasena, new { @Type = "password", @class = "form-control", @name = "contrasena", @placeholder = "Contraseña" })
+                                            @Html.TextBoxFor(x => x.contrasena, new
+                                       {
+                                           @Type = "password",
+                                           @class = "form-control",
+                                           @name = "contrasena",
+                                           @placeholder = "Contraseña",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Ingrese una contraseña')",
+                                           oninput = "setCustomValidity('')"
+                                       })
 
                                         </div>
 
@@ -154,3 +232,22 @@
     <!-- /#page-content-wrapper -->
 </div>
 <!-- /#wrapper -->
+
+
+
+<script>
+
+    window.onload = function () {
+        $("#Mensaje").fadeOut(4000);
+    }
+
+    function mostrarSecciones() {
+        var x = document.getElementById("dropIdTipoUsuario").value;
+        if (x == 3) {
+            $('#divSecciones').css('display', 'block');
+        } else {
+            $('#divSecciones').css('display', 'none');
+        }
+
+    }
+</script>
