@@ -51,16 +51,29 @@
         </button>
 
 
-        @if (TempData["estadoAgregarMateria"] != null)
+        @if (TempData["estadoMat"] != null)
         {
-            <div class="container">
-                <div class="alert alert-success alert-dismissable">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <strong>@TempData["estadoAgregarMateria"]</strong>
+          <div class="container">
+                <div id="Mensaje">
+                    <div class=" alert alert-success alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Materia agregada</strong>
+                    </div>
                 </div>
             </div>
         }
-
+        
+        else if (TempData["errorEdi"] != null)
+        {
+            <div class="container">
+                <div id="Mensaje">
+                    <div class=" alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Revisar bien los datos.(Cedula y correo no deben repetirse de otras cuentas)</strong>
+                    </div>
+                </div>
+            </div>
+        }
 
 
 
@@ -257,6 +270,11 @@
 
 
 <script>
+
+    window.onload = function () {
+        $("#Mensaje").fadeOut(5000);
+    }
+
     function justNumbers(e) {
         var keynum = window.event ? window.event.keyCode : e.which;
         if ((keynum == 8) || (keynum == 46))

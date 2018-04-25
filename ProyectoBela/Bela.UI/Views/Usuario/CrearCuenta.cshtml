@@ -76,6 +76,17 @@
             </div>
 
         }
+        else if (TempData["error"] != null)
+        {
+            <div class="container">
+                <div id="Mensaje">
+                    <div class=" alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Revisar bien los datos.(Cedula y correo no deben repetirse de otras cuentas)</strong>
+                    </div>
+                </div>
+            </div>
+        }
 
 
 
@@ -253,7 +264,7 @@
 <script>
 
     window.onload = function () {
-        $("#Mensaje").fadeOut(4000);
+        $("#Mensaje").fadeOut(5000);
     }
 
     function mostrarSecciones() {

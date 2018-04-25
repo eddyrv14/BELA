@@ -9,7 +9,7 @@ namespace Bela.DAL.Interfaces
 {
     public interface IContacto
     {
-        void EnvioMensaje(MensajeContacto mensaje);
+        string EnvioMensaje(MensajeContacto mensaje);
         List<MensajeContacto> listaMensajes();
     }
 }

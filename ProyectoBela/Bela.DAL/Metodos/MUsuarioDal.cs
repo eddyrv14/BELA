@@ -89,7 +89,7 @@ namespace Bela.DAL.Metodos
             }
             catch (Exception ex)
             {
-                res = ex.Message;
+                res = "Error al agregar";
                 cn.Close();
             }
             cn.Close();
@@ -134,7 +134,7 @@ namespace Bela.DAL.Metodos
                 cmd.Parameters.Add("@correo", SqlDbType.VarChar, 60).Value = usuario.correo;
 
 
-                res = cmd.ExecuteNonQuery() == 1 ? "Persona modificada" : "Error al agregar";
+                res = cmd.ExecuteNonQuery() == 1 ? "Persona modificada" : "Error al modificar";
 
                 if (res.Equals("Persona modificada"))
                 {
@@ -143,7 +143,7 @@ namespace Bela.DAL.Metodos
                     cmd2.CommandText = "modificarUsuario";
                     cmd2.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.Add("@idUsuario", SqlDbType.Int).Value = usuario.idUsuario;
+                    cmd2.Parameters.Add("@idUsuario", SqlDbType.Int).Value = usuario.idUsuario;
                     cmd2.Parameters.Add("@idRol", SqlDbType.Int).Value = usuario.rol;
                     cmd2.Parameters.Add("@usuario", SqlDbType.VarChar, 30).Value = usuario.usuario;
                     cmd2.Parameters.Add("@contrasena", SqlDbType.VarChar, 30).Value = usuario.contrasena;
@@ -154,7 +154,7 @@ namespace Bela.DAL.Metodos
             }
             catch (Exception ex)
             {
-                res = ex.Message;
+                res = "Error al modificar cuenta";
                 cn.Close();
             }
             cn.Close();
@@ -194,7 +194,7 @@ namespace Bela.DAL.Metodos
 
                     cmd2.Parameters.Add("@idUsuario", SqlDbType.Int).Value = idUsuario;
 
-                    res = cmd2.ExecNonQuery() == 1 ? "MateriaAgregada" : "Error al agregar";
+                    res = cmd2.ExecNonQuery() == 1 ? "Materia Agregada" : "Error al agregar";
                 }
 
 

@@ -13,10 +13,29 @@
 
     <section class="section-padding" id="contact">
         <div class="container">
-            @if (Session["MensajeEnviado"] != null)
+
+            @if (TempData["mensaje"] != null)
             {
-                <div class="text-center" style="color:green;">Mensaje Enviado</div>
+                <div class="container">
+                    <div id="Mensaje">
+                        <div class=" alert alert-success alert-dismissable" >
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Mensaje Enviado</strong>
+                        </div>
+                    </div>
+                </div>
+
             }
+
+            <div class="container" style="z-index:999">
+                <div id="Mensaje">
+                    <div class=" alert alert-success alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Mensaje Enviado</strong>
+                    </div>
+                </div>
+            </div>
+
             <div class="row white">
                 <div class="col-md-8 col-sm-12">
                     <div class="section-title">
@@ -93,3 +112,15 @@
     </section>
 
 }
+
+
+
+
+<script>
+    window.onload = function () {
+        $("#Mensaje").fadeOut(5000);
+    }
+  
+
+
+</script>

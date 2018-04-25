@@ -145,8 +145,6 @@ namespace Bela.UI.Controllers
                 string contratxt = form["contrasena"];
 
 
-
-
                 Usuario usu = new Usuario();
 
                 usu.nombre = nombre;
@@ -159,7 +157,15 @@ namespace Bela.UI.Controllers
                 usu.contrasena = contratxt;
 
                 res = usuariosActividad.InsertPersona(usu);
+
+                if (res.Equals("Error al agregar"))
+                {
+                    TempData["error"] = "error";
+                    return RedirectToAction("CrearCuenta");
+                }
+
                 TempData["estado"] = res;
+
                 usu = null;
                 form = null;
 
@@ -221,11 +227,17 @@ namespace Bela.UI.Controllers
         [HttpPost]
         public ActionResult agregarMateriaProf(FormCollection form)
         {
+            string res="";
             int idMateria = Convert.ToInt32(form["DropIdMateria"]);
             int idProfesor = Convert.ToInt32(form["idPersona"]);
             int idSeccion = Convert.ToInt32(form["DropIdSeccion"]);
 
-            usuariosActividad.AgregarMateriaProf(idMateria, idProfesor, idSeccion);
+           res=usuariosActividad.AgregarMateriaProf(idMateria, idProfesor, idSeccion);
+
+           if (res.Equals("Materia Agregada"))
+           {
+               TempData["estadoMat"] = "agregada";
+           }
 
             return RedirectToAction("EditarCuenta", "Usuario", new { idPersona = idProfesor });
         }
@@ -272,9 +284,8 @@ namespace Bela.UI.Controllers
                 string contratxt = form["contrasena"];
 
 
-                /*Estu*/
-                int idSeccion = Convert.ToInt32(form["dropIdSeccion"]);
-                usuariosActividad.ModificarEstudianteSeccion(idPersona, idSeccion);
+               
+                
 
 
                 Usuario usu = new Usuario();
@@ -290,6 +301,17 @@ namespace Bela.UI.Controllers
                 usu.contrasena = contratxt;
 
                 res = usuariosActividad.ModificarCuenta(usu);
+
+                if (res.Equals("Error al modificar cuenta"))
+                {
+                    TempData["errorEdi"] = "error";
+                    return RedirectToAction("EditarCuenta", new { idPersona=idPersona});
+                }
+
+                /*Estu*/
+                int idSeccion = Convert.ToInt32(form["dropIdSeccion"]);
+                usuariosActividad.ModificarEstudianteSeccion(idPersona, idSeccion);
+
                 ViewData["mensajeCuenta"] = res;
                 usu = null;
                 form = null;
