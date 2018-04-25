@@ -19,15 +19,18 @@ namespace Bela.UI.App_Start
                 cfg.CreateMap<Models.NoticiaDetalles, Bela.Datos.NoticiaDetalles>();
                 cfg.CreateMap<Models.Usuario, Bela.Datos.Usuario>();
                 cfg.CreateMap<Models.ImagenNoticia, Bela.Datos.ImagenNoticia>();
-                cfg.CreateMap<Models.Materia, Bela.Datos.Materia>();
-
+                cfg.CreateMap<Models.MateriaDeta, Bela.Datos.MateriaDeta>();
+                cfg.CreateMap<Models.DetalleMaterial, Bela.Datos.DetalleMaterial>();
+                cfg.CreateMap<Models.DetalleMateria, Bela.Datos.DetalleMateria>();
                 //// Selects
                 cfg.CreateMap<Bela.Datos.MensajeContacto, Models.MensajeContacto>();
                 cfg.CreateMap<Bela.Datos.Noticia, Models.Noticia>();
                 cfg.CreateMap<Bela.Datos.NoticiaDetalles, Models.NoticiaDetalles>();
                 cfg.CreateMap<Bela.Datos.Usuario, Models.Usuario>();
                 cfg.CreateMap<Bela.Datos.ImagenNoticia, Models.ImagenNoticia>();
-                cfg.CreateMap<Bela.Datos.Materia, Models.Materia>();
+                cfg.CreateMap<Bela.Datos.MateriaDeta, Models.MateriaDeta>();
+                cfg.CreateMap<Bela.Datos.DetalleMaterial, Models.DetalleMaterial>();
+                cfg.CreateMap<Bela.Datos.DetalleMateria, Models.DetalleMateria>();
             });
         }
 

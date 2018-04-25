@@ -262,7 +262,7 @@ namespace Bela.UI.Controllers
                     MailMessage mail = new MailMessage();
                     mail.From = new MailAddress("liceodepuriscalcr@gmail.com", "Liceo de Puriscal", Encoding.UTF8);
                     mail.Subject = "Nueva noticia: " + titulo;
-                    mail.Body = descripcion + "<br />  Visita la seccion Noticias de nuestra <br />  pagina";
+                    mail.Body = descripcion + "<br />  Visita la seccion Noticias de nuestra  pagina";
                     mail.IsBodyHtml = true;
 
                     foreach (var copi in listaCorreos)

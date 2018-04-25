@@ -19,15 +19,15 @@ namespace Bela.UI.Controllers
             estudiantesMetodos = new MEstudianteBL();
         }
 
-        // GET: Estudiante
+
         public ActionResult Inicio()
         {
             if (Session["UserID"] == null)
             {
                 return RedirectToAction("Login", "Usuario");
             }
-            var listaMaterias = estudiantesMetodos.listaMaterias(Convert.ToInt32(Session["UserID"]));
-            var lista = Mapper.Map<List<Models.Materia>>(listaMaterias);
+            var listaMaterias = estudiantesMetodos.listaMaterias(Convert.ToInt32(Session["UserSeccion"]));
+            var lista = Mapper.Map<List<Models.MateriaDeta>>(listaMaterias);
             return View(lista);
         }
     }

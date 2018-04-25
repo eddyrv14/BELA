@@ -13,10 +13,11 @@ namespace Bela.UI.Controllers
     public class UsuarioController : Controller
     {
         IUsuario usuariosActividad;
-
+        IEstudiante estudianteActividad;
         public UsuarioController()
         {
             usuariosActividad = new MUsuarioBL();
+            estudianteActividad = new MEstudianteBL();
         }
 
         public ActionResult Login()
@@ -45,6 +46,7 @@ namespace Bela.UI.Controllers
                         Session["rol"] = usuarDatos.rolNombre;
                         Session["UserUsuario"] = usuarDatos.usuario;
                         Session["UserContrasena"] = usuarDatos.contrasena;
+
                     }
                     else
                     {
@@ -62,6 +64,9 @@ namespace Bela.UI.Controllers
                     }
                     else if (usuarDatos.rolNombre.Equals("Estudiante"))
                     {
+                        var Datos = estudianteActividad.BuscarSeccion(usuarDatos.idPersona);
+                        Session["UserSeccion"] = Datos.idSeccion;
+
                         return RedirectToAction("Inicio", "Estudiante");
                     }
 
@@ -84,6 +89,9 @@ namespace Bela.UI.Controllers
         public ActionResult CrearCuenta()
         {
 
+            var lista = usuariosActividad.ListaSecciones();
+            ViewBag.Secciones = new SelectList(lista, "idSeccion", "nombre");
+
             var listaTipos = usuariosActividad.listaRoles();
             ViewBag.TiposUsuarios = new SelectList(listaTipos, "idRol", "nombre");
             return View();
@@ -95,8 +103,13 @@ namespace Bela.UI.Controllers
 
             string res = "";
 
+
+
             var listaTipos = usuariosActividad.listaRoles();
             ViewBag.TiposUsuarios = new SelectList(listaTipos, "idRol", "nombre");
+
+            var lista = usuariosActividad.ListaSecciones();
+            ViewBag.Secciones = new SelectList(lista, "idSeccion", "nombre");
 
             //try
             //{
@@ -120,6 +133,9 @@ namespace Bela.UI.Controllers
                 string usuariotxt = form["usuario"];
                 string contratxt = form["contrasena"];
 
+                /*Estu*/
+                int idSeccion = Convert.ToInt32(form["dropIdSeccion"]);
+
                 Usuario usu = new Usuario();
 
                 usu.nombre = nombre;
@@ -131,17 +147,22 @@ namespace Bela.UI.Controllers
                 usu.contrasena = contratxt;
 
                 res = usuariosActividad.InsertPersona(usu);
-                ViewData["mensajeCuenta"] = res;
+                TempData["estado"] = res;
                 usu = null;
                 form = null;
 
+                if (TempData["estado"] != null && idRol == 3 && TempData["estado"].Equals("Usuario creado"))
+                {
+
+                    usuariosActividad.InsertarEstudianteSeccion(idSeccion);
+                }
             }
             else
             {
-                ViewData["mensajeError"] = "Ingrese todos los datos necesarios";
+                TempData["mensajeError"] = "Error";
                 return View();
             }
-            TempData["estado"] = "Cuenta creada";
+
             return RedirectToAction("CrearCuenta");
         }
 
@@ -163,12 +184,42 @@ namespace Bela.UI.Controllers
             var listaTipos = usuariosActividad.listaRoles();
             /*ViewBag primero obtengo los datos de cuenta, para poner valor inicial al dropdownlist*/
             ViewBag.TiposUsuarios = new SelectList(listaTipos, "idRol", "nombre", cuenta.rol);
+            if (cuenta.rol == 3)
+            {
+                var seccion = estudianteActividad.BuscarSeccion(idPersona);
+                var lista = usuariosActividad.ListaSecciones();
+                ViewBag.Secciones = new SelectList(lista, "idSeccion", "nombre", seccion.idSeccion);
+                TempData["rol"] = "Estudiante";
+            }
+            else if (cuenta.rol == 2)
+            {
+                var listaMaterias = usuariosActividad.ListaMaterias();
+                var listaSecciones = usuariosActividad.ListaSecciones();
+                ViewBag.MateriasPro = new SelectList(listaMaterias, "idMateria", "nombre");
+                ViewBag.SeccionesPro = new SelectList(listaSecciones, "idSeccion", "nombre");
+                TempData["rol"] = "Profesor";
+            }
 
             /*AutoMapper*/
             var mostrarCuenta = Mapper.Map<Bela.UI.Models.Usuario>(cuenta);
 
             return View(mostrarCuenta);
         }
+
+
+        [HttpPost]
+        public ActionResult agregarMateriaProf(FormCollection form)
+        {
+            int idMateria = Convert.ToInt32(form["DropIdMateria"]);
+            int idProfesor = Convert.ToInt32(form["idPersona"]);
+            int idSeccion = Convert.ToInt32(form["DropIdSeccion"]);
+
+            usuariosActividad.AgregarMateriaProf(idMateria, idProfesor, idSeccion);
+
+            return RedirectToAction("EditarCuenta", "Usuario", new { idPersona = idProfesor });
+        }
+
+
 
         [HttpPost]
         public ActionResult EditarCuenta(Models.Usuario usuario, FormCollection form)
@@ -178,6 +229,12 @@ namespace Bela.UI.Controllers
 
             var listaTipos = usuariosActividad.listaRoles();
             ViewBag.TiposUsuarios = new SelectList(listaTipos, "idRol", "nombre");
+
+            var lista = usuariosActividad.ListaSecciones();
+            ViewBag.SeccionesPro = new SelectList(lista, "idSeccion", "nombre");
+
+            var listaMaterias = usuariosActividad.ListaMaterias();
+            ViewBag.MateriasPro = new SelectList(listaMaterias, "idMateria", "nombre");
 
             //try
             //{
@@ -202,6 +259,12 @@ namespace Bela.UI.Controllers
                 string usuariotxt = form["usuario"];
                 string contratxt = form["contrasena"];
 
+
+                /*Estu*/
+                int idSeccion = Convert.ToInt32(form["dropIdSeccion"]);
+                usuariosActividad.ModificarEstudianteSeccion(idPersona, idSeccion);
+
+
                 Usuario usu = new Usuario();
                 usu.idPersona = idPersona;
                 usu.nombre = nombre;
@@ -221,7 +284,7 @@ namespace Bela.UI.Controllers
             }
             else
             {
-                ViewData["mensajeError"] = "Ingrese todos los datos necesarios";
+                TempData["estado"] = "error";
                 return View();
             }
             TempData["estado"] = "Cuenta Modificada";
@@ -240,6 +303,7 @@ namespace Bela.UI.Controllers
             }
             TempData["estado"] = "Error al eliminar cuenta";
             return RedirectToAction("EditarCuenta", "Usuario", new { idPersona = idPersona });
+
 
         }
 
@@ -275,13 +339,6 @@ namespace Bela.UI.Controllers
         {
             string res = "";
             string correo = form["txtCorreo"];
-            if (correo.Equals(""))
-            {
-                TempData["estadoNotificacion"] = "ErrorNoIngresoCorreo";
-                TempData["mensaje"] = "No se escribio ningun correo!";
-                return RedirectToAction("Noticias", "Noticia");
-            }
-
             res = usuariosActividad.ActivarNoticacionesInternas(correo);
             if (res.Equals("Se agrego correo"))
             {
@@ -294,5 +351,6 @@ namespace Bela.UI.Controllers
             }
             return RedirectToAction("NoticiasInternas", "Noticia");
         }
+
     }
 }

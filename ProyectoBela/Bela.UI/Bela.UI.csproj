@@ -169,14 +169,18 @@
     <Compile Include="Controllers\EstudianteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InformacionController.cs" />
+    <Compile Include="Controllers\MaterialController.cs" />
     <Compile Include="Controllers\NoticiaController.cs" />
     <Compile Include="Controllers\ProfesorController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DetalleMateria.cs" />
+    <Compile Include="Models\DetalleMaterial.cs" />
+    <Compile Include="Models\EstudianteSeccion.cs" />
     <Compile Include="Models\ImagenNoticia.cs" />
-    <Compile Include="Models\Materia.cs" />
+    <Compile Include="Models\MateriaDeta.cs" />
     <Compile Include="Models\MensajeContacto.cs" />
     <Compile Include="Models\Noticia.cs" />
     <Compile Include="Models\NoticiaDetalles.cs" />
@@ -304,6 +308,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Materiales\" />
+    <Folder Include="Views\Material\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
