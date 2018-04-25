@@ -39,6 +39,12 @@ namespace Bela.UI.Controllers
 
             var listaNoticias = noticiasAdmin.ListaNoticiasAdmin(Convert.ToInt32(Session["UserID"]));
             var mostrarNoticias = Mapper.Map<List<Models.Noticia>>(listaNoticias);
+
+            if (listaNoticias.Count == 0)
+            {
+                TempData["noticiasNull"] = "null";
+            }
+
             return View(mostrarNoticias);
         }
 

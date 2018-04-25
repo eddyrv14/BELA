@@ -76,7 +76,7 @@
             <h2><small>Estas son las noticias creadas por ti </small></h2>
             <p><span class="glyphicon glyphicon-chevron-down"></span></p>
         </div>
-        <section class="section--padding-bottom-small noticias" style="margin-bottom:400px;">
+        <section class="section--padding-bottom-small noticias">
             <div class="container">
                 <div class="row">
                     @foreach (var item in Model)
@@ -99,6 +99,15 @@
                 </div>
             </div>
         </section>
+
+        @if (TempData["noticiasNull"] != null)
+        {
+            <div class="text-center" style="margin-bottom:400px;">
+                <p class="parrafos" style="font-size:18px;">Sin  noticias a mostrar</p>
+            </div>
+        }
+
+         
 
 
 

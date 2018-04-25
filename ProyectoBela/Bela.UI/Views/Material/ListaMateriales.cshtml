@@ -9,6 +9,21 @@
 
 <div class="container text-center">
     <h1 class="titulos"><small>@material.materia    @material.seccion</small></h1>
+
+    @if (TempData["mensajeProf"] != null)
+    {
+        <div class="container">
+            <div id="Mensaje">
+                <div class=" alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Material agregado</strong>
+                </div>
+            </div>
+        </div>
+    }
+
+
+
     @if (Session["UserID"] != null && Session["rol"].Equals("Profesor"))
     {
         <h1><small>Materiales subidos a esta materia</small></h1>
@@ -28,7 +43,6 @@
         <p class="iconMas" data-toggle="modal" data-target="#CrearMaterial"><span class="glyphicon glyphicon-plus"></span></p>
     </div>
 }
-
 
 
 <section id="blog" class="section">
@@ -173,38 +187,38 @@
 
 
     <script>
-    function adjuntarImagen() {
-        document.getElementById('file').click();
-        document.getElementById('txtDocumento').readOnly = true;
+        function adjuntarImagen() {
+            document.getElementById('file').click();
+            document.getElementById('txtDocumento').readOnly = true;
 
-    }
-
-    function adjuntarImagenes() {
-        document.getElementById('files').click();
-
-    }
-
-    function cambiar() {
-        var reader = new FileReader();
-        document.getElementById('txtDocumento').value = document.getElementById('file').value;
-        document.getElementById('Img').src = document.getElementById('txtDocumento').value;
-        reader.readAsDataURL(this.files[0]);
-    }
-
-
-    function mostrarImagen(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#Img').attr('src', e.target.result);
-            }
-            reader.readAsDataURL(input.files[0]);
         }
-    }
 
-    $("#file").change(function () {
-        mostrarImagen(this);
-    });
+        function adjuntarImagenes() {
+            document.getElementById('files').click();
+
+        }
+
+        function cambiar() {
+            var reader = new FileReader();
+            document.getElementById('txtDocumento').value = document.getElementById('file').value;
+            document.getElementById('Img').src = document.getElementById('txtDocumento').value;
+            reader.readAsDataURL(this.files[0]);
+        }
+
+
+        function mostrarImagen(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#Img').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#file").change(function () {
+            mostrarImagen(this);
+        });
 
 
 

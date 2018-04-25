@@ -96,16 +96,19 @@ namespace Bela.UI.Controllers
                     }
                 }
 
-                TempData["mensajeProf"] = mensaje;
+                if (mensaje.Equals("Material agregado"))
+                {
+                    TempData["mensajeProf"] = mensaje;
+                }
 
-                return RedirectToAction("Inicio", "Profesor");
+                return RedirectToAction("ListaMateriales", "Material", new { idDetalleMateria=material.idDetalleMateria});
 
             }
             catch (NullReferenceException)
             {
 
-                TempData["mensajeProf"] = "Material Creado";
-                return RedirectToAction("Inicio", "Profesor");
+                TempData["mensajeProf"] = "Material agregado";
+                return RedirectToAction("ListaMateriales", "Material", new { idDetalleMateria = material.idDetalleMateria });
             }
             catch (Exception)
             {
