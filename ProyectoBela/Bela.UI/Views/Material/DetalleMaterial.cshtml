@@ -4,6 +4,8 @@
 @{
     ViewBag.Title = "Detalle material";
     Layout = "~/Views/Shared/_Perfil.cshtml";
+     List<Bela.Datos.MasMaterial> lista = (List<Bela.Datos.MasMaterial>)ViewBag.Materiales;
+}
 }
 
 
@@ -37,11 +39,19 @@
             <div class="col-md-4 space">
                 <div class="text-center">
                     <span class="far fa-file icon-size-materiales"></span>
-                    <h2><a href="@Html.DisplayFor(model => model.material)">@Html.DisplayFor(model => model.material)</a></h2>
-
-
+                    <h2 class="parrafos" style="font-size:18px;" ><a href="@Html.DisplayFor(model => model.material)">@Html.DisplayFor(model => model.nombreMaterial)</a></h2>
                 </div>
             </div>
+
+            @foreach (var adicional in lista)
+            {
+                <div class="col-md-4 space">
+                    <div class="text-center">
+                        <span class="far fa-file icon-size-materiales"></span>
+                        <h2 class="parrafos" style="font-size:18px;"><a href="@adicional.material">@adicional.nombreMaterial</a></h2>
+                    </div>
+                </div>
+            }
 
 
 

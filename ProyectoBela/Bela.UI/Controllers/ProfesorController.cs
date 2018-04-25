@@ -61,6 +61,7 @@ namespace Bela.UI.Controllers
                     material.titulo = tituloTxt;
                     material.mensaje = descripcionTxt;
                     material.material = materialGuardar;
+                    material.nombreMaterial = fileName;
 
 
                     var materialMap = material;
@@ -75,23 +76,25 @@ namespace Bela.UI.Controllers
                 }
 
 
-                /**/
 
 
-                /*Imagenes adicionales*/
-                //if (uploadfilesMateria != null)
-                //{
-                //    foreach (var files in uploadfilesMateria.ToList())
-                //    {
-                //        var fileNames = Path.GetFileName(files.FileName);
-                //        var paths = Path.Combine(Server.MapPath(guardaEn), fileNames);
-                //        files.SaveAs(paths);
-                //        string documentosAdicionales = guardaEn + fileNames;
-                //        //profesorActiv.InsertarDocumentosAdicionales(documentosAdicionales);
+                if (mensaje.Equals("Material agregado"))
+                {
+                    /*MaterialesAdicionales*/
+                    if (uploadfilesMateria != null)
+                    {
+                        foreach (var files in uploadfilesMateria.ToList())
+                        {
+                            var fileNames = Path.GetFileName(files.FileName);
+                            var paths = Path.Combine(Server.MapPath(guardaEn), fileNames);
+                            files.SaveAs(paths);
+                            string documentosAdicionales = guardaEn + fileNames;
+                            profesorActiv.AgregarMaterialesAdicionales(documentosAdicionales, fileNames);
 
-                //    }
+                        }
 
-                //}
+                    }
+                }
 
                 TempData["mensajeProf"] = mensaje;
 

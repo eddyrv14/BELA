@@ -13,13 +13,12 @@ namespace Bela.UI.Models
         public int idMaterial { get; set; }
         public int idUsuario { get; set; }
         public int idDetalleMateria { get; set; }
-        //public string nombreMateria { get; set; }
-        //public string seccion { get; set; }
         [Required]
         public string titulo { get; set; }
         [Required]
         public string mensaje { get; set; }
         public string material { get; set; }
+        public string nombreMaterial { get; set; }
         public DateTime fechaHora { get; set; }
     }
 }

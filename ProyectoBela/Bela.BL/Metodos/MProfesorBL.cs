@@ -25,6 +25,12 @@ namespace Bela.BL.Metodos
             return profesoresMetodos.crearMaterial(material);
         }
 
+        public void AgregarMaterialesAdicionales(string material, string nombreMaterial)
+        {
+            string limDoc = Regex.Replace(material, @"^[~]", "");
+            material = limDoc;
+            profesoresMetodos.AgregarMaterialesAdicionales(material, nombreMaterial);
+        }
 
         public List<MateriaDeta> ListaMaterialesProfesores(int idUsuario)
         {
@@ -37,5 +43,9 @@ namespace Bela.BL.Metodos
             return profesoresMetodos.BuscarMateria(idMateria);
         }
 
+        public List<MasMaterial> ListaMaterialesAdicionales(int idMaterial)
+        {
+            return profesoresMetodos.ListaMaterialesAdicionales(idMaterial);
+        }
     }
 }

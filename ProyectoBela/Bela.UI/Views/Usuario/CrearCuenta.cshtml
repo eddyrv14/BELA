@@ -169,6 +169,21 @@
                                         </div>
 
                                         <div class="form-group">
+                                            @Html.Label("Cedula")
+                                            @Html.TextBoxFor(x => x.cedula, new
+                                       {
+                                           @class = "form-control",
+                                           @name = "cedula",
+                                           @placeholder = "Cedula",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Ingrese numero de cedula')",
+                                           oninput = "setCustomValidity('')",
+                                           onkeypress = "return justNumbers(event);"
+                                       })
+
+                                        </div>
+
+                                        <div class="form-group">
                                             @Html.Label("Correo")
                                             @Html.TextBoxFor(x => x.correo, new
                                        {
@@ -250,4 +265,15 @@
         }
 
     }
+
+
+
+    function justNumbers(e) {
+        var keynum = window.event ? window.event.keyCode : e.which;
+        if ((keynum == 8) || (keynum == 46))
+            return true;
+
+        return /\d/.test(String.fromCharCode(keynum));
+    }
+
 </script>

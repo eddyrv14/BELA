@@ -25,6 +25,7 @@ namespace Bela.DAL.Metodos
 
         }
 
+
         public Usuario Login(string usuario, string contrasena)
         {
             var re = _db.SqlList<Usuario>("EXEC login @usuario,@contrasena", new { usuario = usuario, contrasena = contrasena }).FirstOrDefault();
@@ -65,6 +66,7 @@ namespace Bela.DAL.Metodos
                 cmd.Parameters.Add("@nombre", SqlDbType.VarChar, 60).Value = persona.nombre;
                 cmd.Parameters.Add("@apellido1", SqlDbType.VarChar, 60).Value = persona.apellido1;
                 cmd.Parameters.Add("@apellido2", SqlDbType.VarChar, 60).Value = persona.apellido2;
+                cmd.Parameters.Add("@cedula", SqlDbType.VarChar, 20).Value = persona.cedula;
                 cmd.Parameters.Add("@correo", SqlDbType.VarChar, 60).Value = persona.correo;
 
 
@@ -128,6 +130,7 @@ namespace Bela.DAL.Metodos
                 cmd.Parameters.Add("@nombre", SqlDbType.VarChar, 60).Value = usuario.nombre;
                 cmd.Parameters.Add("@apellido1", SqlDbType.VarChar, 60).Value = usuario.apellido1;
                 cmd.Parameters.Add("@apellido2", SqlDbType.VarChar, 60).Value = usuario.apellido2;
+                cmd.Parameters.Add("@cedula", SqlDbType.VarChar, 20).Value = usuario.cedula;
                 cmd.Parameters.Add("@correo", SqlDbType.VarChar, 60).Value = usuario.correo;
 
 
@@ -310,4 +313,5 @@ namespace Bela.DAL.Metodos
 
     }
 }
+
 

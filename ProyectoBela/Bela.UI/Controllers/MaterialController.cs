@@ -46,6 +46,11 @@ namespace Bela.UI.Controllers
 
         public ActionResult DetalleMaterial(int idMaterial)
         {
+            List<MasMaterial> listaMateriales = new List<MasMaterial>();
+            listaMateriales = profesorMetodos.ListaMaterialesAdicionales(idMaterial);
+            ViewBag.Materiales = listaMateriales;
+
+
             var material = materialMetodos.BuscarMaterial(idMaterial);
             var materialMostrar = Mapper.Map<Models.DetalleMaterial>(material);
             return View(materialMostrar);

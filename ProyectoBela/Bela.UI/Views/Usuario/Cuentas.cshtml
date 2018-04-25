@@ -71,7 +71,7 @@
             </div>
         }
 
-        <div class="container " style="margin-bottom:100px">
+        <div class="container " style="margin-bottom:250px">
             <div class="row">
 
 
@@ -85,6 +85,7 @@
                                     <th>Nombre</th>
                                     <th>Apellido1</th>
                                     <th>Apellido2</th>
+                                    <th>Cedula</th>
                                     <th>Rol</th>
                                     <th>Opciones</th>
                                     @*<th>Eliminar</th>*@
@@ -98,6 +99,7 @@
                                         <td>@Html.DisplayFor(modelItem => item.nombre)</td>
                                         <td>@Html.DisplayFor(modelItem => item.apellido1)</td>
                                         <td>@Html.DisplayFor(modelItem => item.apellido2)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.cedula)</td>
                                         <td>@Html.DisplayFor(modelItem => item.rolNombre)</td>
                                         <td><button class="btn btn-warning" onclick="location.href='@Url.Action("EditarCuenta", "Usuario", new { idPersona = item.idPersona })'">Ver datos de cuenta</button></td>
                                         @*<td><button class="btn btn-danger" data-title="Delete" data-toggle="modal" data-target="#delete" onclick="location.href='@Url.Action("EliminarCuenta", "Usuario", new { idPersona = item.idPersona })'">Eliminar</button></td>*@
@@ -110,6 +112,7 @@
                                     <th>Nombre</th>
                                     <th>Apellido1</th>
                                     <th>Apellido2</th>
+                                    <th>Cedula</th>
                                     <th>Rol</th>
                                     <th>Editar</th>
                                     @*<th>Eliminar</th>*@

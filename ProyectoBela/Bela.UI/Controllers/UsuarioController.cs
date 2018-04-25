@@ -43,6 +43,7 @@ namespace Bela.UI.Controllers
                         Session["UserApellido1"] = usuarDatos.apellido1;
                         Session["UserApellido2"] = usuarDatos.apellido2;
                         Session["UserCorreo"] = usuarDatos.correo;
+                        Session["UserCedula"] = usuarDatos.cedula;
                         Session["rol"] = usuarDatos.rolNombre;
                         Session["UserUsuario"] = usuarDatos.usuario;
                         Session["UserContrasena"] = usuarDatos.contrasena;
@@ -102,6 +103,7 @@ namespace Bela.UI.Controllers
         {
 
             string res = "";
+            int idSeccion = 0;
 
 
 
@@ -110,6 +112,14 @@ namespace Bela.UI.Controllers
 
             var lista = usuariosActividad.ListaSecciones();
             ViewBag.Secciones = new SelectList(lista, "idSeccion", "nombre");
+
+
+            int idRol = Convert.ToInt32(form["dropIdTipoUsuario"]);
+
+            if (idRol == 3)
+            {
+                idSeccion = Convert.ToInt32(form["dropIdSeccion"]);
+            }
 
             //try
             //{
@@ -126,21 +136,23 @@ namespace Bela.UI.Controllers
                 string nombre = form["nombre"];
                 string apellido1 = form["apellido1"];
                 string apellido2 = form["apellido2"];
+                string cedula = form["cedula"];
                 string correo = form["correo"];
 
                 /*Usuariop*/
-                int idRol = Convert.ToInt32(form["dropIdTipoUsuario"]);
+
                 string usuariotxt = form["usuario"];
                 string contratxt = form["contrasena"];
 
-                /*Estu*/
-                int idSeccion = Convert.ToInt32(form["dropIdSeccion"]);
+
+
 
                 Usuario usu = new Usuario();
 
                 usu.nombre = nombre;
                 usu.apellido1 = apellido1;
                 usu.apellido2 = apellido2;
+                usu.cedula = cedula;
                 usu.correo = correo;
                 usu.rol = idRol;
                 usu.usuario = usuariotxt;
@@ -151,9 +163,8 @@ namespace Bela.UI.Controllers
                 usu = null;
                 form = null;
 
-                if (TempData["estado"] != null && idRol == 3 && TempData["estado"].Equals("Usuario creado"))
+                if (idRol == 3 && TempData["estado"] != null && TempData["estado"].Equals("Usuario creado"))
                 {
-
                     usuariosActividad.InsertarEstudianteSeccion(idSeccion);
                 }
             }
@@ -252,6 +263,7 @@ namespace Bela.UI.Controllers
                 string nombre = form["nombre"];
                 string apellido1 = form["apellido1"];
                 string apellido2 = form["apellido2"];
+                string cedula = form["cedula"];
                 string correo = form["correo"];
 
                 /*Usuariop*/
@@ -270,6 +282,7 @@ namespace Bela.UI.Controllers
                 usu.nombre = nombre;
                 usu.apellido1 = apellido1;
                 usu.apellido2 = apellido2;
+                usu.cedula = cedula;
                 usu.correo = correo;
                 usu.idUsuario = idPersona;
                 usu.rol = idRol;
@@ -353,4 +366,5 @@ namespace Bela.UI.Controllers
         }
 
     }
+
 }

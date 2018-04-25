@@ -119,6 +119,12 @@
                                         </div>
 
                                         <div class="form-group">
+                                            @Html.Label("Cedula")
+                                            @Html.TextBoxFor(x => x.cedula, new { @class = "form-control", @name = "cedula", @placeholder = "Cedula", onkeypress = "return justNumbers(event);" })
+
+                                        </div>
+
+                                        <div class="form-group">
                                             @Html.Label("Correo")
                                             @Html.TextBoxFor(x => x.correo, new { @Type = "email", @class = "form-control", @name = "correo", @placeholder = "Correo" })
                                         </div>
@@ -197,12 +203,12 @@
 
                                 <div class="form-group">
                                     @Html.Label("Materia")
-                                    @Html.DropDownList("dropIdMateria", (SelectList)ViewBag.MateriasPro, "Seleccione una Materia", new { @class = "form-control", required = "required" })
+                                    @Html.DropDownList("dropIdMateria", (SelectList)ViewBag.MateriasPro, "Seleccione una Materia", new { @class = "form-control margenCentro", required = "required" })
                                 </div>
 
                                 <div class="form-group">
                                     @Html.Label("Seccion")
-                                    @Html.DropDownList("dropIdSeccion", (SelectList)ViewBag.SeccionesPro, "Seleccione una Seccion", new { @class = "form-control", required = "required" })
+                                    @Html.DropDownList("dropIdSeccion", (SelectList)ViewBag.SeccionesPro, "Seleccione una Seccion", new { @class = "form-control margenCentro", required = "required" })
                                 </div>
 
                                 <div class="modal-footer ">
@@ -239,7 +245,7 @@
             </div>
 
             <div class="modal-footer ">
-                <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("EliminarCuenta", "Usuario", new {idPersona=Model.idPersona })'"><span class="glyphicon glyphicon-ok-sign"></span> Si</button>
+                <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("EliminarCuenta", "Usuario",new {idPersona=Model.idPersona })'"><span class="glyphicon glyphicon-ok-sign"></span> Si</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
             </div>
         </div>
@@ -247,3 +253,15 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
+
+
+
+<script>
+    function justNumbers(e) {
+        var keynum = window.event ? window.event.keyCode : e.which;
+        if ((keynum == 8) || (keynum == 46))
+            return true;
+
+        return /\d/.test(String.fromCharCode(keynum));
+    }
+</script>

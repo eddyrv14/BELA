@@ -180,6 +180,7 @@
     <Compile Include="Models\DetalleMaterial.cs" />
     <Compile Include="Models\EstudianteSeccion.cs" />
     <Compile Include="Models\ImagenNoticia.cs" />
+    <Compile Include="Models\MasMaterial.cs" />
     <Compile Include="Models\MateriaDeta.cs" />
     <Compile Include="Models\MensajeContacto.cs" />
     <Compile Include="Models\Noticia.cs" />

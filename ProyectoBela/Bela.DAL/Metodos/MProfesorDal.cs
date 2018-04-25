@@ -24,8 +24,32 @@ namespace Bela.DAL.Metodos
             _db = _conex.Open();
         }
 
+        public string crearMaterial(DetalleMaterial material)
+        {
+            string res = "";
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "insertarMaterial";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@idUsuario", SqlDbType.Int).Value = material.idUsuario;
+                cmd.Parameters.Add("@idDetalleMateria", SqlDbType.Int).Value = material.idDetalleMateria;
+                cmd.Parameters.Add("titulo", 50).Value = material.titulo;
+                cmd.Parameters.Add("mensaje", 300).Value = material.mensaje;
+                cmd.Parameters.Add("material", 100).Value = material.material;
+                cmd.Parameters.Add("nombreMaterial", 100).Value = material.nombreMaterial;
+                cmd.Parameters.Add("fechaHora", SqlDbType.DateTime).Value = material.fechaHora;
+                res = cmd.ExecuteNonQuery() == 1 ? "Material agregado" : "Error al agregar";
+            }
+            catch (Exception e)
+            {
+                res = e.Message;
+            }
+            return res;
 
-        
+        }
 
 
         public List<Datos.MateriaDeta> ListaMaterialesProfesores(int idUsuario)
@@ -41,29 +65,16 @@ namespace Bela.DAL.Metodos
             return re;
         }
 
-        public string crearMaterial(DetalleMaterial material)
+
+        public void AgregarMaterialesAdicionales(string material, string nombreMaterial)
         {
-            string res = "";
-            try
-            {
-                cn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = "insertarMaterial";
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@idUsuario", SqlDbType.Int).Value = material.idUsuario;
-                cmd.Parameters.Add("@idDetalleMateria", SqlDbType.Int).Value = material.idDetalleMateria;
-                cmd.Parameters.Add("titulo", 50).Value = material.titulo;
-                cmd.Parameters.Add("mensaje", 300).Value = material.mensaje;
-                cmd.Parameters.Add("material", 45).Value = material.material;
-                cmd.Parameters.Add("fechaHora", SqlDbType.DateTime).Value = material.fechaHora;
-                res = cmd.ExecuteNonQuery() == 1 ? "Material agregado" : "Error al agregar";
-            }
-            catch (Exception e)
-            {
-                res = e.Message;
-            }
-            return res;
+            _db.SqlScalar<MasMaterial>("EXEC insertarMaterialesAdicionales @material,@nombreMaterial", new { material = material, nombreMaterial = nombreMaterial });
+        }
+
+
+        public List<MasMaterial> ListaMaterialesAdicionales(int idMaterial)
+        {
+            return _db.Select<MasMaterial>(x => x.idMaterial == idMaterial).ToList();
         }
     }
 }
