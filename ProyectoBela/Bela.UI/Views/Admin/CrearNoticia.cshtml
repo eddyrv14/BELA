@@ -126,7 +126,8 @@
                                            @placeholder = "Titulo",
                                            required = "",
                                            oninvalid = "this.setCustomValidity('Ingrese un titulo')",
-                                           oninput = "setCustomValidity('')"
+                                           oninput = "setCustomValidity('')",
+                                           @maxlength = "100"
                                        })
                                             @Html.ValidationMessageFor(model => model.titulo)
                                         </div>
@@ -139,7 +140,8 @@
                                            @placeholder = "Descripcion",
                                            required = "",
                                            oninvalid = "this.setCustomValidity('Ingrese una descripcion')",
-                                           oninput = "setCustomValidity('')"
+                                           oninput = "setCustomValidity('')",
+                                           @maxlength = "300"
                                        })
 
 
@@ -153,7 +155,8 @@
                                            @placeholder = "Contenido",
                                            required = "",
                                            oninvalid = "this.setCustomValidity('Ingrese el contenido')",
-                                           oninput = "setCustomValidity('')"
+                                           oninput = "setCustomValidity('')",
+                                           @maxlength = "1000"
                                        })
                                         </div>
 

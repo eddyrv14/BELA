@@ -200,6 +200,7 @@
     <Content Include="Content\fontawesome.min.css" />
     <Content Include="Content\lighbox.css" />
     <Content Include="Content\lightboxmin.css" />
+    <Content Include="Content\maxDrescrip.css" />
     <Content Include="Content\responsive.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style2.css" />
