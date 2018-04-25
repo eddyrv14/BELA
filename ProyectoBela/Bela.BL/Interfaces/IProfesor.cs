@@ -9,6 +9,8 @@ namespace Bela.BL.Interfaces
 {
     public interface IProfesor
     {
-        string crearMaterial(DetalleMateria materia);
+        string crearMaterial(DetalleMaterial materia);
+        List<MateriaDeta> ListaMaterialesProfesores(int idUsuario);
+        MateriaDeta BuscarMateria(int idMateria);
     }
 }

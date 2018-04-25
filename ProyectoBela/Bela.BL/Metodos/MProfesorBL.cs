@@ -6,13 +6,36 @@ using System.Threading.Tasks;
 using Bela.BL.Interfaces;
 using Bela.Datos;
 
+
+using Bela.DAL.Metodos;
+using System.Text.RegularExpressions;
+
 namespace Bela.BL.Metodos
 {
     public class MProfesorBL : IProfesor
     {
-        public string crearMaterial(DetalleMateria materia)
+        MProfesorDal profesoresMetodos = new MProfesorDal();
+
+        public string crearMaterial(DetalleMaterial material)
         {
-            throw new NotImplementedException();
+            DateTime fecha = Convert.ToDateTime(DateTime.Now.ToString("G"));
+            string limDoc = Regex.Replace(material.material, @"^[~]", "");
+            material.fechaHora = fecha;
+            material.material = limDoc;
+            return profesoresMetodos.crearMaterial(material);
         }
+
+
+        public List<MateriaDeta> ListaMaterialesProfesores(int idUsuario)
+        {
+            return profesoresMetodos.ListaMaterialesProfesores(idUsuario);
+        }
+
+
+        public MateriaDeta BuscarMateria(int idMateria)
+        {
+            return profesoresMetodos.BuscarMateria(idMateria);
+        }
+
     }
 }
