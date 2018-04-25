@@ -1,129 +1,114 @@
 ﻿/*BI*/
 
-.sangria {
-    text-indent: 10px;
+.sangria{
+   text-indent:10px;
 }
 
 
-.parrafos {
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    line-height: 27px;
-    color: #000;
+.aboutBI{
+	background:#ffffff;
+	text-align:left;
+    font-family: 'Open Sans' , sans-serif;
+
 }
 
-
-.aboutBI {
-    background: #ffffff;
-    text-align: left;
-    font-family: 'Open Sans', sans-serif;
+.aboutBI p{
+    font-size:16px;
 }
 
-    .aboutBI p {
-        font-size: 16px;
-    }
-
-    .aboutBI .container {
-        padding-top: 10px;
-        padding-bottom: 47px;
-    }
-
-    .aboutBI img {
-        padding: 7px;
-        display: block;
-        border: 1px solid #bab4bb;
-    }
-
-.heading {
-    text-align: center;
-    padding-bottom: 70px;
+.aboutBI .container{
+	padding-top:10px ;
+	padding-bottom:47px ;
+}
+.aboutBI img {
+	padding:7px;
+	display:block;
+	border:1px solid #bab4bb;
 }
 
-    .heading h2 {
-        font-size: 35px;
-        line-height: 40px;
-        font-weight: 400;
-        margin-bottom: 20px;
-        letter-spacing: 2px;
-        display: inline-block;
-        position: relative;
-    }
-
-        .heading h2:after {
-            content: "";
-            display: block;
-            width: 76px;
-            height: 2px;
-            background: #5b4c5c;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            margin-left: -38px;
-        }
-
-.aboutBI .heading p {
-    padding-bottom: 41px;
+.heading{
+	text-align:center;
+	padding-bottom:70px;
 }
 
+.heading h2 {
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+.heading h2:after {
+    content: "";
+    display: block;
+    width: 76px;
+    height: 2px;
+    background: #5b4c5c;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -38px;
+}
+
+.aboutBI .heading p{
+	padding-bottom:41px;
+}
 .aboutBI h4 {
-    font-size: 16px;
-    color: #5b4c5c;
-    padding-bottom: 20px;
+	font-size:16px;
+	color:#5b4c5c;
+	padding-bottom:20px;
 }
 
-.introBI {
-    /*box-shadow: inset 0px 0px 10px 0px #FFFFFF,-1px 2px 24px -1px #BAAFF7;
+.introBI{
+        /*box-shadow: inset 0px 0px 10px 0px #FFFFFF,-1px 2px 24px -1px #BAAFF7;
 -webkit-box-shadow: inset 0px 0px 10px 0px #FFFFFF,-1px 2px 24px -1px #BAAFF7;
 -moz-box-shadow: inset 0px 0px 10px 0px #FFFFFF,-1px 2px 24px -1px #BAAFF7;
 -o-box-shadow: inset 0px 0px 10px 0px #FFFFFF,-1px 2px 24px -1px #BAAFF7;*/
 }
 
-.introBI-contentBI {
-    margin-top: 20px;
-    margin-left: 20px;
-}
+  .introBI-contentBI {
+	margin-top: 20px;
+    margin-left:20px;
 
+}
 .introBI h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 33px;
-    font-weight: 700;
+	font-family: 'Open Sans' , sans-serif;
+	font-size:33px;
+	font-weight: 700;
 }
-
 .introBI h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	font-weight: 600;
+	letter-spacing:2px;
+	text-transform:uppercase;
 }
-
 .introBI p {
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    line-height: 27px;
-    color: #000;
+	font-size:16px;
+	font-weight: 300;
+	letter-spacing:1px;
+	line-height:27px;
+    color:#000;
 }
 
 
 .service-section {
-    padding-top: 30px;
+	padding-top: 30px;
 }
-
 .services {
-    margin-bottom: 50px;
+	margin-bottom: 50px;
 }
-
 .services-content {
-    padding: 0 15px;
-    margin-top: 30px;
+	padding: 0 15px;
+	margin-top: 30px;
 }
-
 .services .icon {
-    color: #00aeda;
-    font-size: 50px;
-    padding-left: 15px;
+	color: #00aeda;
+	font-size: 50px;
+	padding-left: 15px;
 }
 
 h5 {
@@ -133,8 +118,8 @@ h5 {
     font-weight: 700;
 }
 
-.finBI {
-    background-color: #2d5e9b;
+.finBI{
+    background-color:#2d5e9b;
 }
 
 .section {
@@ -142,16 +127,16 @@ h5 {
 }
 
 .finBI h3 {
-    color: #fff;
-    margin-top: 0;
+	color: #fff;
+	margin-top: 0;
 }
 
 .finBI p {
-    color: #fff;
+    color:#fff;
 }
 
-.materiasHeading {
-    font-size: 29px;
+.materiasHeading{
+     font-size: 29px;
     line-height: 40px;
     font-weight: 400;
     margin-bottom: 20px;
@@ -160,17 +145,17 @@ h5 {
     position: relative;
 }
 
-    .materiasHeading:after {
-        content: "";
-        display: block;
-        width: 76px;
-        height: 2px;
-        background: #5b4c5c;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        margin-left: -38px;
-    }
+.materiasHeading:after{
+     content: "";
+    display: block;
+    width: 76px;
+    height: 2px;
+    background: #5b4c5c;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -38px;
+}
 
 /*BI*/
 
@@ -178,31 +163,34 @@ h5 {
 .lc-section {
     padding-top: 20px;
     padding-bottom: 110px;
-    display: block;
-    position: relative;
-    z-index: 120;
+	display:block;
+    position:relative;
+    z-index:120;
 }
 
 
 .section-heading {
-    margin-bottom: 60px;
+
+	margin-bottom:60px;
 }
 
 
 
-    .section-heading h2 {
-        font-size: 40px;
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-    }
+.section-heading h2 {
+	font-size: 40px;
+	letter-spacing:1px;
+    margin-bottom: 10px;
+}
 
 
 
 .lc-icon {
-    margin-bottom: 50px;
+	margin-bottom:50px;
+	
 }
 
-    .lc-icon:hover {
-        color: #D09A43;
-    }
+.lc-icon:hover {
+	color:#D09A43;
+	
+}
 /*LyC*/

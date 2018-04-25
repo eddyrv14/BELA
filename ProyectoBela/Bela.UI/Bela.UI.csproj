@@ -206,6 +206,7 @@
     <Content Include="Content\styleMaterias.css" />
     <Content Include="Content\styleMenuVerticaNoticias.css" />
     <Content Include="Content\styleNoticias.css" />
+    <Content Include="Content\styleProfesores.css" />
     <Content Include="Content\Style_BI.css" />
     <Content Include="Content\stylosInicioPerfil.css" />
     <Content Include="favicon.ico" />
@@ -281,7 +282,7 @@
     <Content Include="Views\Informacion\matricula.cshtml" />
     <Content Include="Views\Informacion\vidaEstudiantil.cshtml" />
     <Content Include="Views\Noticia\Detalles.cshtml" />
-    <Content Include="Views\Usuario\login.cshtml" />
+    <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Shared\_Usuario.cshtml" />
     <Content Include="Views\Admin\Inicio.cshtml" />
     <Content Include="Views\Estudiante\Inicio.cshtml" />

@@ -1,0 +1,161 @@
+﻿
+/*Materia*/
+.align-center {
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    padding: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+    .align-center h4 {
+        padding: 10px;
+        -webkit-box-shadow: 1px 2px 2px 4px rgba(247,222,59,0.47);
+        -moz-box-shadow: 1px 2px 2px 4px rgba(247,222,59,0.47);
+        box-shadow: 1px 2px 2px 4px rgba(247,222,59,0.47);
+    }
+
+    .align-center p {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .align-center:hover {
+        -webkit-box-shadow: 1px 2px 2px 4px rgba(247,222,59,0.47);
+        -moz-box-shadow: 1px 2px 2px 4px rgba(247,222,59,0.47);
+        box-shadow: 1px 2px 2px 4px rgba(247,222,59,0.47);
+    }
+
+
+
+    /*Materiales*/
+
+.icon-size{
+    font-size:30px;
+}
+
+.icon-size-materiales{
+    font-size:150px;
+    
+}
+
+.icon-size-materiales:hover{
+    color:#D09A43;
+}
+
+.maxDescrip{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 350px;
+}
+
+.iconMas{
+    font-size:30px;
+    color:green;
+}
+
+.margenCentro{
+    margin:auto;
+}
+
+.home-post .post-meta {
+    background: #FFBF00;
+}
+
+
+
+section#blog {
+    background: #FFF;
+}
+
+.home-post {
+    background: #fff;
+}
+
+    .home-post:hover {
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+
+    .home-post .entry-content {
+        padding: 20px;
+    }
+
+        .home-post .entry-content h5 a {
+            font-size: 22px;
+        }
+
+            .home-post .entry-content h5 a:hover {
+                color: #312f2b;
+                text-decoration: none;
+            }
+
+        .home-post .entry-content a.more {
+            font-size: 13px;
+        }
+
+    .home-post .post-meta {
+        padding: 20px;
+        overflow: hidden;
+        color: #fcfcfc;
+    }
+
+        .home-post .post-meta i {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .home-post .post-meta span {
+            margin-top: 10px;
+        }
+
+            .home-post .post-meta span.date {
+                font-weight: 12px;
+                font-size: 17px;
+                float: left;
+            }
+
+            .home-post .post-meta span.tags {
+                font-weight: 700;
+                font-size: 13px;
+                float: right;
+                color: #ddd;
+            }
+
+                .home-post .post-meta span.tags a {
+                    color: #fcfcfc;
+                }
+
+
+
+/*DetalleMaterias*/
+
+.boxed-grey {
+	background: #eee;
+	padding: 20px;
+}
+
+.team h5 {
+	margin-bottom: 10px;
+}
+
+.team p.subtitle {
+	margin-bottom: 10px;
+}
+
+.avatar {
+	margin-bottom: 20px;
+}
+
+.space{
+    margin-top:40px;
+}

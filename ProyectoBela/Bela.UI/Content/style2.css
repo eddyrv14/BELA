@@ -4,6 +4,42 @@
 	font-family: 'Open Sans', sans-serif;
     overflow-x: hidden; 
 }
+
+.titulos  {
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+
+.parrafos{  
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 27px;
+    color: #000;
+
+}
+
+.titulos:after {
+    content: "";
+    display: block;
+    width: 76px;
+    height: 2px;
+    background: #5b4c5c;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -38px;
+}
+
+
+
+
 ol, ul {
 	list-style: none;
 }
