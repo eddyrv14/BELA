@@ -9,6 +9,10 @@ namespace Bela.DAL.Interfaces
 {
     public interface IProfesor
     {
-        string crearMaterial(DetalleMateria material);
+        string crearMaterial(DetalleMaterial material);
+        void AgregarMaterialesAdicionales(string material, string nombreMaterial);
+        List<MateriaDeta> ListaMaterialesProfesores(int idUsuario);
+        MateriaDeta BuscarMateria(int idMateria);
+        List<MasMaterial> ListaMaterialesAdicionales(int idMaterial);
     }
 }

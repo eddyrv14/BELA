@@ -23,24 +23,47 @@ namespace Bela.BL.Metodos
             return usuarios.ListaRoles();
         }
 
+        public List<Seccion> ListaSecciones()
+        {
+            return usuarios.ListaSecciones();
+        }
+
+        public List<Materia> ListaMaterias()
+        {
+            return usuarios.ListaMaterias();
+        }
+
         public string InsertPersona(Usuario persona)
         {
             return usuarios.InsertPersona(persona);
         }
+
+        public void InsertarEstudianteSeccion(int idSeccion)
+        {
+            usuarios.InsertarEstudianteSeccion(idSeccion);
+        }
+
 
         public List<Usuario> ListaUsuarios()
         {
             return usuarios.ListaUsuarios();
         }
 
+
         public Usuario BuscarCuenta(int idPersona)
         {
             return usuarios.BuscarCuenta(idPersona);
         }
 
+
         public string ModificarCuenta(Usuario usuario)
         {
             return usuarios.ModificarCuenta(usuario);
+        }
+
+        public void ModificarEstudianteSeccion(int idUsuario, int idSeccion)
+        {
+            usuarios.ModificarEstudianteSeccion(idUsuario, idSeccion);
         }
 
         public string EliminarCuenra(int idUsuario)
@@ -53,20 +76,31 @@ namespace Bela.BL.Metodos
             return usuarios.ActivarNotificaciones(correo);
         }
 
-        public List<NotiExternas> ListaCorreoNotiExternas()
-        {
-            return usuarios.ListaCorreoNotiExternas();
-        }
-
 
         public string ActivarNoticacionesInternas(string correo)
         {
             return usuarios.ActivarNotificacionesInternas(correo);
         }
 
-        public List<NotiInternas> ListaCorreoNotiInternas()
+
+        public List<NotiExternas> ListaCorreoNotiExternas()
+        {
+            return usuarios.ListaCorreoNotiExternas();
+        }
+
+
+        List<NotiInternas> IUsuario.ListaCorreoNotiInternas()
         {
             return usuarios.ListaCorreoNotiInternas();
+        }
+
+
+
+
+
+        public string AgregarMateriaProf(int idMateria, int idUsuario, int idSeccion)
+        {
+            return usuarios.AgregarMateriaProf(idMateria, idUsuario, idSeccion);
         }
     }
 }

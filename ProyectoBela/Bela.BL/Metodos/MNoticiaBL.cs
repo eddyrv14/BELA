@@ -80,8 +80,6 @@ namespace Bela.BL.Metodos
 
         public string ModificarNoticia(Noticia noticia)
         {
-            string limImagen = Regex.Replace(noticia.imagen, @"^[~]", "");
-            noticia.imagen = limImagen;
             return noticias.ModificarNoticia(noticia);
         }
     }

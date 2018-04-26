@@ -10,7 +10,7 @@ using System.Data;
 
 namespace Bela.DAL.Metodos
 {
-   public  class MEstudianteDal
+   public  class MEstudianteDal : IEstudiante
     {
         private OrmLiteConnectionFactory _conex;
         private IDbConnection _db;
@@ -22,10 +22,15 @@ namespace Bela.DAL.Metodos
             _db = _conex.Open();
         }
 
-
-        public List<Materia> listaMaterias(int idUsuario)
+        public EstudianteSeccion BuscarSeccion(int idUsuario)
         {
-            var re = _db.SqlList<Materia>("EXEC listaMaterias @idUsuario", new { @idUsuario = idUsuario }).ToList();
+            var re = _db.Select<EstudianteSeccion>(x => x.idUsuario == idUsuario).FirstOrDefault();
+            return re;
+        }
+
+        public List<MateriaDeta> listaMaterias(int idSeccion)
+        {
+            var re = _db.SqlList<MateriaDeta>("EXEC listaMateriasEstudiante @idSeccion", new { idSeccion = idSeccion }).ToList();
             return re;
         }
     }

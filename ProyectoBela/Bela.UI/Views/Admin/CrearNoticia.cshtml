@@ -9,7 +9,6 @@
 <div id="wrapper">
     <div class="overlay"></div>
 
-    <!-- Sidebar -->
     <nav class="navbar navbar-inverse navbar-fixed-top menu" id="sidebar-wrapper" role="navigation">
         <ul class="nav sidebar-nav">
             <li class="sidebar-brand">
@@ -48,6 +47,35 @@
             <span class="hamb-middle"></span>
             <span class="hamb-bottom"></span>
         </button>
+
+        @if (TempData["mensajeError"] != null && TempData["mensajeError"].Equals("Error"))
+        {
+            <div class="container">
+                <div id="Mensaje">
+                    <div class=" alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Ingrese la imagen obligatoria</strong>
+                    </div>
+                </div>
+            </div>
+
+        }
+        else if (TempData["estado"] != null && TempData["estado"].Equals("Noticia creada"))
+        {
+            <div class="container">
+                <div id="Mensaje">
+                    <div class=" alert alert-success alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Noticia Creada</strong>
+                    </div>
+                </div>
+            </div>
+
+        }
+
+
+
+
         <div class="text-center">
             <h2>@ViewData["mensajeAdmin"]</h2>
         </div>
@@ -80,31 +108,61 @@
 
                                         <div class="form-group">
                                             @Html.Label("Tipo noticia")
-                                            @Html.DropDownList("dropIdTipo", (SelectList)ViewBag.Tipos, "Seleccione Tipo", new { @class = "form-control" })
+                                            @Html.DropDownList("dropIdTipo", (SelectList)ViewBag.Tipos, "Seleccione Tipo", new
+                                       {
+                                           @class = "form-control",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Seleccione una opcion')",
+                                           oninput = "setCustomValidity('')"
+                                       })
                                         </div>
 
                                         <div class=" form-group">
                                             @Html.Label("Titulo")
-                                            @Html.TextBoxFor(x => x.titulo, new { @class = "form-control", @name = "titulo", @placeholder = "Titulo" })
+                                            @Html.TextBoxFor(x => x.titulo, new
+                                       {
+                                           @class = "form-control",
+                                           @name = "titulo",
+                                           @placeholder = "Titulo",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Ingrese un titulo')",
+                                           oninput = "setCustomValidity('')",
+                                           @maxlength = "100"
+                                       })
                                             @Html.ValidationMessageFor(model => model.titulo)
                                         </div>
 
                                         <div class="form-group">
                                             @Html.Label("Descripcion")
-                                            @* @Html.TextBoxFor(x => x.descripcion, new { @class = "form-control", @style="background-color:black;", @name = "descripcion", @placeholder = "Descripcion"})*@
-                                            @Html.TextArea("txtDescripcion", null, new { @class = "form-control", @placeholder = "Descripcion" })
+                                            @Html.TextArea("txtDescripcion", null, new
+                                       {
+                                           @class = "form-control",
+                                           @placeholder = "Descripcion",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Ingrese una descripcion')",
+                                           oninput = "setCustomValidity('')",
+                                           @maxlength = "300"
+                                       })
 
-                                            @*@Html.ValidationMessageFor(model => model.descripcion)*@
+
                                         </div>
 
                                         <div class="form-group">
                                             @Html.Label("Contenido")
-                                            @Html.TextArea("txtContenido", null, new { @class = "form-control", @placeholder = "Contenido" })
+                                            @Html.TextArea("txtContenido", null, new
+                                       {
+                                           @class = "form-control",
+                                           @placeholder = "Contenido",
+                                           required = "",
+                                           oninvalid = "this.setCustomValidity('Ingrese el contenido')",
+                                           oninput = "setCustomValidity('')",
+                                           @maxlength = "1000"
+                                       })
                                         </div>
 
                                         <div class="form-group">
                                             <label>Imagen  -Obligatoria</label>
-                                            <input type="text" id="txtImagen" name="txtImagen" class="form-control" />
+                                            <input type="text" id="txtImagen" name="txtImagen" class="form-control" required oninvalid="this.setCustomValidity('Ingrese una imagen')" oninput="setCustomValidity('')" />
                                             <input type="file" onchange="cambiar()" name="uploadFile" id="file" class="form-control" style="display:none;" />
                                             <div class="text-center">
                                                 <input type="button" value="Adjuntar Imagen" class="btn btn-ghost" onclick="adjuntarImagen()" />
@@ -140,6 +198,11 @@
 
 
 <script>
+
+    window.onload = function () {
+        $("#Mensaje").fadeOut(4000);
+    }
+
     function adjuntarImagen() {
         document.getElementById('file').click();
         document.getElementById('txtImagen').readOnly = true;

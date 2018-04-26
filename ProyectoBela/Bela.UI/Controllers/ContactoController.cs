@@ -35,17 +35,22 @@ namespace Bela.UI.Controllers
     [HttpPost]
         public ActionResult EnvioMensaje(Models.MensajeContacto mensaje, FormCollection form)
         {
+            string res = "";
              mensaje.mensaje = form["message"];
             if (ModelState.IsValid && !mensaje.mensaje.Equals(""))
             {
-                Session.Contents.Remove("errorMensaje");   /***/
+            
                 var mensajeInsertar = Mapper.Map<Datos.MensajeContacto>(mensaje);
-                contacto.EnvioMensaje(mensajeInsertar);
-                Session["mensajeEnviado"] =1;   /**/
+                res=contacto.EnvioMensaje(mensajeInsertar);
+                if (res.Equals("Correo enviado"))
+                {
+                    TempData["mensaje"] = 1;   /**/
+                }
+
                 return View();
             }
-            Session.Contents.Remove("mensajeEnviado");      /***/
-            Session["errorMensaje"] = 0;   /***/
+        
+            TempData["mensajeError"]= 0;   /***/
             return View(mensaje);
         }
 	}

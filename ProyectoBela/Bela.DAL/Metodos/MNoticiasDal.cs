@@ -14,7 +14,6 @@ namespace Bela.DAL.Metodos
     public class MNoticiasDal : INoticia
     {
 
-
         private OrmLiteConnectionFactory _conex;
         private IDbConnection _db;
         private SqlConnection cn;
@@ -26,6 +25,8 @@ namespace Bela.DAL.Metodos
             _db = _conex.Open();
 
         }
+
+
 
         public List<Noticia> listaNoticias()
         {
@@ -97,28 +98,22 @@ namespace Bela.DAL.Metodos
                 cmd.Connection = cn;
                 cmd.CommandText = "eliminarImagenNoticia";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@idNoticia", SqlDbType.Int).Value =idNoticia;
+                cmd.Parameters.Add("@idNoticia", SqlDbType.Int).Value = idNoticia;
                 res = cmd.ExecuteNonQuery() == 1 ? "Imagenes eliminadas" : "Error al eliminar";
 
-                if (res.Equals("Imagenes eliminadas"))
-                {
 
-                    SqlCommand cmd2 = new SqlCommand();
-                    cmd2.Connection = cn;
-                    cmd2.CommandText = "eliminarNoticia";
-                    cmd2.CommandType = CommandType.StoredProcedure;
-                    cmd2.Parameters.Add("@idNoticia", SqlDbType.Int).Value = idNoticia;
-                    res = cmd2.ExecuteNonQuery() == 1 ? "Noticia eliminada" : "Error al eliminar";
-                }
-
+                SqlCommand cmd2 = new SqlCommand();
+                cmd2.Connection = cn;
+                cmd2.CommandText = "eliminarNoticia";
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.Parameters.Add("@idNoticia", SqlDbType.Int).Value = idNoticia;
+                res = cmd2.ExecuteNonQuery() == 1 ? "Noticia eliminada" : "Error al eliminar";
 
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                res = ex.Message;
-                cn.Close();
+                res = e.Message;
             }
-            cn.Close();
             return res;
         }
 
@@ -153,5 +148,7 @@ namespace Bela.DAL.Metodos
             return res;
 
         }
+
+
     }
 }

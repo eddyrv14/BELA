@@ -13,9 +13,15 @@ namespace Bela.BL.Metodos
     {
         MEstudianteDal estudiantesMeto = new MEstudianteDal();
 
-        public List<Materia> listaMaterias(int idUsuario)
+        public List<MateriaDeta> listaMaterias(int idUsuario)
         {
             return estudiantesMeto.listaMaterias(idUsuario);
         }
+
+        public EstudianteSeccion BuscarSeccion(int idUsuario)
+        {
+            return estudiantesMeto.BuscarSeccion(idUsuario);
+        }
+
     }
 }

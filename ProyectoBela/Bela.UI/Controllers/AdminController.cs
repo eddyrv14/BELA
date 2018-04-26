@@ -39,6 +39,12 @@ namespace Bela.UI.Controllers
 
             var listaNoticias = noticiasAdmin.ListaNoticiasAdmin(Convert.ToInt32(Session["UserID"]));
             var mostrarNoticias = Mapper.Map<List<Models.Noticia>>(listaNoticias);
+
+            if (listaNoticias.Count == 0)
+            {
+                TempData["noticiasNull"] = "null";
+            }
+
             return View(mostrarNoticias);
         }
 
@@ -262,7 +268,7 @@ namespace Bela.UI.Controllers
                     MailMessage mail = new MailMessage();
                     mail.From = new MailAddress("liceodepuriscalcr@gmail.com", "Liceo de Puriscal", Encoding.UTF8);
                     mail.Subject = "Nueva noticia: " + titulo;
-                    mail.Body = descripcion + "<br />  Visita la seccion Noticias de nuestra <br />  pagina";
+                    mail.Body = descripcion + "<br />  Visita la seccion Noticias de nuestra  pagina";
                     mail.IsBodyHtml = true;
 
                     foreach (var copi in listaCorreos)

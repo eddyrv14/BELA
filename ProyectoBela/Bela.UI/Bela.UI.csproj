@@ -169,14 +169,19 @@
     <Compile Include="Controllers\EstudianteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InformacionController.cs" />
+    <Compile Include="Controllers\MaterialController.cs" />
     <Compile Include="Controllers\NoticiaController.cs" />
     <Compile Include="Controllers\ProfesorController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DetalleMateria.cs" />
+    <Compile Include="Models\DetalleMaterial.cs" />
+    <Compile Include="Models\EstudianteSeccion.cs" />
     <Compile Include="Models\ImagenNoticia.cs" />
-    <Compile Include="Models\Materia.cs" />
+    <Compile Include="Models\MasMaterial.cs" />
+    <Compile Include="Models\MateriaDeta.cs" />
     <Compile Include="Models\MensajeContacto.cs" />
     <Compile Include="Models\Noticia.cs" />
     <Compile Include="Models\NoticiaDetalles.cs" />
@@ -187,7 +192,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animated.css" />
-    <Content Include="Content\BI.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\datatable.css" />
@@ -196,6 +200,7 @@
     <Content Include="Content\fontawesome.min.css" />
     <Content Include="Content\lighbox.css" />
     <Content Include="Content\lightboxmin.css" />
+    <Content Include="Content\maxDrescrip.css" />
     <Content Include="Content\responsive.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style2.css" />
@@ -203,6 +208,7 @@
     <Content Include="Content\styleMaterias.css" />
     <Content Include="Content\styleMenuVerticaNoticias.css" />
     <Content Include="Content\styleNoticias.css" />
+    <Content Include="Content\styleProfesores.css" />
     <Content Include="Content\Style_BI.css" />
     <Content Include="Content\stylosInicioPerfil.css" />
     <Content Include="favicon.ico" />
@@ -210,8 +216,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\2017-11-10.png" />
+    <Content Include="Imagenes\activadadesDepor.jpg" />
     <Content Include="Imagenes\banner.jpg" />
+    <Content Include="Imagenes\BI.png" />
     <Content Include="Imagenes\hd.jpg" />
+    <Content Include="Imagenes\ImagenesMatricula\1.jpg" />
+    <Content Include="Imagenes\ImagenesMatricula\2.jpg" />
+    <Content Include="Imagenes\ImagenesMatricula\3.jpg" />
     <Content Include="Imagenes\ImagenesNoticias\4.jpg" />
     <Content Include="Imagenes\ImagenesNoticias\5.jpg" />
     <Content Include="Imagenes\inicio3.jpg" />
@@ -261,15 +273,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Contacto\EnvioMensaje.cshtml" />
     <Content Include="Views\Shared\_Contacto.cshtml" />
     <Content Include="Views\Noticia\Noticias.cshtml" />
@@ -281,7 +284,7 @@
     <Content Include="Views\Informacion\matricula.cshtml" />
     <Content Include="Views\Informacion\vidaEstudiantil.cshtml" />
     <Content Include="Views\Noticia\Detalles.cshtml" />
-    <Content Include="Views\Usuario\login.cshtml" />
+    <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Shared\_Usuario.cshtml" />
     <Content Include="Views\Admin\Inicio.cshtml" />
     <Content Include="Views\Estudiante\Inicio.cshtml" />
@@ -295,10 +298,13 @@
     <Content Include="Views\Usuario\Cuentas.cshtml" />
     <Content Include="Views\Usuario\EditarCuenta.cshtml" />
     <Content Include="Views\Informacion\nosotros.cshtml" />
-    <Content Include="Views\Profesor\CrearMaterial.cshtml" />
+    <Content Include="Views\Material\DetalleMaterial.cshtml" />
+    <Content Include="Views\Material\ListaMateriales.cshtml" />
+    <Content Include="Views\Profesor\ss.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Materiales\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

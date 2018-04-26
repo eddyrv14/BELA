@@ -28,13 +28,20 @@ namespace Bela.UI.Controllers
 
         }
 
+
         public ActionResult NoticiasInternas()
         {
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
+
             var listaNoticiasInternas = noticias.listaNoticiasInternas();
             var lista = Mapper.Map<List<Models.Noticia>>(listaNoticiasInternas);
             return View(lista);
 
         }
+
 
         public ActionResult Detalles(int idNoticia)
         {

@@ -9,9 +9,9 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/style2.css" rel="stylesheet" />
-    @* <link href="~/Content/animated.css" rel="stylesheet" />*@
+    <link href="~/Content/animated.css" rel="stylesheet" />
+    <link href="~/Content/styleinfo.css" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link href="~/Content/BI.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                             <ul class="nav navbar-nav">
                                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                                 <li>@Html.ActionLink("Noticias", "Noticias", "Noticia")</li>
-                                <li>@Html.ActionLink("Nosotros", "nosotros", "Informacion")</li>
+                                <li class="active">@Html.ActionLink("Nosotros", "nosotros", "Informacion")</li>
                                 <li>@Html.ActionLink("Contacto", "EnvioMensaje", "Contacto")</li>
 
                                 @if (Session["UserID"] != null && Session["rol"].Equals("Administrador"))
@@ -66,7 +66,7 @@
         </div>
     </header>
 
-    <div class="container body-content">
+    <div class="">
         @RenderBody()
         <hr />
     </div>
@@ -86,7 +86,7 @@
                         @*<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
                             <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
                             <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>*@
-                        <a href="https://wego.here.com/directions/mix//Liceo-de-Puriscal,-114001-Santiago:e-eyJuYW1lIjoiTGljZW8gZGUgUHVyaXNjYWwiLCJhZGRyZXNzIjoiMTE0MDAxIFNhbnRpYWdvLCBTYW4gSm9zZSwgQ29zdGEgUmljYSIsImxhdGl0dWRlIjo5Ljg0NzM2MjM1MDIyODQsImxvbmdpdHVkZSI6LTg0LjMxMzEyNDMyMTU1NCwicHJvdmlkZXJOYW1lIjoiZmFjZWJvb2siLCJwcm92aWRlcklkIjo0Mzc3NzI2NTI5OTU3OTN9?map=9.84736,-84.31312,15,normal&fb_locale=es_LA" title="Ubicacion"><i class="fas fa-map-marker-alt fa-2x"></i></a>
+                        <a href="https://wego.here.com/directions/mix//Liceo-de-Puriscal,-114001-Santiago:e-eyJuYW1lIjoiTGljZW8gZGUgUHVyaXNjYWwiLCJhZGRyZXNzIjoiMTE0MDAxIFNhbnRpYWdvLCBTYW4gSm9zZSwgQ29zdGEgUmljYSIsImxhdGl0dWRlIjo5Ljg0NzM2MjM1MDIyODQsImxvbmdpdHVkZSI6LTg0LjMxMzEyNDMyMTU1NCwicHJvdmlkZXJOYW1lIjoiZmFjZWJvb2siLCJwcm92aWRlcklkIjo0Mzc3NzI2NTI5OTU3OTN9?map=9.84736,-84.31312,15,normal&fb_locale=es_LA" title="Ubicacion"><i class="fas fa-map-marker-alt fa-2x"></i></i></a>
                     </div>
                 </div>
             </div>
@@ -98,6 +98,5 @@
     @RenderSection("scripts", required: false)
     <script src="~/Scripts/wow.js"></script>
     <script src="~/Scripts/custom.js"></script>
-    @* <script src="~/Scripts/formularioContacto.js"></script>*@
 </body>
 </html>
