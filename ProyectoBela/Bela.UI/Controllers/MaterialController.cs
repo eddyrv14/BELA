@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Bela.Datos;
 using Bela.BL.Interfaces;
 using Bela.BL.Metodos;
 using AutoMapper;
-using Bela.Datos;
 
 namespace Bela.UI.Controllers
 {
@@ -37,8 +37,8 @@ namespace Bela.UI.Controllers
                 TempData["null"] = "null";
             }
 
-            var detallesMateria = profesorMetodos.BuscarMateria(idDetalleMateria);
-            var detallesMostrar = Mapper.Map<Models.MateriaDeta>(detallesMateria);
+            var detallesMateria=profesorMetodos.BuscarMateria(idDetalleMateria);
+            var detallesMostrar=Mapper.Map<Models.MateriaDeta>(detallesMateria);
             ViewBag.idMateria = detallesMostrar;
 
             return View(lista);
@@ -55,5 +55,5 @@ namespace Bela.UI.Controllers
             var materialMostrar = Mapper.Map<Models.DetalleMaterial>(material);
             return View(materialMostrar);
         }
-    }
+	}
 }

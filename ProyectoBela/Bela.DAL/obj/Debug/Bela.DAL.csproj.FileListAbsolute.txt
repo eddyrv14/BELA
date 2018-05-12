@@ -5,88 +5,14 @@ C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoB
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Common.dll
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Interfaces.dll
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Text.dll
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\Bela.Datos.pdb
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Common.xml
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Interfaces.xml
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.xml
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Text.xml
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.csprojResolveAssemblyReference.cache
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.dll
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.dll.config
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.Datos.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Common.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Interfaces.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Text.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.Datos.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Common.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Interfaces.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Text.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.csprojResolveAssemblyReference.cache
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.pdb
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.dll.config
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.pdb
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.Datos.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Common.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Interfaces.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Text.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.Datos.pdb
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Common.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Interfaces.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Text.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.csprojResolveAssemblyReference.cache
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.pdb
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.dll.config
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.pdb
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.Datos.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Common.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Interfaces.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Text.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.Datos.pdb
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Common.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Interfaces.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Text.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.csprojResolveAssemblyReference.cache
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.pdb
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.dll.config
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.DAL.pdb
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.Datos.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Common.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Interfaces.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Text.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\Bela.Datos.pdb
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Common.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Interfaces.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.OrmLite.SqlServer.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\bin\Debug\ServiceStack.Text.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.csprojResolveAssemblyReference.cache
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.csproj.CoreCompileInputs.cache
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.csproj.CopyComplete
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.DAL\obj\Debug\Bela.DAL.pdb

@@ -9,20 +9,10 @@ ol, ul {
     list-style: none;
 }
 
-blockquote, q {
-    quotes: none;
+.titulo-height{
+    line-height: 1.5em
 }
 
-    blockquote:before, blockquote:after,
-    q:before, q:after {
-        content: '';
-        content: none;
-    }
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
 
 .section-padding {
     padding: 60px 0px;
@@ -30,7 +20,6 @@ table {
 
 h1, h2, h3, h4, h5, h6 {
 }
-
 
 
 .navbar-default {
@@ -128,31 +117,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 25px 0px;
 }
 
-.btn-submit {
-    background: #FFD34E;
-    border: 0px;
-    display: inline-block;
-    font-size: 16px;
-    text-transform: uppercase;
-    padding: 10px 40px;
-    font-weight: normal;
-    border-radius: 0px;
-    letter-spacing: 1px;
-    color: #333;
-    position: relative;
-    overflow: hidden;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    margin-top: 25px;
-    border: 2px solid #FFD34E;
-}
 
-    .btn-submit:hover {
-        background: #fff;
-    }
+
+
 
 
 /**Intro*/
@@ -180,7 +147,6 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-
 .text-services-apoyo {
     color: #DF122E;
 }
@@ -193,14 +159,19 @@ h1, h2, h3, h4, h5, h6 {
     color: #D06111;
 }
 
+.text-services-matricula{
+    color:brown;
+}
+
 .service-box {
     max-width: 400px;
 }
 
 
-/****/
 
 
+
+/*****************/
 
 
 
@@ -261,6 +232,7 @@ h3.txt-tl {
     font-size: 24px;
     line-height: 1.35;
 }
+/****/
 
 
 .section {
@@ -279,6 +251,7 @@ h3.txt-tl {
 .cta-txt p {
     color: #fff;
 }
+
 /****/
 .portfolio-box {
     margin-bottom: 15px;
@@ -399,6 +372,11 @@ a, a:hover {
         border-color: #FFBF00;
     }
 
+ .news{
+     margin-top:40px;
+
+ }
+
 /**/
 
 .post {
@@ -481,7 +459,7 @@ a, a:hover {
 
 
 /**footer**/
-#footer {
+/*#footer {
     background-color: #191919;
     padding: 20px 0px;
 }
@@ -550,9 +528,9 @@ a, a:hover {
         font-size: 24px;
     }
 
-    .footer-copyright {
+    /*.footer-copyright {
         text-align: center;
-    }
+    }*/
 
     .padding-right-zero {
         padding-right: 15px;

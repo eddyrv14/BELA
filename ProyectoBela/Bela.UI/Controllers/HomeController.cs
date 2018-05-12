@@ -19,7 +19,6 @@ namespace Bela.UI.Controllers
             noticias = new MNoticiaBL();
         }
 
-
         public ActionResult Index()
         {
             var ultimasNoticias = noticias.ultimasNoticias();

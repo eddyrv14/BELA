@@ -19,7 +19,7 @@
                 </a>
             </li>
             <li>
-                @Html.ActionLink("Inicio", "Inicio", "Admin", null, new { @class = "activeMenu" })
+                @Html.ActionLink("Inicio", "Inicio", "Admin", null, new {@class="activeMenu" })
             </li>
             <li>
                 @Html.ActionLink("Crear Noticias", "CrearNoticia", "Admin")
@@ -34,9 +34,9 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cuentas<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">Opciones</li>
-                    <li>@Html.ActionLink("Crear Cuenta", "CrearCuenta", "Usuario")</li>
-                    <li>@Html.ActionLink("Administrar Cuentas", "Cuentas", "Usuario")</li>
-                    <li>@Html.ActionLink("Mi Cuenta", "MiCuenta", "Usuario")</li>
+                    <li>@Html.ActionLink("Crear Cuenta", "CrearCuenta", "Admin")</li>
+                    <li>@Html.ActionLink("Administrar Cuentas","Cuentas","Admin")</li>
+                    <li>@Html.ActionLink("Mi Cuenta","MiCuenta","Usuario")</li>
                 </ul>
             </li>
         </ul>
@@ -76,7 +76,7 @@
             <h2><small>Estas son las noticias creadas por ti </small></h2>
             <p><span class="glyphicon glyphicon-chevron-down"></span></p>
         </div>
-        <section class="section--padding-bottom-small noticias">
+        <section class="section--padding-bottom-small noticias" style="margin-bottom:400px;">
             <div class="container">
                 <div class="row">
                     @foreach (var item in Model)
@@ -87,12 +87,12 @@
                                 <h3><a onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'">@Html.DisplayFor(modelItem => item.titulo)</a></h3>
                                 <p class="post__intro">@Html.DisplayFor(modelItem => item.descripcion)</p>
                                 <div class="btn-group">
-
+                                    
                                     <button class="btn btn-ghost" onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'">Leer Mas</button>
                                     <button class="btn btn-ghost-modificar" onclick="location.href='@Url.Action("ModificarNoticia", "Admin", new { idNoticia=item.idNoticia})'">Modificar</button>
                                     <button class="btn btn-ghost-eliminar" onclick="location.href='@Url.Action("EliminarNoticia", "Admin", new { idNoticia=item.idNoticia})'">Eliminar</button>
                                 </div>
-                            </div>
+                             </div>
                         </div>
 
                     }
@@ -100,18 +100,13 @@
             </div>
         </section>
 
-        @if (TempData["noticiasNull"] != null)
-        {
-            <div class="text-center" style="margin-bottom:400px;">
-                <p class="parrafos" style="font-size:18px;">Sin  noticias a mostrar</p>
-            </div>
-        }
-
-         
-
 
 
     </div>
-    <!-- /#page-content-wrapper -->
-</div>
-<!-- /#wrapper -->
+                <!-- /#page-content-wrapper -->
+            </div>
+            <!-- /#wrapper -->
+
+
+
+            

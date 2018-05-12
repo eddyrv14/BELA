@@ -11,7 +11,7 @@ using Bela.Datos;
 
 namespace Bela.DAL.Metodos
 {
-    public class MProfesorDal : IProfesor
+   public  class MProfesorDal:IProfesor
     {
         private OrmLiteConnectionFactory _conex;
         private IDbConnection _db;
@@ -23,6 +23,7 @@ namespace Bela.DAL.Metodos
             _conex = new OrmLiteConnectionFactory(BD.Default.conexion, SqlServerDialect.Provider);
             _db = _conex.Open();
         }
+
 
         public string crearMaterial(DetalleMaterial material)
         {
@@ -48,7 +49,7 @@ namespace Bela.DAL.Metodos
                 res = e.Message;
             }
             return res;
-
+        
         }
 
 
@@ -68,7 +69,7 @@ namespace Bela.DAL.Metodos
 
         public void AgregarMaterialesAdicionales(string material, string nombreMaterial)
         {
-            _db.SqlScalar<MasMaterial>("EXEC insertarMaterialesAdicionales @material,@nombreMaterial", new { material = material, nombreMaterial = nombreMaterial });
+            _db.SqlScalar<MasMaterial>("EXEC insertarMaterialesAdicionales @material,@nombreMaterial", new { material=material,nombreMaterial=nombreMaterial });
         }
 
 

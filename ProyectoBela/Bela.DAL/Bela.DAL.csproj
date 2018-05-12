@@ -63,15 +63,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>BD.settings</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IAdmin.cs" />
     <Compile Include="Interfaces\IContacto.cs" />
     <Compile Include="Interfaces\IEstudiante.cs" />
     <Compile Include="Interfaces\IMaterial.cs" />
     <Compile Include="Interfaces\INoticia.cs" />
     <Compile Include="Interfaces\IProfesor.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
+    <Compile Include="Metodos\MAdminDal.cs" />
     <Compile Include="Metodos\MContactoDal.cs" />
     <Compile Include="Metodos\MEstudianteDal.cs" />
-    <Compile Include="Metodos\MMaterialDAL.cs" />
+    <Compile Include="Metodos\MMaterialDal.cs" />
     <Compile Include="Metodos\MNoticiasDal.cs" />
     <Compile Include="Metodos\MProfesorDal.cs" />
     <Compile Include="Metodos\MUsuarioDal.cs" />

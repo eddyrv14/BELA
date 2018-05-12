@@ -16,5 +16,6 @@ namespace Bela.Datos
         public string contenido { get; set; }
         public string imagen { get; set; }
         public DateTime fechaYHora { get; set; }
+
     }
 }

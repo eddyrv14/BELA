@@ -8,10 +8,9 @@ using Bela.Datos;
 using Bela.DAL.Metodos;
 using System.Text.RegularExpressions;
 
-
 namespace Bela.BL.Metodos
 {
-   public class MNoticiaBL:INoticia
+    public class MNoticiaBL : INoticia
     {
         MNoticiasDal noticias = new MNoticiasDal();
 

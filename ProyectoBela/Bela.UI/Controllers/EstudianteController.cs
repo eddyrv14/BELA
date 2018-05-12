@@ -18,8 +18,8 @@ namespace Bela.UI.Controllers
         {
             estudiantesMetodos = new MEstudianteBL();
         }
-
-
+        
+        
         public ActionResult Inicio()
         {
             if (Session["UserID"] == null)
@@ -28,13 +28,7 @@ namespace Bela.UI.Controllers
             }
             var listaMaterias = estudiantesMetodos.listaMaterias(Convert.ToInt32(Session["UserSeccion"]));
             var lista = Mapper.Map<List<Models.MateriaDeta>>(listaMaterias);
-
-            if (listaMaterias.Count == 0)
-            {
-                TempData["nullMaterias"] = "null";
-            }
-
             return View(lista);
         }
-    }
+	}
 }

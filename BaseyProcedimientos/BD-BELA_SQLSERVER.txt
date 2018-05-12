@@ -16,8 +16,8 @@ Create table Materia(idMateria int IDENTITY(1,1) primary key,nombre varchar(20))
 
 Create table Seccion(idSeccion int IDENTITY(1,1) primary key,nombre varchar(10));
 
-Create table DetalleMateria(idDetalleMateria int IDENTITY(1,1) primary key,idMateria int,idUsuario int,idSeccion int,grado int,CONSTRAINT FK_IDPROFESOR
-foreign key (idUsuario) references Usuario(idUsuario),
+Create table DetalleMateria(idDetalleMateria int IDENTITY(1,1) primary key,idMateria int,idUsuario int,idSeccion int,grado int,
+CONSTRAINT FK_IDPROFESOR foreign key (idUsuario) references Usuario(idUsuario),
 CONSTRAINT FK_IDSECCION foreign key (idSeccion) references Seccion(idSeccion),
 CONSTRAINT FK_IDMATERIA foreign key (idMateria) references Materia(idMateria));
 
@@ -57,7 +57,21 @@ Create table MasMaterial(idMasMaterial int IDENTITY(1,1) primary key,idMaterial 
 
 CONSTRAINT FK_IDMaterialMas FOREIGN KEY (idMaterial)REFERENCES Material(idMaterial));
 
-Create table NotiInternas(idNotificacionInt int IDENTITY(1,1) primary key,idUsuario int,CONSTRAINT FK_IDUSARIOCORREO FOREIGN KEY (idUsuario)
-REFERENCES Usuario(idUsuario));
+CREATE TABLE NotiInternas(idNotificacionInter int IDENTITY(1,1) primary key,correo varchar(100));
 
-Create table NotiExternas(idNoticficacionExter int IDENTITY(1,1) primary key,correo varchar(100)); 
+Create table NotiExternas(idNoticficacionExter int IDENTITY(1,1) primary key,correo varchar(100));
+
+Create table EstudianteSeccion(idEstudianteSeccion int IDENTITY(1,1) primary key,
+idUsuario int,idSeccion int,CONSTRAINT FK_IDUSUARIOSEC FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
+CONSTRAINT FK_SECCIONEST FOREIGN KEY (idSeccion) REFERENCES Seccion(idSeccion));
+
+
+
+
+***ALTERS
+
+ALTER TABLE NotiExternas
+ADD UNIQUE (correo);
+
+ALTER TABLE NotiInternas
+ADD UNIQUE (correo);
