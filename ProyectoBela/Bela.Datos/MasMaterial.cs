@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bela.Datos
 {
-    public class MasMaterial
+   public  class MasMaterial
     {
         public int idMasMaterial { get; set; }
         public int idMaterial { get; set; }

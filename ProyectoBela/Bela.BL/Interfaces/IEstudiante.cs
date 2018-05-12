@@ -9,7 +9,7 @@ namespace Bela.BL.Interfaces
 {
    public interface IEstudiante
     {
-        List<MateriaDeta> listaMaterias(int idSeccion);
-        EstudianteSeccion BuscarSeccion(int idUsuario);
+       List<MateriaDeta> listaMaterias(int idSeccion);
+       EstudianteSeccion BuscarSeccion(int idUsuario);
     }
 }

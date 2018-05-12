@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Bela.BL.Interfaces;
 using Bela.Datos;
 
-
 using Bela.DAL.Metodos;
 using System.Text.RegularExpressions;
+
 
 namespace Bela.BL.Metodos
 {

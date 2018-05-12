@@ -9,7 +9,6 @@ using Bela.Datos;
 using AutoMapper;
 using System.IO;
 
-
 namespace Bela.UI.Controllers
 {
     public class ProfesorController : Controller
@@ -34,7 +33,7 @@ namespace Bela.UI.Controllers
 
 
         [HttpPost]
-        public ActionResult CrearMateriales(Models.DetalleMaterial material, HttpPostedFileBase uploadFile, FormCollection form, IEnumerable<HttpPostedFileBase> uploadfilesMateria)
+        public ActionResult CrearMateriales(Models.DetalleMaterial material,HttpPostedFileBase uploadFile, FormCollection form, IEnumerable<HttpPostedFileBase> uploadfilesMateria)
         {
             string mensaje = "";
             string guardaEn = "~/Materiales/";
@@ -43,7 +42,7 @@ namespace Bela.UI.Controllers
             try
             {
                 int idMateriaTxt = Convert.ToInt32(form["idMateria"]);
-                int idUsuario = Convert.ToInt32(Session["UserID"]);
+                int idUsuario=Convert.ToInt32(Session["UserID"]);
                 string tituloTxt = form["txtTitulo"];
                 string descripcionTxt = form["txtDescripcion"];
 
@@ -62,7 +61,7 @@ namespace Bela.UI.Controllers
                     material.mensaje = descripcionTxt;
                     material.material = materialGuardar;
                     material.nombreMaterial = fileName;
-
+                    
 
                     var materialMap = material;
                     var materialInsert = Mapper.Map<Datos.DetalleMaterial>(materialMap);
@@ -76,7 +75,7 @@ namespace Bela.UI.Controllers
                 }
 
 
-
+        
 
                 if (mensaje.Equals("Material agregado"))
                 {
@@ -96,19 +95,16 @@ namespace Bela.UI.Controllers
                     }
                 }
 
-                if (mensaje.Equals("Material agregado"))
-                {
-                    TempData["mensajeProf"] = mensaje;
-                }
+                TempData["mensajeProf"] = mensaje;
 
-                return RedirectToAction("ListaMateriales", "Material", new { idDetalleMateria=material.idDetalleMateria});
+                return RedirectToAction("Inicio", "Profesor");
 
             }
             catch (NullReferenceException)
             {
 
-                TempData["mensajeProf"] = "Material agregado";
-                return RedirectToAction("ListaMateriales", "Material", new { idDetalleMateria = material.idDetalleMateria });
+                TempData["mensajeProf"] = "Material Creado";
+                return RedirectToAction("Inicio", "Profesor");
             }
             catch (Exception)
             {

@@ -7,8 +7,9 @@ using Bela.Datos;
 
 namespace Bela.DAL.Interfaces
 {
-   public interface IMaterial
+    public interface IMaterial
     {
+
         List<DetalleMaterial> ListaMateriales(int idDetalleMateria);
         DetalleMaterial BuscarMaterial(int idMaterial);
     }

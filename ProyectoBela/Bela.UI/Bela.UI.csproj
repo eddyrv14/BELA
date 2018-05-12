@@ -20,8 +20,6 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <UseGlobalApplicationHostFile />
-    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -182,8 +180,8 @@
     <Compile Include="Models\ImagenNoticia.cs" />
     <Compile Include="Models\MasMaterial.cs" />
     <Compile Include="Models\MateriaDeta.cs" />
-    <Compile Include="Models\MensajeContacto.cs" />
     <Compile Include="Models\Noticia.cs" />
+    <Compile Include="Models\MensajeContacto.cs" />
     <Compile Include="Models\NoticiaDetalles.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -200,30 +198,26 @@
     <Content Include="Content\fontawesome.min.css" />
     <Content Include="Content\lighbox.css" />
     <Content Include="Content\lightboxmin.css" />
-    <Content Include="Content\maxDrescrip.css" />
     <Content Include="Content\responsive.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style2.css" />
+    <Content Include="Content\styleFooter.css" />
     <Content Include="Content\styleinfo.css" />
     <Content Include="Content\styleMaterias.css" />
     <Content Include="Content\styleMenuVerticaNoticias.css" />
-    <Content Include="Content\styleNoticias.css" />
     <Content Include="Content\styleProfesores.css" />
-    <Content Include="Content\Style_BI.css" />
+    <Content Include="Content\stylesNoticias.css" />
+    <Content Include="Content\styleTxtPlaceholder.css" />
     <Content Include="Content\stylosInicioPerfil.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Imagenes\2017-11-10.png" />
     <Content Include="Imagenes\activadadesDepor.jpg" />
     <Content Include="Imagenes\banner.jpg" />
     <Content Include="Imagenes\BI.png" />
     <Content Include="Imagenes\hd.jpg" />
-    <Content Include="Imagenes\ImagenesMatricula\1.jpg" />
-    <Content Include="Imagenes\ImagenesMatricula\2.jpg" />
-    <Content Include="Imagenes\ImagenesMatricula\3.jpg" />
     <Content Include="Imagenes\ImagenesNoticias\4.jpg" />
     <Content Include="Imagenes\ImagenesNoticias\5.jpg" />
     <Content Include="Imagenes\inicio3.jpg" />
@@ -238,11 +232,12 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Materiales\Temas de Examen1_1Tri-7-1.docx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\contador.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\datatable.js" />
     <Content Include="Scripts\datatable_bootstrap.js" />
-    <Content Include="Scripts\datatable_init.js" />
     <Content Include="Scripts\formularioContacto.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -254,6 +249,7 @@
     <Content Include="Scripts\lightbox.js" />
     <Content Include="Scripts\lightboxmin.js" />
     <Content Include="Scripts\menuVertical.js" />
+    <Content Include="Scripts\mn.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -275,36 +271,36 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Contacto\EnvioMensaje.cshtml" />
     <Content Include="Views\Shared\_Contacto.cshtml" />
-    <Content Include="Views\Noticia\Noticias.cshtml" />
     <Content Include="Views\Shared\_Noticias.cshtml" />
-    <Content Include="Views\Shared\_Informacion.cshtml" />
-    <Content Include="Views\Informacion\apoyoEducativo.cshtml" />
-    <Content Include="Views\Informacion\bachilleratoInternacional.cshtml" />
-    <Content Include="Views\Informacion\liceoComunidad.cshtml" />
-    <Content Include="Views\Informacion\matricula.cshtml" />
     <Content Include="Views\Informacion\vidaEstudiantil.cshtml" />
+    <Content Include="Views\Shared\_Informacion.cshtml" />
+    <Content Include="Views\Informacion\matricula.cshtml" />
+    <Content Include="Views\Informacion\bachilleratoInternacional.cshtml" />
+    <Content Include="Views\Informacion\apoyoEducativo.cshtml" />
+    <Content Include="Views\Informacion\liceoComunidad.cshtml" />
+    <Content Include="Views\Noticia\Noticias.cshtml" />
     <Content Include="Views\Noticia\Detalles.cshtml" />
     <Content Include="Views\Usuario\Login.cshtml" />
-    <Content Include="Views\Shared\_Usuario.cshtml" />
     <Content Include="Views\Admin\Inicio.cshtml" />
-    <Content Include="Views\Estudiante\Inicio.cshtml" />
-    <Content Include="Views\Profesor\Inicio.cshtml" />
+    <Content Include="Views\Shared\_Usuario.cshtml" />
     <Content Include="Views\Shared\_Perfil.cshtml" />
+    <Content Include="Views\Profesor\Inicio.cshtml" />
+    <Content Include="Views\Estudiante\Inicio.cshtml" />
     <Content Include="Views\Admin\CrearNoticia.cshtml" />
     <Content Include="Views\Noticia\NoticiasInternas.cshtml" />
-    <Content Include="Views\Usuario\CrearCuenta.cshtml" />
+    <Content Include="Views\Admin\CrearCuenta.cshtml" />
     <Content Include="Views\Admin\Mensajes.cshtml" />
+    <Content Include="Views\Admin\Cuentas.cshtml" />
+    <Content Include="Views\Admin\EditarCuenta.cshtml" />
     <Content Include="Views\Admin\ModificarNoticia.cshtml" />
-    <Content Include="Views\Usuario\Cuentas.cshtml" />
-    <Content Include="Views\Usuario\EditarCuenta.cshtml" />
     <Content Include="Views\Informacion\nosotros.cshtml" />
-    <Content Include="Views\Material\DetalleMaterial.cshtml" />
-    <Content Include="Views\Material\ListaMateriales.cshtml" />
     <Content Include="Views\Profesor\ss.cshtml" />
+    <Content Include="Views\Material\ListaMateriales.cshtml" />
+    <Content Include="Views\Material\DetalleMaterial.cshtml" />
+    <Content Include="Views\Shared\_FooterPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Materiales\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

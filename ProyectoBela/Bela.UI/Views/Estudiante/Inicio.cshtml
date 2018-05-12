@@ -27,7 +27,7 @@
                         Materia: @Html.DisplayFor(modelItem => item.materia)
                     </div>
                 </div>
-                <div class="materias-desc col-xs-12 col-sm-9 col-md-9 col-lg-9 parrafos" onclick="location.href='@Url.Action("ListaMateriales","Material", new {idDetalleMateria=item.idDetalleMateria })'">
+                <div class="materias-desc col-xs-12 col-sm-9 col-md-9 col-lg-9 parrafos"  onclick="location.href='@Url.Action("ListaMateriales","Material", new {idDetalleMateria=item.idDetalleMateria })'">
                     <h4>Seccion: @Html.DisplayFor(modelItem => item.seccion)</h4>
                     <h5>Profesor: @Html.DisplayFor(modelItem => item.nomProfesor)</h5>
                     <p>
@@ -38,13 +38,6 @@
 
 
 
-        }
-
-        @if (TempData["nullMaterias"] != null)
-        {
-            <div class="text-center" style="margin-bottom:220px;">
-                <p class="parrafos">Sin materias a mostrar</p>
-            </div>
         }
     </div>
 </section>

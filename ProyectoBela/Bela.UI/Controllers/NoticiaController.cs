@@ -25,7 +25,7 @@ namespace Bela.UI.Controllers
             var listaNoticias = noticias.listaNoticias();
             var lista = Mapper.Map<List<Models.Noticia>>(listaNoticias);
             return View(lista);
-
+           
         }
 
 
@@ -52,7 +52,7 @@ namespace Bela.UI.Controllers
             var noticiaDetails = noticias.buscarNoticiaDetalle(idNoticia);
             var noticiaDetailsMostrar = Mapper.Map<Models.NoticiaDetalles>(noticiaDetails);
             return View(noticiaDetailsMostrar);
-
+          
         }
-    }
+	}
 }

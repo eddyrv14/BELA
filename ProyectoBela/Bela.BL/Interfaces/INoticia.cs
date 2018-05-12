@@ -14,7 +14,7 @@ namespace Bela.BL.Interfaces
         List<Noticia> ultimasNoticias();
 
         void insertarNoticia(Noticia noticia);
-
+        
 
         void insertarImagenesAdicionales(string imagenes);
 

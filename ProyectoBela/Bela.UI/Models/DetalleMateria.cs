@@ -10,5 +10,6 @@ namespace Bela.UI.Models
         public int idDetalleMateria { get; set; }
         public int idMateria { get; set; }
         public int idUsuario { get; set; }
+       
     }
 }

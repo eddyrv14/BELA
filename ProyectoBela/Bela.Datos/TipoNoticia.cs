@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bela.Datos
 {
-  public  class TipoNoticia
+   public class TipoNoticia
     {
-        public int idTipoNoticia { get; set; }
-        public string nombre { get; set; }
+       public int idTipoNoticia { get; set; }
+       public string nombre { get; set; }
     }
 }

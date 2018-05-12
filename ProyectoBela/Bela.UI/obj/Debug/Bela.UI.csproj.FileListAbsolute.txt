@@ -1,95 +1,3 @@
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.UI.dll.config
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.UI.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.UI.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Antlr3.Runtime.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.BL.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.Datos.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\EntityFramework.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\EntityFramework.SqlServer.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Newtonsoft.Json.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Owin.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Helpers.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Mvc.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Optimization.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Razor.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Razor.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\WebGrease.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.BL.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.Datos.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Helpers.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Mvc.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Optimization.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Razor.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Razor.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Newtonsoft.Json.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Antlr3.Runtime.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\EntityFramework.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\EntityFramework.SqlServer.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.Helpers.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.Mvc.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.Optimization.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.Razor.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.Deployment.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\EntityFramework.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\EntityFramework.SqlServer.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Google.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.csprojResolveAssemblyReference.cache
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\AutoMapper.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\AutoMapper.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.DAL.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Common.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Interfaces.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Text.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.DAL.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Common.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Interfaces.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Text.xml
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.SqlServer.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.SqlServer.xml
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.dll.config
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.dll
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.pdb
@@ -182,282 +90,95 @@ C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\Proyect
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.csprojResolveAssemblyReference.cache
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.dll
 C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto\git\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.pdb
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.dll.config
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.pdb
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Antlr3.Runtime.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\AutoMapper.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.BL.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.Datos.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.SqlServer.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Newtonsoft.Json.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Owin.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Helpers.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Mvc.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Optimization.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Razor.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Deployment.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Razor.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\WebGrease.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.DAL.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.SqlServer.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Common.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Interfaces.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Text.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.BL.pdb
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.Datos.pdb
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\AutoMapper.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Helpers.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Mvc.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Optimization.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Razor.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Deployment.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Razor.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Newtonsoft.Json.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Antlr3.Runtime.pdb
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.SqlServer.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.DAL.pdb
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.SqlServer.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Common.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Interfaces.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Text.xml
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Helpers.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Mvc.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Optimization.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Razor.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.Deployment.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\EntityFramework.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\EntityFramework.SqlServer.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Google.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.csprojResolveAssemblyReference.cache
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.dll
-C:\Users\tito\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.pdb
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.csprojResolveAssemblyReference.cache
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.dll.config
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.pdb
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Antlr3.Runtime.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\AutoMapper.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.BL.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.Datos.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.SqlServer.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Newtonsoft.Json.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Owin.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Helpers.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Mvc.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Optimization.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Razor.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Razor.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\WebGrease.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.DAL.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.SqlServer.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Common.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Interfaces.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Text.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.BL.pdb
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.Datos.pdb
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\AutoMapper.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Helpers.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Mvc.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Optimization.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Razor.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Razor.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Newtonsoft.Json.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Antlr3.Runtime.pdb
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.SqlServer.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.DAL.pdb
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.SqlServer.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Common.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Interfaces.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Text.xml
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Helpers.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Mvc.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Optimization.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Razor.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.Deployment.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\EntityFramework.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\EntityFramework.SqlServer.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Google.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.dll
-C:\Users\Leste\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.pdb
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.dll.config
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.UI.pdb
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Antlr3.Runtime.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\AutoMapper.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.BL.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.Datos.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.SqlServer.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Newtonsoft.Json.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Owin.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Helpers.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Mvc.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Optimization.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Razor.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Razor.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\WebGrease.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.DAL.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.SqlServer.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Common.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Interfaces.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Text.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.BL.pdb
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.Datos.pdb
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\AutoMapper.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Helpers.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Mvc.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Optimization.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.Razor.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Razor.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Newtonsoft.Json.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Antlr3.Runtime.pdb
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\EntityFramework.SqlServer.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.DAL.pdb
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\Bela.DAL.dll.config
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.SqlServer.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Common.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Interfaces.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\ServiceStack.Text.xml
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Helpers.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Mvc.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Optimization.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.Razor.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.Deployment.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\EntityFramework.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\EntityFramework.SqlServer.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Google.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.csprojResolveAssemblyReference.cache
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.csproj.CoreCompileInputs.cache
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.csproj.CopyComplete
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.dll
-C:\Users\Erick Condrak\Documents\GitHub\BELA\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.pdb
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.UI.dll.config
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.UI.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.UI.pdb
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Antlr3.Runtime.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\AutoMapper.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.BL.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.Datos.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\EntityFramework.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\EntityFramework.SqlServer.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Newtonsoft.Json.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Owin.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Helpers.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Mvc.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Optimization.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Razor.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\WebGrease.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.DAL.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.SqlServer.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Common.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Interfaces.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Text.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.BL.pdb
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.Datos.pdb
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\AutoMapper.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Helpers.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Mvc.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Optimization.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.Razor.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Newtonsoft.Json.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Antlr3.Runtime.pdb
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\EntityFramework.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\EntityFramework.SqlServer.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\Bela.DAL.pdb
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.OrmLite.SqlServer.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Common.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Interfaces.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\ServiceStack.Text.xml
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.Razor.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\EntityFramework.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.csprojResolveAssemblyReference.cache
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.dll
+C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.UI\obj\Debug\Bela.UI.pdb

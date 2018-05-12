@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Bela.Datos
 {
-    public class MateriaDeta
+  public  class MateriaDeta
     {
-        public int idDetalleMateria { get; set; }
+        public int idDetalleMateria{ get; set; }
         public string materia { get; set; }
         public string nomProfesor { get; set; }
-        public string seccion { get; set; }
-        public int grado { get; set; }
+        public string  seccion { get; set; }
+        public int grado{ get; set; }
     }
 }

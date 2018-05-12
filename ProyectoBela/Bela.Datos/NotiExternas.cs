@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bela.Datos
 {
-    public class NotiExternas
+   public  class NotiExternas
     {
         public int idNoticficacionExter { get; set; }
         public string correo { get; set; }

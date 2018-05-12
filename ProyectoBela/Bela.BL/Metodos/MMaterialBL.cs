@@ -9,7 +9,7 @@ using Bela.DAL.Metodos;
 
 namespace Bela.BL.Metodos
 {
-   public class MMaterialBL: IMaterial
+    public class MMaterialBL:IMaterial
     {
         MMaterialDal materialMetodos = new MMaterialDal();
         public List<DetalleMaterial> ListaMateriales(int idDetalleMateria)
@@ -22,6 +22,5 @@ namespace Bela.BL.Metodos
         {
             return materialMetodos.BuscarMaterial(idMaterial);
         }
-
     }
 }

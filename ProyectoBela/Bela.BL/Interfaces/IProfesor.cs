@@ -7,12 +7,12 @@ using Bela.Datos;
 
 namespace Bela.BL.Interfaces
 {
-    public interface IProfesor
+   public interface IProfesor
     {
-        string crearMaterial(DetalleMaterial materia);
-        void AgregarMaterialesAdicionales(string material, string nombreMaterial);
-        List<MateriaDeta> ListaMaterialesProfesores(int idUsuario);
-        MateriaDeta BuscarMateria(int idMateria);
-        List<MasMaterial> ListaMaterialesAdicionales(int idMaterial);
+       string crearMaterial(DetalleMaterial materia);
+       void AgregarMaterialesAdicionales(string material, string nombreMaterial);
+       List<MateriaDeta> ListaMaterialesProfesores(int idUsuario);
+       MateriaDeta BuscarMateria(int idMateria);
+       List<MasMaterial> ListaMaterialesAdicionales(int idMaterial);
     }
 }

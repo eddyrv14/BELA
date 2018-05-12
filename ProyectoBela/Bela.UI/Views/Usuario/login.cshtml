@@ -14,9 +14,9 @@
 
     <section class="section-padding" id="contact">
         <div class="container">
-
+           
             <div class="row white">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-8 col-md-offset-2" >
                     <div class="section-title">
                         <h2 class="head-title black">Login</h2>
                     </div>
@@ -30,7 +30,7 @@
                             <form action="" method="post" role="form" class="contactForm">
 
                                 <div class="form-group">
-                                    @Html.TextBoxFor(x => x.usuario, new { @class = "form-control", @name = "usuario", @placeholder = "Usuario" })
+                                    @Html.TextBoxFor(x => x.usuario, new {@class = "form-control", @name = "usuario", @placeholder = "Usuario" })
                                     @Html.ValidationMessageFor(model => model.usuario)
                                 </div>
 
@@ -39,7 +39,7 @@
                                     @Html.ValidationMessageFor(model => model.contrasena)
                                 </div>
 
-
+                           
 
                                 <button type="submit" class="btn btn-ghost">Ingresar</button>
 
@@ -61,6 +61,6 @@
 }
 
 <br />
-<br />
-<br />
-<br />
+<br/>
+<br/>
+<br/>

@@ -14,15 +14,15 @@ namespace Bela.UI.App_Start
             Mapper.Initialize(cfg =>
             {
                 //Inserts, Update, Deletes
-                cfg.CreateMap<Models.MensajeContacto, Bela.Datos.MensajeContacto>();
-                cfg.CreateMap<Models.Noticia, Bela.Datos.Noticia>();
-                cfg.CreateMap<Models.NoticiaDetalles, Bela.Datos.NoticiaDetalles>();
-                cfg.CreateMap<Models.Usuario, Bela.Datos.Usuario>();
-                cfg.CreateMap<Models.ImagenNoticia, Bela.Datos.ImagenNoticia>();
-                cfg.CreateMap<Models.MateriaDeta, Bela.Datos.MateriaDeta>();
-                cfg.CreateMap<Models.DetalleMaterial, Bela.Datos.DetalleMaterial>();
-                cfg.CreateMap<Models.DetalleMateria, Bela.Datos.DetalleMateria>();
-                cfg.CreateMap<Models.MasMaterial, Bela.Datos.MasMaterial>();
+               cfg.CreateMap<Models.MensajeContacto, Bela.Datos.MensajeContacto>();
+               cfg.CreateMap<Models.Noticia, Bela.Datos.Noticia>();
+               cfg.CreateMap<Models.NoticiaDetalles, Bela.Datos.NoticiaDetalles>();
+               cfg.CreateMap<Models.Usuario, Bela.Datos.Usuario>();
+               cfg.CreateMap<Models.ImagenNoticia, Bela.Datos.ImagenNoticia>();
+               cfg.CreateMap<Models.MateriaDeta, Bela.Datos.MateriaDeta>();
+               cfg.CreateMap<Models.DetalleMaterial, Bela.Datos.DetalleMaterial>();
+               cfg.CreateMap<Models.DetalleMateria, Bela.Datos.DetalleMateria>();
+               cfg.CreateMap<Models.MasMaterial, Bela.Datos.MasMaterial>();
                 //// Selects
                 cfg.CreateMap<Bela.Datos.MensajeContacto, Models.MensajeContacto>();
                 cfg.CreateMap<Bela.Datos.Noticia, Models.Noticia>();
@@ -40,4 +40,3 @@ namespace Bela.UI.App_Start
 
 
 }
-

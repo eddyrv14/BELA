@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bela.Datos
 {
-    public class Usuario : Persona
+   public class Usuario:Persona
     {
         public int idUsuario { get; set; }
         public int rol { get; set; }

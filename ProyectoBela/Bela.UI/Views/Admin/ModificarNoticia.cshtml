@@ -79,8 +79,8 @@
                                     <form action="" method="post" role="form" class="contactForm" enctype="multipart/form-data">
 
                                         <div class=" form-group">
-                                            @Html.TextBoxFor(x => x.idNoticia, new { @class = "form-control", @name = "idNoticia", @readonly = true, style = "display: none;" })
-                                        </div>
+                                          @Html.TextBoxFor(x => x.idNoticia, new { @class = "form-control", @name = "idNoticia", @readonly = true, style = "display: none;" })
+                                         </div>
 
 
                                         <div class="form-group">
@@ -97,19 +97,19 @@
                                         <div class="form-group">
                                             @Html.Label("Descripcion")
                                             @* @Html.TextBoxFor(x => x.descripcion, new { @class = "form-control", @style="background-color:black;", @name = "descripcion", @placeholder = "Descripcion"})*@
-                                            @Html.TextAreaFor(x => x.descripcion, new { @class = "form-control", @placeholder = "Descripcion" })
+                                            @Html.TextAreaFor(x=>x.descripcion, new { @class = "form-control", @placeholder = "Descripcion" })
 
                                             @*@Html.ValidationMessageFor(model => model.descripcion)*@
                                         </div>
 
                                         <div class="form-group">
                                             @Html.Label("Contenido")
-                                            @Html.TextAreaFor(x => x.contenido, new { @class = "form-control", @placeholder = "Contenido" })
+                                            @Html.TextAreaFor(x=>x.contenido, new { @class = "form-control", @placeholder = "Contenido" })
                                         </div>
 
                                         <div class="form-group">
                                             <label>Imagen  -Obligatoria</label>
-                                            <input type="text" id="txtImagen" value="@ViewBag.imagen" name="txtImagen" class="form-control" />
+                                            <input type="text" id="txtImagen"value="@ViewBag.imagen" name="txtImagen" class="form-control" />
                                             <input type="file" onchange="cambiar()" name="uploadFile" id="file" class="form-control" style="display:none;" />
                                             <div class="text-center">
                                                 <input type="button" value="Adjuntar Imagen" class="btn btn-ghost" onclick="adjuntarImagen()" />
@@ -117,13 +117,13 @@
                                         </div>
 
                                         @*<div class="form-group">
-                                                <label>Imagenes adicionales</label>
-                                                <br>
-                                                <input type="file" onchange="" name="uploadfiles" id="files" class="form-control" multiple style="display:none;" />
-                                                <div class="text-center">
-                                                    <input type="button" value="Adjuntar imagenes" class="btn btn-ghost" onclick="adjuntarImagenes()" />
-                                                </div>
-                                            </div>*@
+                                            <label>Imagenes adicionales</label>
+                                            <br>
+                                            <input type="file" onchange="" name="uploadfiles" id="files" class="form-control" multiple style="display:none;" />
+                                            <div class="text-center">
+                                                <input type="button" value="Adjuntar imagenes" class="btn btn-ghost" onclick="adjuntarImagenes()" />
+                                            </div>
+                                        </div>*@
 
                                         <button type="submit" class="btn btn-crear">Modificar Noticia</button>
 

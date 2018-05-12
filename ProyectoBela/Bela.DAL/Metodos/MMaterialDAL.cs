@@ -9,7 +9,6 @@ using Bela.DAL.Interfaces;
 using Bela.Datos;
 using System.Data.SqlClient;
 
-
 namespace Bela.DAL.Metodos
 {
     public class MMaterialDal : IMaterial

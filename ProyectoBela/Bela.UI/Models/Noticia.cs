@@ -8,6 +8,7 @@ namespace Bela.UI.Models
 {
     public class Noticia
     {
+
         public int idNoticia { get; set; }
         public int idUsuario { get; set; }
         public int idtipo { get; set; }

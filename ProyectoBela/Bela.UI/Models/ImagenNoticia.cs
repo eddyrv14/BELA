@@ -12,5 +12,6 @@ namespace Bela.UI.Models
         public int idNoticia { get; set; }
 
         public string Imagen { get; set; }
+
     }
 }

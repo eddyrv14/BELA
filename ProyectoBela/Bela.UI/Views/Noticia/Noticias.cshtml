@@ -6,15 +6,15 @@
 
 <div class="social2">
     <ul>
-        <li><a data-toggle="modal" data-target="#Notificaciones" class="far fa-bell"></a></li>
+        <li ><a data-toggle="modal" data-target="#Notificaciones" class="far fa-bell"></a></li>      
     </ul>
 </div>
 
 
 
 <div class="container text-center">
-
-    @if (TempData["estadoNotificacion"] != null && TempData["estadoNotificacion"].Equals("Se agrego correo"))
+   
+     @if (TempData["estadoNotificacion"] != null && TempData["estadoNotificacion"].Equals("Se agrego correo"))
     {
         <div class="container">
             <div class="alert alert-success alert-dismissable">
@@ -23,41 +23,40 @@
             </div>
         </div>
     }
-    else if (TempData["estadoNotificacion"] != null && TempData["estadoNotificacion"].Equals("Error"))
-    {
-        <div class="container">
+     else if (TempData["estadoNotificacion"] != null && TempData["estadoNotificacion"].Equals("Error"))
+     {
+            <div class="container">
             <div class="alert alert-danger alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <strong>Error al agregar correo.Correo no valido o ya existe</strong>
             </div>
         </div>
-    }
-    else if (TempData["estadoNotificacion"] != null && TempData["estadoNotificacion"].Equals("ErrorNoIngresoCorreo"))
-    {
-        <div class="container">
+     }
+     else if (TempData["estadoNotificacion"] != null && TempData["estadoNotificacion"].Equals("ErrorNoIngresoCorreo"))
+     {
+            <div class="container">
             <div class="alert alert-danger alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <strong>@TempData["mensaje"]</strong>
             </div>
         </div>
-    }
-
-    <h1>Noticias</h1>
+     }
+    
+  <h1>Noticias</h1>
 </div>
 
-<section class="section--padding-bottom-small noticias">
+<section class="section--padding-bottom-small noticias" >
     <div class="container">
         <div class="row">
-            @foreach (var item in Model)
-            {
-                <div class="col-sm-6 wow fadeInUp">
-                    <div class="post">
-                        <div class="image"><a onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'"><img src="@Html.DisplayFor(modelItem => item.imagen)" alt="" class="img-responsive"></a></div>
-                        <h3><a onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'">@Html.DisplayFor(modelItem => item.titulo)</a></h3>
-                        <p class="post__intro maxDescrip2">@Html.DisplayFor(modelItem => item.descripcion)</p>
-                        <p class="read-more"><a onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'" class="btn btn-ghost">Leer mas  </a></p>
-                    </div>
+            @foreach (var item in Model) { 
+            <div class="col-sm-6 wow fadeInUp">
+                <div class="post">
+                    <div class="image"><a onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'"><img src="@Html.DisplayFor(modelItem => item.imagen)" alt="" class="img-responsive"></a></div>
+                    <h3><a onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'">@Html.DisplayFor(modelItem => item.titulo)</a></h3>
+                    <p class="post__intro">@Html.DisplayFor(modelItem => item.descripcion)</p>
+                    <p class="read-more"><a onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'" class="btn btn-ghost">Leer mas  </a></p>
                 </div>
+            </div>
             }
         </div>
     </div>
@@ -76,27 +75,28 @@
                 <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Estas seguro de que quieres enviar notificaciones al correo?</div>
                 @using (Html.BeginForm("ActivarNotificaciones", "Usuario", FormMethod.Post))
                 {
-                    <form method="post">
-                        <div class="form-group">
-                            @Html.Label("Correo:")
-                            @Html.TextBox("txtCorreo", null, new { @Type = "email", @class = "form-control", @placeholder = "Ingrese un correo!" })
-                        </div>
+                <form method="post"> 
+                    <div class="form-group">
+                     @Html.Label("Correo:")
+                      @Html.TextBox("txtCorreo", null, new { @Type = "email", @class = "form-control",@placeholder="Ingrese un correo!" }) 
+                    </div>
 
-                        <div class="modal-footer ">
-                            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Si</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
-                        </div>
+                    <div class="modal-footer ">
+                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Si</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                    </div>
 
-                    </form>
+                </form>
                 }
             </div>
 
-
+           
         </div>
         <!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->
 </div>
+
 
 
 

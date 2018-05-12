@@ -40,12 +40,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DetalleMateria.cs" />
-    <Compile Include="DetalleMaterial.cs" />
     <Compile Include="EstudianteSeccion.cs" />
     <Compile Include="ImagenNoticia.cs" />
     <Compile Include="MasMaterial.cs" />
     <Compile Include="Materia.cs" />
     <Compile Include="MateriaDeta.cs" />
+    <Compile Include="DetalleMaterial.cs" />
     <Compile Include="MensajeContacto.cs" />
     <Compile Include="Noticia.cs" />
     <Compile Include="NoticiaDetalles.cs" />

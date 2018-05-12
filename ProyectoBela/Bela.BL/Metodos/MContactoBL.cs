@@ -13,9 +13,9 @@ namespace Bela.BL.Metodos
     {
         MContactoDal contacto = new MContactoDal();
 
-        public string EnvioMensaje(MensajeContacto mensaje)
+        public void EnvioMensaje(MensajeContacto mensaje)
         {
-           return contacto.EnvioMensaje(mensaje);
+            contacto.EnvioMensaje(mensaje);
         }
 
 

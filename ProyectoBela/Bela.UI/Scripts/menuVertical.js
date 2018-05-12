@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     var trigger = $('.hamburger'),
         overlay = $('.overlay'),
-        footer = $('.footer'),
+        footer=$('.footer'),
        isClosed = false;
 
     trigger.click(function () {
