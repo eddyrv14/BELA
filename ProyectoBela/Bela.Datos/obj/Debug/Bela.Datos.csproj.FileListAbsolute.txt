@@ -1,5 +1,0 @@
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.Datos\bin\Debug\Bela.Datos.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.Datos\bin\Debug\Bela.Datos.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.dll
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.pdb
-C:\Users\Bayron\Documents\A-Universidad\2018\Analisis2\Proyecto_singit\ProyectoBela\Bela.Datos\obj\Debug\Bela.Datos.csprojResolveAssemblyReference.cache
