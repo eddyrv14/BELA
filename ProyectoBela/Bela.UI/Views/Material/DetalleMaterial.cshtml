@@ -6,6 +6,7 @@
     List<Bela.Datos.MasMaterial> lista = (List<Bela.Datos.MasMaterial>)ViewBag.Materiales;
 }
 
+<link href="~/Content/preloader.css" rel="stylesheet" />
 
 <div class="container">
     <div class="text-center">
@@ -30,25 +31,30 @@
 <section id="Materiales">
     <div class="container">
 
+        @if (Session["UserID"] != null && Session["rol"].Equals("Profesor"))
+        {
+            <a id="configMat" data-toggle="modal" data-target="#ModificarMateriales" class="configMaterial"><i id="sc" class="fas fa-cogs icon-square icon-bgWhite icon-3x"></i></a>
+        }
+
         <div class="row">
 
 
 
             <div class="col-md-4 space">
                 <div class="text-center">
-                 <span class="far fa-file icon-size-materiales"></span>
+                    <span class="far fa-file icon-size-materiales"></span>
                     <h2 class="parrafos" style="font-size:18px;"><a href="@Html.DisplayFor(model => model.material)">@Html.DisplayFor(model => model.nombreMaterial)</a></h2>
                 </div>
             </div>
 
             @foreach (var adicional in lista)
             {
-                 <div class="col-md-4 space">
-                <div class="text-center">
-                    <span class="far fa-file icon-size-materiales"></span>
-                    <h2 class="parrafos" style="font-size:18px;"><a href="@adicional.material">@adicional.nombreMaterial</a></h2>
+                <div class="col-md-4 space">
+                    <div class="text-center">
+                        <span class="far fa-file icon-size-materiales"></span>
+                        <h2 class="parrafos" style="font-size:18px;"><a href="@adicional.material">@adicional.nombreMaterial</a></h2>
+                    </div>
                 </div>
-            </div>
             }
 
 
@@ -59,3 +65,153 @@
 
 <div class="container" style="margin-bottom:450px;"></div>
 
+
+
+
+
+
+<!------------------------------------------------------ /Modals ------------------------------------------------------>
+@if (Session["UserID"] != null && Session["rol"].Equals("Profesor"))
+{
+
+    <div class="modal fade" id="ModificarMateriales" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                    <h4 class="modal-title custom_align" id="Heading">Configurar @Html.DisplayFor(x => x.titulo)</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>Revisar que los datos sean correctos.!</div>
+
+                    <div class="text-center">
+
+                        <div id="messageBox">
+
+                        </div>
+
+                        @using (Ajax.BeginForm("MofidificarMateriales", "Profesor", new AjaxOptions()
+                        {
+
+                            OnSuccess = "res",
+                            OnFailure = "OnFailure",
+                            InsertionMode = InsertionMode.Replace,
+                            UpdateTargetId = "messageBox"
+
+                        }))
+                        {
+
+
+                            @*<div class=" form-group">
+                                    @Html.TextBox("idPersona", null, new { @type = "number", @class = "form-control", @name = "idPersona", @readonly = true, style = "display: none;", @Value = @Html.DisplayFor(x => x.idPersona) })
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.Label("Materia")
+                                    @Html.DropDownList("dropIdMateria", (SelectList)ViewBag.MateriasPro, "Seleccione una Materia", new { @class = "form-control margenCentro", required = "required" })
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.Label("Seccion")
+                                    @Html.DropDownList("dropIdSeccion", (SelectList)ViewBag.SeccionesPro, "Seleccione una Seccion", new { @class = "form-control margenCentro", required = "required" })
+                                </div>*@
+
+                            <div class="modal-footer " style="text-align:center">
+                                <button id="btnAgregar" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Agregar Materia</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
+                            </div>
+
+
+                            @*}*@
+
+
+                        }
+                    </div>
+
+
+
+                    <div class="checkbox checkbox-success">
+                        <input id="checkbox3" type="checkbox">
+                        <label for="checkbox3">
+                            Modificar datos
+                        </label>
+                    </div>
+
+
+      
+
+
+                    
+                    <div id="wrapper2" class="wrapper2">
+                        <div class="cssload-loader"></div>
+                    </div>
+
+                    <div id="getMateriales">
+                        
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+}
+
+
+
+
+
+@section scripts{
+    <script>
+        var res = function () {
+            $("#dropIdMateria").prop('selectedIndex', 0);
+            $("#dropIdSeccion").prop('selectedIndex', 0);
+
+            $("#messageBox").fadeIn();
+            $("#messageBox").fadeOut(2000);
+
+            if ($('#checkbox3').is(':checked')) {
+
+                var idProfesorA = $("#idPersona").val();
+
+                var url = "@Url.Action("VerMateriales", "Profesor")";
+                var data = { idProfesor: idProfesorA }
+
+                $.post(url, data).done(function (data) {
+                    $("#getMateriales").html(data);
+                });
+            }
+        }
+
+        $("#configMat").click(function () {
+            var url = "@Url.Action("VerMateriales", "Profesor")";
+            //var data = { idProfesor: idProfesorA }
+            $("#wrapper2").fadeIn();
+
+            $("#getMateriales").hide();
+            $.post(url).done(function (data) {
+                $("#getMateriales").html(data);
+            });
+
+            setTimeout(
+   function () {
+       $("#wrapper2").fadeOut();
+
+       $("#getMateriales").fadeIn();
+      
+   }, 2000);
+           
+        });
+
+
+    </script>
+}

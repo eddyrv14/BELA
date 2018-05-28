@@ -3,15 +3,17 @@
     padding-bottom: 70px;
 }
 
-.materia-bor{
+.materia-bor {
     margin-bottom: 65px;
-    -webkit-box-shadow: 10px 0px 19px 4px rgba(0,0,0,0.36);
-    -moz-box-shadow: 10px 0px 19px 4px rgba(0,0,0,0.36);
-    box-shadow: 10px 0px 19px 4px rgba(0,0,0,0.36);
 }
 
 .materia-bor:hover {
     cursor:pointer;
+    -webkit-transition: all 400ms ease-out 0s;	
+	   -moz-transition: all 400ms ease-out 0s;
+		 -o-transition: all 400ms ease-out 0s;
+		    transition: all 400ms ease-out 0s;
+
     -webkit-box-shadow: 10px 0px 19px 4px rgba(245,227,108,1);
     -moz-box-shadow: 10px 0px 19px 4px rgba(245,227,108,1);
     box-shadow: 10px 0px 19px 4px rgba(245,227,108,1);
@@ -29,18 +31,18 @@
     }
 
 .materias-ico {
-    padding: 30px 63px 30px 0;
+    padding: 60px 60px 30px 0;
     text-align: right;
-    font-family: 'Crimson Text',serif;
-    font-size: 21px;
-    line-height: 24px;
-    color: #ff6a00;
-    font-style: italic;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 27px;
+    color:#FFD34E;
 }
 
 .materias-desc {
     border-left: 2px solid #ada5ad;
-    padding: 0 0 0 69px;
+    padding: 20px 0 20px 69px;
       margin-top:30px;
        margin-bottom: 20px;
 }
@@ -61,15 +63,26 @@
     }
 
     .materias-desc h5 {
-        font-family: 'Crimson Text', serif;
-        color: #5b4c5c;
-        font-size: 18px;
-        font-style: italic;
-        font-weight: 400;
+    color:black;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 27px;
     }
 
 
     .matereiales{
         height:30px;
         
+    }
+
+
+
+
+    .box{
+        border:1px solid #BDBDBD;
+         padding-top:20px;
+         padding-left:30px;
+         padding-right:30px;
+         background-color:#FFF;
     }

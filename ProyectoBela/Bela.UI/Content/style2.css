@@ -198,9 +198,13 @@ h1, h2, h3, h4, h5, h6
 }
 .head-title
 {
-	color: #2b2b2b;
-	font-size: 32px;
+	
 	font-weight: 700;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 27px;
+    color: #000;
 }
 .botm-line
 {
@@ -346,8 +350,12 @@ a, a:hover
 }
 .cont-title
 {
-	font-size: 22px;
 	padding:15px 0px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 27px;
+    color: #000;
 }
 
 .cont-title-login
@@ -526,3 +534,15 @@ a, a:hover
     }
 }
 /****/
+
+
+/*PerfilesIconos*/
+.iconInicioUser{
+    font-size:100px;
+    margin-top:20px;
+    border: 2px solid white;
+    border-radius: 0px 0px 27px 27px;
+    box-sizing: inherit;
+    overflow: hidden;
+}
+

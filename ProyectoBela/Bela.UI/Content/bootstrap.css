@@ -5601,7 +5601,7 @@ button.close {
 }
 
 .modal-open {
-  overflow: hidden;
+   overflow: auto !important;
 }
 
 body.modal-open,

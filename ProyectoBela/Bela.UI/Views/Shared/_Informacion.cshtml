@@ -31,7 +31,7 @@
                             <ul class="nav navbar-nav">
                                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                                 <li>@Html.ActionLink("Noticias", "Noticias", "Noticia")</li>
-                                <li class="active">@Html.ActionLink("Nosotros", "nosotros", "Informacion")</li>
+                                <li class="active"><a href="#">Información</a></li>
                                 <li>@Html.ActionLink("Contacto", "EnvioMensaje", "Contacto")</li>
                                 
                                 @if (Session["UserID"] != null && Session["rol"].Equals("Administrador"))

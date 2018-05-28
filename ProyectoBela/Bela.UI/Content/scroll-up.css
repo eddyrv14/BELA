@@ -1,0 +1,93 @@
+﻿.scrollup{
+   cursor:pointer;
+    position:fixed;
+	width:32px;
+	height:32px;
+    bottom:20px;
+    right:20px;
+}
+
+a.scrollup {
+	outline:0;
+	text-decoration:none;
+}
+
+a.scrollup:hover,a.scrollup:active,a.scrollup:focus {
+	opacity:1;
+	text-decoration:none;
+	-webkit-transition: all 400ms ease-out 0s;	
+	   -moz-transition: all 400ms ease-out 0s;
+		 -o-transition: all 400ms ease-out 0s;
+		    transition: all 400ms ease-out 0s;
+}
+a.scrollup i:hover {
+	text-decoration:none;
+}
+
+
+i.icon-bgdark {
+	color: #f7f7f7;
+	background: #333;
+}
+i.icon-bgdark:hover {
+	color: #fff;
+}
+i.icon-bgdark.active:hover {
+	color: #f7f7f7;
+	background: #333;
+}
+
+/* square */
+i.icon-square {
+	display: inline-block;
+	text-align: center;
+	width: 24px !important;
+	height: 24px !important;
+	line-height: 24px !important;
+}
+i.icon-square.icon-2x{
+	width: 48px !important;
+	height: 48px !important;
+	line-height: 48px !important;
+}
+
+
+i.icon-square.icon-3x{
+	width: 48px !important;
+	height: 48px !important;
+	line-height: 48px !important;
+    font-size:30px;
+}
+
+
+.configMaterial{
+    cursor:pointer;
+    position:fixed;
+	width:32px;
+	height:32px;
+    bottom:20px;
+    right:20px;
+}
+
+
+
+a.configMaterial {
+	outline:0;
+	text-decoration:none;
+}
+
+a.configMaterial:hover,a.configMaterial:active,a.configMaterial:focus {
+	opacity:1;
+    color:black;
+	text-decoration:none;
+	-webkit-transition: all 400ms ease-out 0s;	
+	   -moz-transition: all 400ms ease-out 0s;
+		 -o-transition: all 400ms ease-out 0s;
+		    transition: all 400ms ease-out 0s;
+}
+
+a.configMaterial i:hover {
+	text-decoration:none;
+}
+
+

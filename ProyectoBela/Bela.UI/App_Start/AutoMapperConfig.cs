@@ -23,6 +23,8 @@ namespace Bela.UI.App_Start
                cfg.CreateMap<Models.DetalleMaterial, Bela.Datos.DetalleMaterial>();
                cfg.CreateMap<Models.DetalleMateria, Bela.Datos.DetalleMateria>();
                cfg.CreateMap<Models.MasMaterial, Bela.Datos.MasMaterial>();
+               cfg.CreateMap<Models.MateriaProf, Bela.Datos.MateriaProf>();
+               cfg.CreateMap<Models.EstudianteSeccionDeta, Bela.Datos.EstudianteSeccionDeta>();
                 //// Selects
                 cfg.CreateMap<Bela.Datos.MensajeContacto, Models.MensajeContacto>();
                 cfg.CreateMap<Bela.Datos.Noticia, Models.Noticia>();
@@ -33,6 +35,8 @@ namespace Bela.UI.App_Start
                 cfg.CreateMap<Bela.Datos.DetalleMaterial, Models.DetalleMaterial>();
                 cfg.CreateMap<Bela.Datos.DetalleMateria, Models.DetalleMateria>();
                 cfg.CreateMap<Bela.Datos.MasMaterial, Models.MasMaterial>();
+                cfg.CreateMap<Bela.Datos.MateriaProf, Models.MateriaProf>();
+                cfg.CreateMap<Bela.Datos.EstudianteSeccionDeta, Models.EstudianteSeccionDeta>();
             });
         }
 

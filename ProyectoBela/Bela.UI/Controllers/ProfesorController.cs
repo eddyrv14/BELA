@@ -118,5 +118,14 @@ namespace Bela.UI.Controllers
         {
             return View();
         }
+
+        public PartialViewResult VerMateriales()
+        {
+
+            //var listaMaterias = adminActi.ListaMateriasProf(idProfesor);
+            //var listaMostrar = Mapper.Map<List<MateriaProf>>(listaMaterias);
+            //ViewBag.Materia = listaMostrar;
+            return PartialView("_MaterialesPartial");
+        }
     }
 }

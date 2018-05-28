@@ -22,70 +22,141 @@ namespace Bela.DAL.Metodos
         {
             cn = new SqlConnection(BD.Default.conexion);
             _conex = new OrmLiteConnectionFactory(BD.Default.conexion, SqlServerDialect.Provider);
-            _db = _conex.Open();
-
         }
 
 
 
         public List<Noticia> listaNoticias()
         {
-            var re = _db.SqlList<Noticia>("EXEC listaNoticiasPublicas").ToList();
-            return re;
+            //var re = _db.SqlList<Noticia>("EXEC listaNoticiasPublicas").ToList();
+            //return re;
+
+            var listaNoticiasPublicas = new List<Noticia>();
+
+            using (cn)
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand("listaNoticiasPublicas", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    var noticia = new Noticia();
+                    noticia.idNoticia = Convert.ToInt32(rdr["idNoticia"]);
+                    noticia.idtipo = Convert.ToInt32(rdr["idTipo"]);
+                    noticia.descripcion = rdr["descripcion"].ToString();
+                    noticia.imagen = rdr["imagen"].ToString();
+                    noticia.fechaYHora = Convert.ToDateTime(rdr["fechaYHora"]);
+
+                    listaNoticiasPublicas.Add(noticia);
+                    
+                }
+                cn.Close();
+            }
+
+            return listaNoticiasPublicas;
         }
 
         public List<Noticia> listaNoticiasInternas()
         {
+            _db = _conex.Open();
             var re = _db.SqlList<Noticia>("EXEC listaNoticiasInternas").ToList();
+            _db.Close();
             return re;
         }
 
         public List<Noticia> ultimasNoticias()
         {
-            var re = _db.SqlList<Noticia>("EXEC ultimasNoticias").ToList();
-            return re;
+            //var re = _db.SqlList<Noticia>("EXEC ultimasNoticias").ToList();
+            //return re;
+
+            var UltimasNoticiasPublicas = new List<Noticia>();
+
+            using (cn)
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand("ultimasNoticias", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    var noticia = new Noticia();
+                    noticia.idNoticia = Convert.ToInt32(rdr["idNoticia"]);
+                    noticia.idtipo = Convert.ToInt32(rdr["idTipo"]);
+                    noticia.descripcion = rdr["descripcion"].ToString();
+                    noticia.imagen = rdr["imagen"].ToString();
+                    noticia.fechaYHora = Convert.ToDateTime(rdr["fechaYHora"]);
+
+                    UltimasNoticiasPublicas.Add(noticia);
+                   
+                }
+                cn.Close();
+            }
+
+            return UltimasNoticiasPublicas;
         }
 
         public void insertarNoticia(Noticia noticia)
         {
+            _db = _conex.Open();
             _db.SqlScalar<Noticia>("EXEC crearNoticia @idAdmin,@idTipo,@titulo,@descripcion,@contenido,@imagen,@fechaHora",
                 new { idAdmin = noticia.idUsuario, idTipo = noticia.idtipo, titulo = noticia.titulo, descripcion = noticia.descripcion, contenido = noticia.contenido, imagen = noticia.imagen, fechaHora = noticia.fechaYHora });
+            _db.Close();
         }
 
         public void insertarImagenesAdicionales(string imagenes)
         {
+            _db = _conex.Open();
             _db.SqlScalar<ImagenNoticia>("EXEC insertarImagenes @imagenes", new { imagenes = imagenes });
+            _db.Close();
         }
 
 
         public NoticiaDetalles buscarNoticiaDetalle(int idNoticia)
         {
+            _db = _conex.Open();
             var re = _db.SqlList<NoticiaDetalles>("EXEC detalleNoticia @idNoticia", new { idNoticia = idNoticia }).FirstOrDefault();
+            _db.Close();
             return re;
         }
 
         public Noticia buscarNoticia(int idNoticia)
         {
-            return _db.Select<Noticia>(x => x.idNoticia == idNoticia).FirstOrDefault();
+            _db = _conex.Open();
+            var re=_db.Select<Noticia>(x => x.idNoticia == idNoticia).FirstOrDefault();
+            _db.Close();
+            return re;
         }
 
 
         public List<TipoNoticia> listaTipoNoticias()
         {
-
-            return _db.Select<TipoNoticia>();
+            _db = _conex.Open();
+            var re=_db.Select<TipoNoticia>();
+            _db.Close();
+            return re;
         }
 
 
         public List<ImagenNoticia> listaImagenesNoticia(int idNoticia)
         {
-            return _db.Select<ImagenNoticia>(x => x.idNoticia == idNoticia);
+            _db = _conex.Open();
+            var re=_db.Select<ImagenNoticia>(x => x.idNoticia == idNoticia);
+            _db.Close();
+            return re;
         }
 
 
         public List<Noticia> ListaNoticiasAdmin(int idAdmin)
         {
-            return _db.Select<Noticia>(x => x.idUsuario == idAdmin).OrderByDescending(x => x.idNoticia).ToList();
+            _db = _conex.Open();
+            var re = _db.Select<Noticia>(x => x.idUsuario == idAdmin).OrderByDescending(x => x.idNoticia).ToList();
+            _db.Close();
+            return re;
         }
 
         public string EliminarNoticia(int idNoticia)
@@ -112,8 +183,10 @@ namespace Bela.DAL.Metodos
             }
             catch (Exception e)
             {
+                cn.Close();
                 res = e.Message;
             }
+            cn.Close();
             return res;
         }
 

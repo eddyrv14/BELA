@@ -341,4 +341,71 @@ as
 INSERT INTO ProfesoresMaterias(idUsuario,idDetalleMateria) values(@idUsuario,(Select TOP 1 idDetalleMateria From DetalleMateria order by idDetalleMateria desc))
 go
 
+----PARA ELIMINAR MATERIA 3
+
+CREATE OR ALTER PROC eliminarMateriaPro
+@idMateria int
+as
+DELETE FROM ProfesoresMaterias where idProfesoresMaterias=@idMateria
+go
+
+---
+
+ CREATE OR ALTER PROC buscarMateriaDetaProf
+ @idProfesor int
+ as
+  Select   prof.idProfesoresMaterias idPrMa,prof.idUsuario,m.nombre nomMateria,sec.nombre nomSeccion FROM  ProfesoresMaterias prof   JOIN DetalleMateria det on det.idDetalleMateria=prof.idDetalleMateria
+  JOIN Materia m on m.idMateria=det.idMateria
+  JOIN Seccion sec on sec.idSeccion=det.idSeccion  
+ where det.idUsuario=@idProfesor
+ go
+
+--
+
+
+CREATE OR ALTER PROC listaEstudiantesSeccion
+as
+Select u.idUsuario, p.nombre,p.apellido1,p.apellido2,p.cedula,se.nombre Seccion FROM Persona p 
+Join Usuario u on p.idPersona=u.idUsuario
+JOIN EstudianteSeccion est on u.idUsuario=est.idUsuario
+JOIN Seccion se on se.idSeccion=est.idSeccion
+go
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// POR ERROR CUOTA ORMLITE
+CREATE OR ALTER PROC listaSecciones
+as
+Select*from Seccion
+go
+
 

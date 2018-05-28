@@ -20,20 +20,24 @@ namespace Bela.DAL.Metodos
        public MEstudianteDal()
        {
            _conex = new OrmLiteConnectionFactory(BD.Default.conexion, SqlServerDialect.Provider);
-           _db = _conex.Open();
+          
        }
 
 
         public List<MateriaDeta> listaMaterias(int idSeccion)
         {
+            _db = _conex.Open();
             var re = _db.SqlList<MateriaDeta>("EXEC listaMateriasEstudiante @idSeccion", new { idSeccion = idSeccion }).ToList();
+            _db.Close();
             return re;
         }
 
 
         public EstudianteSeccion BuscarSeccion(int idUsuario)
         {
+            _db = _conex.Open();
             var re = _db.Select<EstudianteSeccion>(x => x.idUsuario == idUsuario).FirstOrDefault();
+            _db.Close();
             return re;
         }
     }

@@ -1,9 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 using Bela.Datos;
 using Bela.BL.Interfaces;
 using Bela.BL.Metodos;
@@ -19,6 +19,8 @@ namespace Bela.UI.Controllers
 {
     public class AdminController : Controller
     {
+        //GET:Admin
+
         INoticia noticiasAdmin;
         IContacto contactoAct;
         IAdmin adminActi;
@@ -88,8 +90,7 @@ namespace Bela.UI.Controllers
                 ViewData["mensajeAdmin"] = "Elija un tipo de noticia";
                 return View();
             }
-
-
+            
             if (ModelState.IsValid)
             {
                 Noticia noticiaInser = new Noticia();
@@ -280,12 +281,13 @@ namespace Bela.UI.Controllers
             }
         }
 
-        public ActionResult EliminarNoticia(int idNoticia)
+        public JsonResult EliminarNoticia(int idNoticia)
         {
+            int estado = 0;
 
             if (Session["UserID"] == null)
             {
-                return RedirectToAction("Login", "Usuario");
+                estado = 0;
             }
 
             if (Session["rol"] != null && Session["rol"].Equals("Administrador"))
@@ -293,10 +295,10 @@ namespace Bela.UI.Controllers
                 string res = "";
                 res = noticiasAdmin.EliminarNoticia(idNoticia);
                 TempData["estadoNoticia"] = res;
-                return RedirectToAction("Inicio");
+                estado = 1;
             }
-
-            return RedirectToAction("Login", "Usuario");
+            var result = new { Success = true, Message = "Succes Message", estado };
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
 
@@ -455,16 +457,75 @@ namespace Bela.UI.Controllers
 
 
         [HttpPost]
-        public ActionResult agregarMateriaProf(FormCollection form)
+        public JsonResult agregarMateriaProf(int idPersona,FormCollection form)
         {
-            int idMateria = Convert.ToInt32(form["DropIdMateria"]);
-            int idProfesor = Convert.ToInt32(form["idPersona"]);
-            int idSeccion = Convert.ToInt32(form["DropIdSeccion"]);
-
-            adminActi.AgregarMateriaProf(idMateria, idProfesor, idSeccion);
-
-            return RedirectToAction("EditarCuenta", "Admin", new { idPersona = idProfesor });
+            string res = "Materia agregada";
+            int idMateria = Convert.ToInt32(form["dropIdMateria"]);
+            int idSeccion = Convert.ToInt32(form["dropIdSeccion"]);
+            res=adminActi.AgregarMateriaProf(idMateria, idPersona, idSeccion);
+            return Json(res);
         }
+
+        // POST: /Admin/EliminarMateria
+        public JsonResult EliminarMateria(int idMateria)
+        {
+            string res = "";
+            res = adminActi.EliminarMateriaProf(idMateria);
+            return Json(res);
+        }
+
+
+        //[HttpPost]
+        //public ActionResult agregarMateriaProf(FormCollection form)
+        //{
+        //    int idMateria = Convert.ToInt32(form["DropIdMateria"]);
+        //    int idProfesor = Convert.ToInt32(form["idPersona"]);
+        //    int idSeccion = Convert.ToInt32(form["DropIdSeccion"]);
+
+        //    adminActi.AgregarMateriaProf(idMateria, idProfesor, idSeccion);
+
+        //    return RedirectToAction("EditarCuenta", "Admin", new { idPersona = idProfesor });
+        //}
+
+        
+        public PartialViewResult VerSecciones(int idProfesor)
+        {
+
+            var listaMaterias = adminActi.ListaMateriasProf(idProfesor);
+            var listaMostrar = Mapper.Map<List<MateriaProf>>(listaMaterias);
+            ViewBag.Materia = listaMostrar;
+            return PartialView("_seccionesPartial");
+        }
+
+        public ActionResult AdminSecciones() {
+
+            
+            var listaEstudiantes = adminActi.ListaEstudiantes();
+            var listaMostrar = Mapper.Map<List<EstudianteSeccionDeta>>(listaEstudiantes);
+            var listaSecciones = adminActi.ListaSecciones();
+            ViewBag.EstudianteList = listaMostrar;
+            ViewBag.SeccionesEst = new SelectList(listaSecciones, "idSeccion", "nombre");
+            return View();
+        }
+
+        [HttpPost]
+        public JsonResult ModificarEstudiante(int idUsuarioEst,FormCollection form)
+        {
+            int idSeccion = Convert.ToInt32(form["dropIdSeccion"]);
+            string res = "";
+            adminActi.ModificarEstudianteSeccion(idUsuarioEst, idSeccion);
+            return Json(res);
+
+        }
+        public PartialViewResult CargarEstudiante()
+        {
+            var listaEstudiantes = adminActi.ListaEstudiantes();
+            var listaMostrar = Mapper.Map<List<EstudianteSeccionDeta>>(listaEstudiantes);
+            ViewBag.EstudianteList = listaMostrar;
+            return PartialView("_EstudiantesSeccionesPartial");
+
+        }
+
 
 
 
@@ -556,6 +617,23 @@ namespace Bela.UI.Controllers
 
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -48,9 +48,10 @@
         </button>
 
         <div class="container text-center">
-            <h1 class="titulos"> Bienvenido Profesor @Session["UserNombre"].ToString()</h1>
+            <p><span class="fas fa-user  iconInicioUser"></span></p>
+            <h1 class="titulos">Prof: @Session["UserNombre"].ToString() @Session["UserApellido1"] @Session["UserApellido2"] </h1>
 
-            <h2><small>Materias</small></h2>
+            <p class="parrafos" style="font-size:18px;">Materias</p>
             <p><span class="glyphicon glyphicon-chevron-down"></span></p>
         </div>
 

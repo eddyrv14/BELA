@@ -13,6 +13,7 @@
     <link href="~/Content/main.css" rel="stylesheet" />
     <link href="~/Content/responsive.css" rel="stylesheet" />
     <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/scroll-up.css" rel="stylesheet" />
 
 </head>
 
@@ -34,7 +35,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="active">@Html.ActionLink("Inicio","Index","Home")</li>
                                 <li>@Html.ActionLink("Noticias", "Noticias", "Noticia")</li>
-                                <li>@Html.ActionLink("Nosotros","nosotros","Informacion")</li>
+                                <li><a href="#1">Información</a></li>
                                 <li>@Html.ActionLink("Contacto", "EnvioMensaje", "Contacto")</li>
 
                                 @if (Session["UserID"] != null && Session["rol"].Equals("Administrador"))
@@ -95,6 +96,8 @@
     <script src="~/Scripts/wow.js"></script>
     <script src="~/Scripts/custom.js"></script>
     <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/jquery.easing.min.js"></script>
+    <script src="~/Scripts/scrolling.js"></script>
 
 
 </body>

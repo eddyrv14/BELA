@@ -97,10 +97,11 @@
 .breadcrumb {
     font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 1px;
     text-align: left;
     font-size: 13px;
     background-color: white;
+    font-weight:600;
 }
 
 

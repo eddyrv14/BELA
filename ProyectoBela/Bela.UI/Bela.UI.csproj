@@ -177,9 +177,11 @@
     <Compile Include="Models\DetalleMateria.cs" />
     <Compile Include="Models\DetalleMaterial.cs" />
     <Compile Include="Models\EstudianteSeccion.cs" />
+    <Compile Include="Models\EstudianteSeccionDeta.cs" />
     <Compile Include="Models\ImagenNoticia.cs" />
     <Compile Include="Models\MasMaterial.cs" />
     <Compile Include="Models\MateriaDeta.cs" />
+    <Compile Include="Models\MateriaProf.cs" />
     <Compile Include="Models\Noticia.cs" />
     <Compile Include="Models\MensajeContacto.cs" />
     <Compile Include="Models\NoticiaDetalles.cs" />
@@ -190,15 +192,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animated.css" />
+    <Content Include="Content\bodyInicioEst.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\checkbox.css" />
     <Content Include="Content\datatable.css" />
     <Content Include="Content\datatable_bootstrap.css" />
     <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fontawesome.min.css" />
     <Content Include="Content\lighbox.css" />
     <Content Include="Content\lightboxmin.css" />
+    <Content Include="Content\MessageBox.css" />
+    <Content Include="Content\preloader.css" />
     <Content Include="Content\responsive.css" />
+    <Content Include="Content\scroll-up.css" />
+    <Content Include="Content\socialNoticias.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style2.css" />
     <Content Include="Content\styleFooter.css" />
@@ -216,6 +224,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Imagenes\activadadesDepor.jpg" />
     <Content Include="Imagenes\banner.jpg" />
+    <Content Include="Imagenes\bdspace.jpg" />
     <Content Include="Imagenes\BI.png" />
     <Content Include="Imagenes\hd.jpg" />
     <Content Include="Imagenes\ImagenesNoticias\4.jpg" />
@@ -242,6 +251,11 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.easing.compatibility.js" />
+    <Content Include="Scripts\jquery.easing.js" />
+    <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -253,6 +267,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scroll-up.js" />
+    <Content Include="Scripts\scrolling.js" />
     <Content Include="Scripts\wow.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
@@ -298,6 +314,10 @@
     <Content Include="Views\Material\ListaMateriales.cshtml" />
     <Content Include="Views\Material\DetalleMaterial.cshtml" />
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
+    <Content Include="Views\Shared\_seccionesPartial.cshtml" />
+    <Content Include="Views\Shared\_MaterialesPartial.cshtml" />
+    <Content Include="Views\Admin\AdminSecciones.cshtml" />
+    <Content Include="Views\Shared\_EstudiantesSeccionesPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

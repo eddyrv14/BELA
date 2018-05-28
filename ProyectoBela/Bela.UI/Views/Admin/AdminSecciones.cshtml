@@ -1,0 +1,174 @@
+﻿
+
+
+
+
+@{
+    ViewBag.Title = "Liceo de puriscal";
+    Layout = "~/Views/Shared/_Perfil.cshtml";
+    //List<>
+}
+
+
+
+
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top menu" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <li class="sidebar-brand">
+                <a>
+                    Menu
+                </a>
+            </li>
+            <li>
+                @Html.ActionLink("Inicio", "Inicio", "Admin", null, new { @class = "activeMenu" })
+            </li>
+            <li>
+                @Html.ActionLink("Crear Noticias", "CrearNoticia", "Admin")
+            </li>
+            <li>
+                @Html.ActionLink("Mensajes", "Mensajes", "Admin")
+            </li>
+            <li>
+                @Html.ActionLink("NoticiasInternas", "NoticiasInternas", "Noticia")
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cuentas<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Opciones</li>
+                    <li>@Html.ActionLink("Crear Cuenta", "CrearCuenta", "Admin")</li>
+                    <li>@Html.ActionLink("Administrar Cuentas", "Cuentas", "Admin")</li>
+                    <li>@Html.ActionLink("Adminitrar Secciones", "Secciones", "Admin",null, new { @class = "activeMenu" }))</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed menubtn" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+
+        @if (TempData["estadoSeccion"] != null && TempData["estado"].Equals("Estudiante Modificado"))
+        {
+            <div id="Mensaje" class="container">
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>@TempData["estadoSeccion"]</strong>
+                </div>
+            </div>
+        }
+      
+
+        <div id="tableSecciones" style="margin-bottom:250px">
+           @{ Html.RenderPartial("_EstudiantesSeccionesPartial");}
+        </div>
+
+        <div id="tableSecciones2"></div>
+
+        <div class="modal fade" id="ModificarSeccion" role="dialog" style="overflow-y: scroll;">
+            <div class=" modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <h4 class="modal-title custom_align" id="Heading">Modificar Seccion a: </h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div id="mensajeModiEst"class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span></div>
+
+                        <div class="text-center">
+
+                            <div id="messageBox">
+
+                            </div>
+
+                            @using (Ajax.BeginForm("ModificarEstudiante", "Admin", null, new AjaxOptions()
+                        {
+
+                            OnSuccess = "modificarRes",
+                            OnFailure = "OnFailure",
+                            InsertionMode = InsertionMode.Replace,
+                            UpdateTargetId = "messageBox"
+
+                        }))
+                            {
+                             
+                                    <div class=" form-group">
+                                        @Html.TextBox("idUsuarioEst", null, new { @type = "number", @class = "form-control", @name = "idPersona", @readonly = true, style = "display: none;", @Value = "" })
+                                    </div>
+                               
+                                
+                                <div class="form-group">
+                                    @Html.Label("Seccion")
+                                    @Html.DropDownList("dropIdSeccion", (SelectList)ViewBag.SeccionesEst, "Seleccione una Seccion", new { @class = "form-control margenCentro", required = "required" })
+                                </div>
+
+                                <div class="modal-footer " style="text-align:center">
+                                    <button id="btnModificar" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span>Modificar Materia</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
+                                </div>
+
+
+                                @*}*@
+
+
+                            }
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        }
+
+
+
+
+
+    </div>
+    <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+
+<script>
+    var valor = '';
+
+    var modificarRes = function () {
+        $("#dropIdSeccion").prop('selectedIndex', 0);
+        var url = "@Url.Action("CargarEstudiante", "Admin")";
+       
+        
+        $.get(url).done(function (data) {
+            $("#tableSecciones").html(data);
+            $('#example').DataTable().destroy();
+            $('#example').DataTable().draw();
+            $('input[type="search"]').val(valor).keyup();
+        });
+        $('#ModificarSeccion').modal('hide');
+       
+    }
+
+
+    function Modificar(ID,NOMBRE,SECCION) {
+
+        $('#ModificarSeccion').modal('show');
+        $('#mensajeModiEst').text('Cambiar de  seccion a: ' + NOMBRE+'  de '+ SECCION+' a:');
+        $("#idUsuarioEst").val(ID);
+        valor = SECCION;
+        
+    }
+
+    window.onload = function () {
+        $("#Mensaje").fadeOut(4000);
+    }
+</script>

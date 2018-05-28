@@ -24,6 +24,7 @@ namespace Bela.UI.Controllers
         {
             var listaNoticias = noticias.listaNoticias();
             var lista = Mapper.Map<List<Models.Noticia>>(listaNoticias);
+            TempData["limite"] = lista.Count();
             return View(lista);
            
         }

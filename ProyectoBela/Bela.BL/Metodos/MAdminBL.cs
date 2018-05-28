@@ -73,5 +73,23 @@ namespace Bela.BL.Metodos
             return adminMetodos.AgregarMateriaProf(idMateria, idUsuario, idSeccion);
         }
 
+
+
+        public List<MateriaProf> ListaMateriasProf(int idProf)
+        {
+            return adminMetodos.ListaMateriasProf(idProf);
+        }
+
+
+        public string EliminarMateriaProf(int idMateriaPr)
+        {
+            return adminMetodos.EliminarMateriaProf(idMateriaPr);
+        }
+
+
+        public List<EstudianteSeccionDeta> ListaEstudiantes()
+        {
+            return adminMetodos.ListaEstudiantes();
+        }
     }
 }

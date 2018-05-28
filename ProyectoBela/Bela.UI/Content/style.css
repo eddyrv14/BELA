@@ -5,6 +5,37 @@
     overflow-x: hidden;
 }
 
+.titulosHome  {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+.titulosHome:after {
+    content: "";
+    display: block;
+    width: 76px;
+    height: 2px;
+    background: #5b4c5c;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -38px;
+}
+
+.parrafosHome{  
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: #000;
+
+}
+
 ol, ul {
     list-style: none;
 }
@@ -98,8 +129,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sub-title {
-    font-size: 45px;
-    font-weight: 600;
+    font-size: 43px;
+    font-weight: 400;
     color: #fff;
     line-height: 71px;
     letter-spacing: 4px;
@@ -107,14 +138,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title {
-    font-size: 123px;
+    font-size: 115px;
     font-weight: 400;
     color: #fff;
     line-height: 95px;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     opacity: 1;
     text-transform: uppercase;
-    padding: 25px 0px;
+    padding: 20px 0px;
 }
 
 
@@ -165,6 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-box {
     max-width: 400px;
+    margin:auto;
 }
 
 
@@ -452,8 +484,28 @@ a, a:hover {
 }
 
 
+section.spacer.bg3 {
+	background: url(../Imagenes/bdspace.jpg) 50% 0 no-repeat fixed;
+	width:100%;
+	height:auto;
+	margin:0;	
+}
+
+blockquote.large {
+	font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+}
 
 
+section.spacer {
+    padding: 90px 0 70px;
+    color: #fcfcfc;
+}
 
 
 

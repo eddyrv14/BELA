@@ -8,39 +8,90 @@ using Bela.DAL.Interfaces;
 using ServiceStack.OrmLite;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Bela.DAL.Metodos
 {
-    public class MAdminDal:IAdmin
+    public class MAdminDal : IAdmin
     {
 
         private OrmLiteConnectionFactory _conex;
         private IDbConnection _db;
-        private SqlConnection cn;
-
+        public SqlConnection cn;
+        string conexionSql = BD.Default.conexion;
 
         public MAdminDal()
         {
             cn = new SqlConnection(BD.Default.conexion);
             _conex = new OrmLiteConnectionFactory(BD.Default.conexion, SqlServerDialect.Provider);
-            _db = _conex.Open();
         }
 
         public List<Rol> ListaRoles()
         {
+            _db = _conex.Open();
             var re = _db.Select<Rol>();
+            _db.Close();
             return re;
+
+            //var listaRoles = new List<Rol>();
+
+
+            //using (cn)
+            //{
+            //    cn.Open();
+            //    SqlCommand cmd = new SqlCommand("listaRoles", cn);
+            //    cmd.CommandType = CommandType.StoredProcedure;
+
+            //    SqlDataReader rdr = cmd.ExecuteReader();
+
+            //    while (rdr.Read())
+            //    {
+            //        var rol = new Rol();
+            //        rol.idRol = Convert.ToInt32(rdr["idRol"]);
+            //        rol.nombre = rdr["nombre"].ToString();
+            //        listaRoles.Add(rol);
+            //    }
+            //}
+
+            //return listaRoles;
         }
 
         public List<Seccion> ListaSecciones()
         {
+            _db = _conex.Open();
             var re = _db.Select<Seccion>();
+            _db.Close();
             return re;
+
+            //var listaSecciones = new List<Seccion>();
+
+            //using (cn)
+            //{
+            //    cn.Open();
+            //    SqlCommand cmd = new SqlCommand("listaSecciones", cn);
+            //    cmd.CommandType = CommandType.StoredProcedure;
+
+            //    SqlDataReader rdr = cmd.ExecuteReader();
+
+            //    while (rdr.Read())
+            //    {
+            //        var seccion = new Seccion();
+            //        seccion.idSeccion = Convert.ToInt32(rdr["idSeccion"]);
+            //        seccion.nombre = rdr["nombre"].ToString();
+            //        listaSecciones.Add(seccion);
+            //    }
+            //}
+
+            //return listaSecciones;
+
+
         }
 
         public List<Materia> ListaMaterias()
         {
+            _db = _conex.Open();
             var re = _db.Select<Materia>();
+            _db.Close();
             return re;
         }
 
@@ -92,19 +143,27 @@ namespace Bela.DAL.Metodos
 
         public void InsertarEstudianteSeccion(int idSeccion)
         {
+            _db = _conex.Open();
             _db.SqlScalar<EstudianteSeccion>("EXEC crearEstudianteSeccion @idSeccion", new { idSeccion = idSeccion });
+            _db.Close();
         }
 
 
         public List<Usuario> ListaUsuarios()
         {
-            return _db.SqlList<Usuario>("EXEC listaUsuarios").ToList();
+            _db = _conex.Open();
+            var re = _db.SqlList<Usuario>("EXEC listaUsuarios").ToList();
+            _db.Close();
+            return re;
         }
 
 
         public Usuario BuscarCuenta(int idPersona)
         {
-            return _db.SqlList<Usuario>("EXEC buscarCuenta @idUsuario", new { idUsuario = idPersona }).FirstOrDefault();
+            _db = _conex.Open();
+            var re = _db.SqlList<Usuario>("EXEC buscarCuenta @idUsuario", new { idUsuario = idPersona }).FirstOrDefault();
+            _db.Close();
+            return re;
         }
 
 
@@ -158,11 +217,13 @@ namespace Bela.DAL.Metodos
 
         public void ModificarEstudianteSeccion(int idUsuario, int idSeccion)
         {
+            _db = _conex.Open();
             _db.SqlScalar<EstudianteSeccion>("EXEC modificarEstudianteSeccion @idUsuario,@idSeccion", new { idUsuario = idUsuario, idSeccion = idSeccion });
+            _db.Close();
         }
 
 
-        
+
 
         public string EliminarCuenta(int idUsuario)
         {
@@ -247,5 +308,112 @@ namespace Bela.DAL.Metodos
         }
 
 
+        public List<MateriaProf> ListaMateriasProf(int idUsuario)
+        {
+            //Por error de cuota ormlite
+            //var re= _db.SqlList<MateriaProf>("EXEC buscarMateriaDetaProf @idProfesor", new { idProfesor = idUsuario }).ToList();
+            //return re;
+
+            var listaMateriasProf = new List<MateriaProf>();
+
+            using (cn = new SqlConnection(conexionSql))
+            {
+                SqlCommand cmd = null;
+                try
+                {
+                    cn.Open();
+                    cmd = new SqlCommand("buscarMateriaDetaProf", cn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlParameter paridDetalleMateria = new SqlParameter();
+                    paridDetalleMateria.ParameterName = ("@idProfesor");
+                    paridDetalleMateria.SqlDbType = SqlDbType.Int;
+                    paridDetalleMateria.Value = idUsuario;
+                    cmd.Parameters.Add(paridDetalleMateria);
+
+                    SqlDataReader rdr = cmd.ExecuteReader();
+
+                    while (rdr.Read())
+                    {
+                        var materia = new MateriaProf();
+                        materia.idPrMa = Convert.ToInt32(rdr["idPrMa"]);
+                        materia.idUsuario = Convert.ToInt32(rdr["idUsuario"]);
+                        materia.nomMateria = rdr["nomMateria"].ToString();
+                        materia.nomSeccion = rdr["nomSeccion"].ToString();
+                        listaMateriasProf.Add(materia);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+                finally
+                {
+                    cmd = null;
+                    if (cn != null)
+                    {
+                        cn.Close();
+                    }
+                }
+
+            }
+
+            return listaMateriasProf;
+        }
+
+        public string EliminarMateriaProf(int idMateriaPr)
+        {
+            string res = "";
+
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "eliminarMateriaPro";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@idMateria", SqlDbType.Int).Value = idMateriaPr;
+                res = cmd.ExecuteNonQuery() == 1 ? "Materia eliminada" : "Error al eliminar";
+            }
+            catch (Exception ex)
+            {
+                res = ex.Message;
+                cn.Close();
+            }
+            cn.Close();
+            return res;
+
+        }
+
+
+        public List<EstudianteSeccionDeta> ListaEstudiantes()
+        {
+            var listaEstudiantes = new List<EstudianteSeccionDeta>();
+
+            using (cn)
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand("listaEstudiantesSeccion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    var estudiante = new EstudianteSeccionDeta();
+                    estudiante.idUsuario = Convert.ToInt32(rdr["idUsuario"]);
+                    estudiante.nombre = rdr["nombre"].ToString();
+                    estudiante.apellido1 = rdr["apellido1"].ToString();
+                    estudiante.apellido2 = rdr["apellido2"].ToString();
+                    estudiante.cedula = rdr["cedula"].ToString();
+                    estudiante.Seccion = rdr["Seccion"].ToString();
+                    listaEstudiantes.Add(estudiante);
+                }
+                cn.Close();
+            }
+
+            return listaEstudiantes;
+
+        }
     }
 }

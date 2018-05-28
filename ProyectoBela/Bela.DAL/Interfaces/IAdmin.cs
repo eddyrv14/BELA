@@ -27,5 +27,10 @@ namespace Bela.DAL.Interfaces
 
         /* Agregar Materia al profesor*/
         string AgregarMateriaProf(int idMateria, int idUsuario, int idSeccion);
+        List<MateriaProf> ListaMateriasProf(int idUsuario);
+        string EliminarMateriaProf(int idMateriaPr);
+
+        /*Secciones*/
+        List<EstudianteSeccionDeta> ListaEstudiantes();
     }
 }

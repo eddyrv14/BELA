@@ -14,7 +14,8 @@ namespace Bela.UI.Models
         public string rolNombre { get; set; }
         [Required(ErrorMessage="Ingrese nombre de usuario")]
         public string usuario { get; set; }
-        [Required(ErrorMessage="Ingrese contraseña")]
+        [Required(ErrorMessage = "Ingrese contraseña")]
         public string contrasena { get; set; }
+
     }
 }
