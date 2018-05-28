@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ServiceStack.Common</id>
+    <version>5.0.2</version>
+    <title>Common libs for ServiceStack projects</title>
+    <authors>ServiceStack</authors>
+    <owners>ServiceStack</owners>
+    <licenseUrl>https://servicestack.net/terms</licenseUrl>
+    <projectUrl>https://github.com/ServiceStack/ServiceStack</projectUrl>
+    <iconUrl>https://servicestack.net/img/logo-32.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ServiceStack Templates, Virtual File System, SimpleContainer and Common library for ServiceStack projects.</description>
+    <summary>Opensource .NET and Mono REST Web Services framework</summary>
+    <copyright>ServiceStack and contributors</copyright>
+    <language>en-US</language>
+    <tags>ServiceStack Common Framework Clients ServiceClients Gateway</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="ServiceStack.Interfaces" version="5.0.2" />
+        <dependency id="ServiceStack.Text" version="5.0.2" />
+      </group>
+      <group targetFramework="Unsupported0.0">
+        <dependency id="Microsoft.Extensions.Primitives" version="2.0.0" />
+        <dependency id="System.Dynamic.Runtime" version="4.3.0" />
+        <dependency id="System.Data.Common" version="4.3.0" />
+        <dependency id="System.ComponentModel.Primitives" version="4.3.0" />
+        <dependency id="System.Net.Primitives" version="4.3.0" />
+        <dependency id="System.Net.NetworkInformation" version="4.3.0" />
+        <dependency id="System.Runtime.Serialization.Primitives" version="4.3.0" />
+        <dependency id="System.Reflection.TypeExtensions" version="4.3.0" />
+        <dependency id="ServiceStack.Interfaces" version="5.0.2" />
+        <dependency id="ServiceStack.Text" version="5.0.2" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

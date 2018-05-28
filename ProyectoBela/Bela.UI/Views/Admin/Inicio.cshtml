@@ -1,0 +1,189 @@
+﻿@model IEnumerable<Bela.UI.Models.Noticia>
+
+@{
+    ViewBag.Title = "Liceo de puriscal";
+    Layout = "~/Views/Shared/_Perfil.cshtml";
+}
+
+
+
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top menu" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <li class="sidebar-brand">
+                <a>
+                    Menu
+                </a>
+            </li>
+            <li>
+                @Html.ActionLink("Inicio", "Inicio", "Admin", null, new { @class = "activeMenu" })
+            </li>
+            <li>
+                @Html.ActionLink("Crear Noticias", "CrearNoticia", "Admin")
+            </li>
+            <li>
+                @Html.ActionLink("Mensajes", "Mensajes", "Admin")
+            </li>
+            <li>
+                @Html.ActionLink("NoticiasInternas", "NoticiasInternas", "Noticia")
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cuentas<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Opciones</li>
+                    <li>@Html.ActionLink("Crear Cuenta", "CrearCuenta", "Admin")</li>
+                    <li>@Html.ActionLink("Administrar Cuentas", "Cuentas", "Admin")</li>
+                    <li>@Html.ActionLink("Adminitrar Secciones", "AdminSecciones", "Admin")</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed menubtn" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+
+        @if (TempData["estadoNoticia"] != null && TempData["estadoNoticia"].Equals("Noticia modificada"))
+        {
+            <div class="container">
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>@TempData["estadoNoticia"]</strong>
+                </div>
+            </div>
+        }
+        else if (TempData["estadoNoticia"] != null && TempData["estadoNoticia"].Equals("Noticia eliminada"))
+        {
+            <div class="container">
+                <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>@TempData["estadoNoticia"]</strong>
+                </div>
+            </div>
+        }
+
+
+        <div class="container text-center">
+
+            <p><span class="fas fa-user  iconInicioUser"></span></p>
+            <h1 class="titulos">Admin: @Session["UserNombre"].ToString() @Session["UserApellido1"] @Session["UserApellido2"] </h1>
+
+            <p class="parrafos" style="font-size:18px;">Estas son las noticias creadas por ti </p>
+            <p><span class="glyphicon glyphicon-chevron-down"></span></p>
+        </div>
+        <section class="section--padding-bottom-small noticias" style="margin-bottom:400px;">
+            <div class="container">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-sm-8 col-sm-offset-2 wow fadeInUp">
+                            <div class="post">
+                                <div class="image"><a onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'"><img src="@Html.DisplayFor(modelItem => item.imagen)" alt="" class="img-responsive"></a></div>
+                                <h3><a onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'">@Html.DisplayFor(modelItem => item.titulo)</a></h3>
+                                <p class="post__intro">@Html.DisplayFor(modelItem => item.descripcion)</p>
+                                <div class="btn-group">
+
+                                    <button class="btn btn-ghost" onclick="location.href='@Url.Action("Detalles", "Noticia", new { idNoticia=item.idNoticia})'">Leer Mas</button>
+                                    <button class="btn btn-ghost-modificar" onclick="location.href='@Url.Action("ModificarNoticia", "Admin", new { idNoticia=item.idNoticia})'">Modificar</button>
+                                    <button class="btn btn-ghost-eliminar" onclick="Delete('@item.idNoticia','@item.titulo')" @*onclick="location.href='@Url.Action("EliminarNoticia", "Admin", new { idNoticia=item.idNoticia})'"*@>Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
+    <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+
+<div id="EliminarNoticiaModal"   class="modal fade" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                <h4 id="NombreTituloNoticia" class="modal-title custom_align"></h4>
+            </div>
+            <div class="modal-body">
+
+                <div id="NombreNoticia" class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span></div>
+
+                <div class="text-center">
+                    <div class="modal-footer " style="text-align:center">
+                        <button id="AceptarEliminarNoticia" onclick="Eliminar" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Eliminar</button>
+                        <button id="CerrarModal" type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+
+
+
+
+
+
+
+@section scripts{
+    <script>
+
+        $("#CerrarModal").click(function () {
+            $('#EliminarNoticiaModal').modal('hide');
+            $('body').removeClass('modal-open');
+        });
+
+        function Delete(ID, TITULO) {
+
+            $('#EliminarNoticiaModal').modal('show');
+            $("#NombreTituloNoticia").text('Eliminar  '+TITULO);
+            $("#NombreNoticia").text('Estas seguro que quieres eliminar la noticia: '+ TITULO);
+           
+            $("#AceptarEliminarNoticia").off().click(function () {
+                $('#EliminarNoticiaModal').modal('hide');
+
+
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json;charset=utf-8",
+                    url: '@Url.Action("EliminarNoticia", "Admin")',
+                    data: "{'idNoticia':'" + ID + "'}",
+                    dataType: "json",
+                    success: function (respuesta) {
+                        if (respuesta.estado == '0') {
+                            location.href = "/Usuario/Login/";
+                        } else if (respuesta.estado == '1') {
+                            location.href = "Inicio";
+                        } else {
+                            Alert.render('Error');
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        Alert.render('Erroor');
+                    }
+                });
+            });
+            
+        }
+
+    </script>
+    
+    }
+

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ServiceStack.OrmLite</id>
+    <version>5.0.2</version>
+    <title>OrmLite - Fast, code-first, config-free Poco ORM</title>
+    <authors>ServiceStack</authors>
+    <owners>ServiceStack</owners>
+    <licenseUrl>https://servicestack.net/terms</licenseUrl>
+    <projectUrl>https://github.com/ServiceStack/ServiceStack.OrmLite</projectUrl>
+    <iconUrl>https://servicestack.net/img/logo-32.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Common library for the Light, simple and fast convention-based code-first POCO, OrmLite.
+  		Support for Creating and Dropping Table Schemas from POCOs, Complex Property types transparently stored in schemaless text blobs.
+      OrmLite is a suite extension methods on ADO.NET's underlying IDbConnection providing DRY, typed access for common data usage patterns that map to clean, simple POCOs. Great support for testing where OrmLite methods can be mocked.</description>
+    <summary />
+    <copyright>ServiceStack and contributors</copyright>
+    <language>en-US</language>
+    <tags>OrmLite POCO Code-First Orm Schema-less Blobs</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="ServiceStack.Common" version="5.0.2" />
+      </group>
+      <group targetFramework="Unsupported0.0">
+        <dependency id="System.Dynamic.Runtime" version="4.3.0" />
+        <dependency id="System.Reflection.Emit" version="4.3.0" />
+        <dependency id="System.Reflection.Emit.Lightweight" version="4.3.0" />
+        <dependency id="System.Reflection.TypeExtensions" version="4.3.0" />
+        <dependency id="System.Collections.NonGeneric" version="4.3.0" />
+        <dependency id="System.Xml.XmlDocument" version="4.3.0" />
+        <dependency id="System.ComponentModel.Primitives" version="4.3.0" />
+        <dependency id="System.Data.SqlClient" version="4.3.1" />
+        <dependency id="System.ComponentModel.Annotations" version="4.3.0" />
+        <dependency id="ServiceStack.Common" version="5.0.2" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

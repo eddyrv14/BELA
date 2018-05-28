@@ -1,0 +1,11 @@
+﻿#messageBox {
+    float: right;
+    position: absolute;
+    top: 70px;
+    color:#04B431;
+    display:none;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 27px;
+}

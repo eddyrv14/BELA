@@ -1,0 +1,258 @@
+﻿@{
+    ViewBag.Title = "Liceo de puriscal";
+    Layout = "~/Views/Shared/_Informacion.cshtml";
+}
+
+
+<div class="container" style="padding-top:50px;">
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading titulos">Proceso de matricula</h1>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fas fa-clipboard text-services text-warning mb-3 sr-icons" data-title="procesoMatricula" data-toggle="modal" data-target="#procesoMatricula" title="Click para mas info"></i>
+                        <h3 class="mb-3">Proceso Matricula</h3>
+                        <p class="text-muted mb-0">Antes de iniciar etapa colegial </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fas fa-clipboard text-services text-warning mb-3 sr-icons" data-title="preMatricula" data-toggle="modal" data-target="#preMatricula" title="Click para mas info"></i>
+                        <h3 class="mb-3">Prematicula</h3>
+                        <p class="text-muted mb-0">Fecha Base</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center ">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fas fa-clipboard text-services text-warning mb-3 sr-icons" data-title="matricula" data-toggle="modal" data-target="#matricula" title="Click para mas info"></i>
+                        <h3 class="mb-3">Matricula</h3>
+                        <p class="text-muted mb-0">Pasos a seguir</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fas fa-id-card text-primary text-services" data-title="confeccionCarnet" data-toggle="modal" data-target="#confeccionCarnet" title="Click para mas info"></i>
+                        <h3 class="mb-3">Confeccion de carnet</h3>
+                        <p class="text-muted mb-0">Carnet Estudiantil</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="container" style="margin-bottom:200px;"></div>
+
+@*  Proceso Matricula*@
+<div class="modal fade" id="procesoMatricula" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header alert alert-warning">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                <h4 class="modal-title custom_align" id="Heading">Detalles</h4>
+            </div>
+            <div class="modal-body">
+
+                <div>
+                    <span class="glyphicon glyphicon-warning-sign"> </span>
+                    <ol>
+                        <li>
+                            <p class="titulos" style="font-size:23px;">
+                                •Visita a las escuelas
+                            </p>
+                            <ul>
+                                <li class="parrafos">
+                                    •Durante los meses de agosto y setiembre personal del Liceo de Puriscal visita las escuelas que normalmente aportan estudiantes
+                                    a la institución para contactar a los estudiantes de VI año y a sus padres de familia para que conozcan la institución, conozcan
+                                    los servicios que se ofrecen y el procedimiento de matrícula.
+                                </li>
+                                <li class="parrafos">
+                                    •Este proceso previo se complementa con la visita de los estudiantes a la institución a finales de setiembre o inicios del mes
+                                    de octubre y la reunión de padres de familia que se realiza en el mes de octubre.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-ok-sign"></span> Cerrar</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+@*  Prematricula*@
+<div class="modal fade" id="preMatricula" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header alert alert-warning">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                <h4 class="modal-title custom_align" id="Heading">Detalles</h4>
+            </div>
+            <div class="modal-body">
+
+                <div>
+                    <span class="glyphicon glyphicon-warning-sign"> </span>
+                    <ol>
+                        <li>
+                            <p class="parrafos">
+                                •En el presente curso lectivo se realizará del 8 al 12 de octubre de 2018.
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-ok-sign"></span> Cerrar</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+@*  Matricula*@
+<div class="modal fade" id="matricula" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header alert alert-warning">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                <h4 class="modal-title custom_align" id="Heading">Detalles</h4>
+            </div>
+            <div class="modal-body">
+
+                <div>
+                    <span class="glyphicon glyphicon-warning-sign"> </span>
+                    <ol>
+                        <li>
+                            <h4 class="titulos" style="font-size:22px;">Fechas</h4>
+                            <ul>
+                                <li>
+                                    <p class="parrafos">
+                                        •La matrícula para VII año y la ratificación de matrícula para los estudiantes de VIII a XII (Bachillerato Internacional)
+                                        se realiza en la primera semana de diciembre.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="parrafos">•En el 2018 se realizará del 4 al 7 de diciembre</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="titulos" style="font-size:22px;">Requisitos</h4>
+                            <ul>
+                                <li>
+                                    <p class="parrafos">
+                                        •Se encuentran descritos en la normativa interna vigente de la institución
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="parrafos">
+                                        •Original y fotocopia del título, Informe al Hogar del año anterior, copia de la cédula del padre, madre y encargado
+                                        y copia de la Tarjeta de Identificación del Menor (TIM).
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="parrafos">
+                                        •Firmar una nota de compromiso de acatamiento y conocimiento de las normas establecidas en la institución.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="parrafos">
+                                        •Los estudiantes mayores de 18 años serán responsables directos de su proceso de aprendizaje, siempre que hayan formalizado
+                                        su situación, liberando de responsabilidades a sus padres de familia ante la institución, en caso contrario, los padres de
+                                        familia serán los responsables ante la institución.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="parrafos">
+                                        •En caso de traslado de otra institución, deberá adjuntar una carta de valoración de la conducta y asistencia, emitida por
+                                        el Departamento de Orientación del colegio de procedencia, así como una copia de su expediente individual.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="parrafos">
+                                        •Cuando el estudiante requiera atención para algún tipo de Necesidad Educativa, el proceso de matrícula DEBERÁ ser tramitado ante el Comité
+                                        de Apoyo, e informado oportunamente al docente.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="parrafos">
+                                        •En caso de que se requiera que el estudiante almuerce fuera del Centro Educativo, el padre de familia o persona encargada,
+                                        deberá presentar una nota de solicitud del permiso y respetar los controles de ingreso y salida de la institución.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="parrafos">
+                                        •Se recomienda tener Póliza Estudiantil emitida por un ente asegurador autorizado, que se encuentre vigente durante el curso
+                                        lectivo para el que el estudiante va a ser matriculado, pero no es un requisito indispensable para l matrícula. Si es un
+                                        requisito para participar en las actividades de extensión fuera de la planta física de la institución.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-ok-sign"></span> Cerrar</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+@* Confeccion de Carnet *@
+<div class="modal fade" id="confeccionCarnet" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header alert alert-warning">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                <h4 class="modal-title custom_align" id="Heading">Detalles</h4>
+            </div>
+            <div class="modal-body">
+
+                <div>
+                    <span class="glyphicon glyphicon-warning-sign"> </span>
+                    <ol>
+                        <li>
+                            <p class="parrafos">
+                                *Liceo de Puriscal cuenta con un carnet estudiantil plastificado, donde aparece la fotografía e información básica del estudiante,
+                                la posibilidad o no tener permiso de salida de la institución con autorización de sus padres y un código de barras asociado
+                                a una base de datos del estudiante y a un mecanismo de comunicación directo con un padre de familia asignado.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="parrafos">*Incluir fotografía</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-ok-sign"></span> Cerrar</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
